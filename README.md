@@ -1,8 +1,8 @@
 ## HeartOfSabik使用说明
 HeartOfSabik是一个副本研究用插件，能利用ACT和FFXIV_Plugin提供的数据进行时间轴的自动生成和战斗记录分析。
 (FFXIV中的HeartOfSabik是究极神兵的核心，隐藏着强大的力量。)
-HearOfSabik能利用所有可获得的数据来分析副本，并高效地建立Timeline时间轴文件。
-项目地址、所生成的时间轴文件和使用帮助见：https://github.com/pipirapira/Timeline-and-TTS-for-FFXIV
+HearOfSabik能利用所有可获得的数据来分析副本，并高效地建立Timeline时间轴文件。HeartOfSabik目前的功能并未完善，作者将会进行更多更新。
+项目地址、所生成的时间轴文件和使用帮助见：https://github.com/pipirapira/ACT.HeartOfSabik/
 ### 时间轴生成语法：
 #### 1.技能名替换：	
 ```
