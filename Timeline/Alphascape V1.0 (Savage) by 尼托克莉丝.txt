@@ -45,7 +45,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 #========================火开场时间轴========================
 #                          第一阶段
 #============================================================
-1000	--Start--	sync /(正在发动“|readies) Damning Edict/ window 1001,10
+1000	--Start--
 1007	半场攻击	
 1014	(信息_13)	sync /00:0044:Grovel in terror! The flames hunger for your flesh!/ window 15,60
 1014	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 15,10
@@ -130,7 +130,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 #========================水开场时间轴========================		
 #                          第一阶段		
 #============================================================		
-2000	--Start--	sync /(正在发动“|readies) Latitudinal Implosion/ window 1,10
+2000	--Start--
 2006	随机前后左右攻击	
 2014	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 15,10
 2014	(信息_14)	sync /00:0044:Scurry and flail, little mortals! The raging tide will claim you all!/ window 15,60
