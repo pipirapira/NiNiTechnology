@@ -40,22 +40,22 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 #========================水开场时间轴========================
 #                          第一阶段
 #============================================================
-100	--Start--	sync /(正在发动“|readies|begins casting) Damning Edict/ window 101,10 jump 1000
-200	--Start2-- sync /(正在发动“|readies|begins casting) (Latitudinal Implosion|Longitudinal Implosion)/ window 201,10 jump 2000
+100	--Start--	sync /(正在发动“|readies) Damning Edict/ window 101,10 jump 1000
+200	--Start2-- sync /(正在发动“|readies) (Latitudinal Implosion|Longitudinal Implosion)/ window 201,10 jump 2000
 #========================火开场时间轴========================
 #                          第一阶段
 #============================================================
-1000	--Start--	sync /(正在发动“|readies|begins casting) Damning Edict/ window 1001,10
+1000	--Start--	sync /(正在发动“|readies) Damning Edict/ window 1001,10
 1007	半场攻击	
 1014	(信息_13)	sync /00:0044:Grovel in terror! The flames hunger for your flesh!/ window 15,60
-1014	(读条)火AOE	sync /(正在发动“|readies|begins casting) Blaze/ window 15,10
+1014	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 15,10
 1020	火AOE	
 1021	(buff)击退火圈buff
 1030	火圈击退散开
 1037	随机前后左右攻击	
 1045	火圈击退散开
 1057	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 58,10
-1063	(读条)火AOE	sync /(正在发动“|readies|begins casting) Blaze/ window 38,10
+1063	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 38,10
 1068	火AOE	
 1069	(buff)击退火圈buff
 1079  火圈击退散开
@@ -64,13 +64,13 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 1098	岩咚
 1101	连线小球出现	sync /Added new combatant Chaosphere/ window 102,10
 1107	浮游炮	
-1123	(读条)风AOE	sync /(正在发动“|readies|begins casting) Cyclone/ window 124,10
+1123	(读条)风AOE	sync /(正在发动“|readies) Cyclone/ window 124,10
 1123	(信息_123)	sync /00:0044:Despair at your hollow fate! The winds will strip away your skin!/ window 124,60
 1129	(buff)顺逆风buff	
 1142	超级跳跃	
 1151	半场攻击	
 1170	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 102,10
-1176	(读条)风AOE	sync /(正在发动“|readies|begins casting) Cyclone/ window 41,10
+1176	(读条)风AOE	sync /(正在发动“|readies) Cyclone/ window 41,10
 1181	(buff)顺逆风buff
 1193	治疗陨石
 1200	岩咚
@@ -93,63 +93,63 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 #============================================================
 1299	随机前后左右攻击	
 1307	(信息_307)	sync /00:0044:Scurry and flail, little mortals! The raging tide will claim you all!/ window 308,60
-1308	(读条)水AOE	sync /(正在发动“|readies|begins casting) Tsunami/ window 309,10
+1308	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 309,10
 1313	(buff)环形水圈buff
 1323	超级跳跃	
 1332	半场攻击
 1351	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 170,10
-1357	(读条)水AOE	sync /(正在发动“|readies|begins casting) Tsunami/ window 38,10
+1357	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 38,10
 1362	(buff)环形水圈buff
 1373	治疗陨石
 1379	岩咚
 1383	连线小球出现	sync /Added new combatant Chaosphere/ window 168,10
 1392	接线
-1408	(读条)土AOE	sync /(正在发动“|readies|begins casting) Earthquake/ window 409,10
+1408	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 409,10
 1408	(信息_407)	sync /00:0044:Hark, wretched creatures! The earth itself rumbles of your doom!/ window 409,60
 1415	(buff)死超或无心
 1427	随机前后左右攻击	
 1446	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 85,10
-1452	(读条)土AOE	sync /(正在发动“|readies|begins casting) Earthquake/ window 34,10
+1452	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 34,10
 1459	(buff)死超或无心
 1470	击退分摊
 1475	岩咚
 1478	连线小球出现	sync /Added new combatant Chaosphere/ window 85,10
 1485	浮游炮
 1501	(信息_500)	sync /00:0044:Abandon this feeble hope. None may rise above me!/ window 502,60
-1504	(读条)火AOE	sync /(正在发动“|readies|begins casting) Blaze/ window 430,10
+1504	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 430,10
 1514	火AOE
 1515	(buff)击退火圈buff	
-1517	(读条)水AOE	sync /(正在发动“|readies|begins casting) Tsunami/ window 149,10
+1517	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 149,10
 1527	(buff)环形水圈buff	
-1530	(读条)风AOE	sync /(正在发动“|readies|begins casting) Cyclone/ window 343,10
+1530	(读条)风AOE	sync /(正在发动“|readies) Cyclone/ window 343,10
 1540	(buff)顺逆风buff	
-1543	(读条)土AOE	sync /(正在发动“|readies|begins casting) Earthquake/ window 79,10
+1543	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 79,10
 1555	(buff)死超或无心	
-1556	(读条)狂暴	sync /(正在发动“|readies|begins casting) Bowels of Agony/ window 200,10
+1556	(读条)狂暴	sync /(正在发动“|readies) Bowels of Agony/ window 200,10
 		
 #========================水开场时间轴========================		
 #                          第一阶段		
 #============================================================		
-2000	--Start--	sync /(正在发动“|readies|begins casting) Latitudinal Implosion/ window 1,10
+2000	--Start--	sync /(正在发动“|readies) Latitudinal Implosion/ window 1,10
 2006	随机前后左右攻击	
-2014	(读条)水AOE	sync /(正在发动“|readies|begins casting) Tsunami/ window 15,10
+2014	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 15,10
 2014	(信息_14)	sync /00:0044:Scurry and flail, little mortals! The raging tide will claim you all!/ window 15,60
 2020	(buff)环形水圈buff	
 2030	超级跳跃	
 2039	半场攻击	
 2057	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 58,10
-2063	(读条)水AOE	sync /(正在发动“|readies|begins casting) Tsunami/ window 38,10
+2063	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 38,10
 2069	(buff)环形水圈buff	
 2079	治疗陨石	
 2086	岩咚	
 2089	连线小球出现	sync /Added new combatant Chaosphere/ window 90,10
 2098	接线	
 2114	(信息_114)	sync /00:0044:Hark, wretched creatures! The earth itself rumbles of your doom!/ window 115,60
-2114	(读条)土AOE	sync /(正在发动“|readies|begins casting) Earthquake/ window 115,10
+2114	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 115,10
 2121	(buff)死超或无心	
 2134	随机前后左右攻击	
 2153	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 85,10
-2159	(读条)土AOE	sync /(正在发动“|readies|begins casting) Earthquake/ window 34,10
+2159	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 34,10
 2166	(buff)死超或无心	
 2177	击退分摊
 2182	岩咚
@@ -172,14 +172,14 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 #============================================================		
 2285	半场攻击	
 2292	(信息_292)	sync /00:0044:Grovel in terror! The flames hunger for your flesh!/ window 293,60
-2293	(读条)火AOE	sync /(正在发动“|readies|begins casting) Blaze/ window 294,10
+2293	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 294,10
 2298	火AOE	
 2299	(buff)击退火圈buff	
 2309	火圈击退散开
 2316	随机前后左右攻击	
 2324	火圈击退散开
 2335	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 171,10
-2341	(读条)火AOE	sync /(正在发动“|readies|begins casting) Blaze/ window 37,10
+2341	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 37,10
 2347	火AOE	
 2348	(buff)击退火圈buff	
 2358  火圈击退散开
@@ -188,13 +188,13 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 2376	岩咚	
 2380	连线小球出现	sync /Added new combatant Chaosphere/ window 184,10
 2386	浮游炮
-2402	(读条)风AOE	sync /(正在发动“|readies|begins casting) Cyclone/ window 403,10
+2402	(读条)风AOE	sync /(正在发动“|readies) Cyclone/ window 403,10
 2402	(信息_401)	sync /00:0044:Despair at your hollow fate! The winds will strip away your skin!/ window 403,60
 2408	(buff)顺逆风buff	
 2420	超级跳跃
 2430	半场攻击
 2448	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 102,10
-2454	(读条)风AOE	sync /(正在发动“|readies|begins casting) Cyclone/ window 41,10
+2454	(读条)风AOE	sync /(正在发动“|readies) Cyclone/ window 41,10
 2460	(buff)顺逆风buff	
 2472	治疗陨石
 2479	岩咚
@@ -204,10 +204,10 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 2511	(读条)火AOE	
 2521	火AOE	
 2522	(buff)击退火圈buff	
-2523	(读条)水AOE	sync /(正在发动“|readies|begins casting) Tsunami/ window 449,10
+2523	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 449,10
 2534	(buff)环形水圈buff	
 2537	(读条)风AOE	
 2547	(buff)顺逆风buff	
 2550	(读条)土AOE	
 2562	(buff)死超或无心
-2563	(读条)狂暴	sync /(正在发动“|readies|begins casting) Bowels of Agony/ window 200,10
+2563	(读条)狂暴	sync /(正在发动“|readies) Bowels of Agony/ window 200,10
