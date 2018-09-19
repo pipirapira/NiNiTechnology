@@ -1,0 +1,137 @@
+﻿########################################################
+# Alphascape V2.0 (Midgardsormr)
+# Created by Puktata Pako on Asura/尼托克莉丝 on 萌芽池
+# Last Updated: 2018年9月19日, 星期三
+########################################################
+#  更新地址：
+#  https://github.com/pipirapira/ACT.HeartOfSabik
+#  有效性：目前仅EN客户端有效
+################## Windows 8 & 10 音效 #################
+#删去前方的#标签来选择声音
+define speaker "voice" "Microsoft Huihui Desktop" 2 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 2 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+
+alertall "动作1" before 5 speak "voice" "动作1"
+alertall "动作2释放" before 5 speak "voice" "动作2"
+alertall "死亡轮回读条" before 3 speak "voice" "分摊"
+alertall "死亡轮回读条（狂暴）" before 4 speak "voice" "狂暴死亡轮回"
+alertall "死刑读条" before 2 speak "voice" "死刑"
+alertall "八方向振翅点名" before 3 speak "voice" "八振翅"
+alertall "百雷点名" before 3 speak "voice" "雷散开"
+alertall "换T读条" before 6 speak "voice" "天地换替"
+alertall "滑板鞋" before 3 speak "voice" "滑板鞋"
+alertall "流沙集合引导" before 4 speak "voice" "流沙流沙"
+alertall "顺劈" before 4 speak "voice" "顺劈"
+alertall "AOE" before 5 speak "voice" "AOE"
+alertall "白圈出现" before 2 speak "voice" "白圈出现"
+alertall "流沙+百雷集合散开" before 6 speak "voice" "流沙百雷"
+alertall "点名1" before 1 speak "voice" "点名传标"
+alertall "火球②出现" before 5 speak "voice" "找安全点"
+alertall "流沙③动作1中央引导" before 5 speak "voice" "流沙引导"
+alertall "Exaflare+冰圈" before 7 speak "voice" "冰圈加第火"
+alertall "Exaflare" before 8 speak "voice" "第火俯冲"
+alertall "散开机制" before 8 speak "voice" "散开"
+alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始。"
+#============================================================
+#                          第一阶段
+#============================================================
+0 	--Start--	sync /I am Midgardsormr/ window 10,10
+15 	动作1	sync /The air about the elder wyrm begins to crackle/ window 16,10
+26 	动作2释放	sync /Midgardsormr unleashes his rage/
+39 	动作1	
+42 	死亡轮回读条	sync /readies Akh Morn/ window 30,10
+46 	死亡轮回	
+57 	动作2释放	
+65 	死刑读条	sync /readies Tail End/ window 30,10
+80 	动作1	
+88 	八方向振翅点名
+92 	动作2释放	
+103 	动作1	
+106 	死刑读条
+112 	百雷点名
+117 	动作2释放
+124 	换T读条	sync /readies Time Immemorial/ window 30,10
+135 	死刑读条	
+149 	动作1	
+153 	滑板鞋	sync /readies Northern Cross/ window 30,10
+164 	动作2释放
+167 	2天光+2冰圈	sync /readies Akh Rhal/ window 30,10
+179 	动作1	
+188 	流沙集合引导
+192 	动作2释放
+#============================================================
+#                          第二阶段
+#============================================================
+199 	p2小怪阶段	sync /Come forth, my child!/ window 200,10
+202 	古龙出现	
+212 	顺劈	
+214 	读条AOE	sync /readies Rime Wreath/ window 214,0
+217 	AOE	
+222 	顺劈	
+232 	顺劈	
+236 	AOE	
+242 	顺劈	
+251 	AOE	
+253 	顺劈	
+200 	小龙击杀AOE	sync /readies Dark Wave/ window 201,10
+265 	白圈出现	
+#============================================================
+#                          第三阶段
+#============================================================
+288 	流沙+百雷集合散开
+289 	俯冲读条	sync /readies Cauterize/ window 289,0
+293 	百雷+俯冲	
+298 	流沙+百雷集合散开
+299 	俯冲读条
+303 	百雷+俯冲
+308 	Boss出现	
+314 	换T读条	sync /readies Time Immemorial/ window 100,40
+325 	点名1
+331 	喷火1	
+338 	喷火2	
+345 	喷火3	
+352 	喷火4（出现标记）	
+355 	连线出现	
+356 	火球②出现
+365 	流沙③动作1中央引导	sync /readies Horrid Roar/ window 20,5
+370 	回中央	
+372 	绿buff接线，其余侧面躲避	
+376 	火尾	
+385 	上天	
+387 	Exaflare	
+388 	流沙中央引导
+389 	俯冲读条	sync /readies Cauterize/ window 50,0
+398 	流沙引导
+399 	俯冲读条
+409 	boss出现	
+419 	死刑读条	sync /readies Tail End/ window 200,10
+429 	死亡轮回读条	sync /readies Akh Morn/ window 200,10
+441 	流沙+百雷集合散开
+455 	动作1	
+458 	死刑读条
+464 	散开机制
+467 	动作2释放	
+472 	换T读条	sync /readies Time Immemorial/ window 100,10
+484 	Exaflare+冰圈
+491 	死亡轮回读条
+515 	动作1	
+518 	滑板鞋	sync /readies Northern Cross/ window 100,10
+524 	散开机制
+528 	动作2释放
+534 	流沙	
+545 	2天光
+550 	死刑读条
+565 	动作1	
+569 	死刑读条
+576 	散开机制
+580 	动作2释放	
+586 	换T读条	sync /readies Time Immemorial/ window 50,10
+597 	Exaflare+冰圈	
+604 	死亡轮回读条
+629 	动作1	
+632 	死亡轮回读条（狂暴）
