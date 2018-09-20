@@ -1,0 +1,179 @@
+﻿########################################################
+# Alphascape V2.0 (Midgardsormr)
+# Created by Puktata Pako on Asura/尼托克莉丝 on 萌芽池
+# Last Updated: 2018年9月20日, 星期四
+########################################################
+#  更新地址：
+#  https://github.com/pipirapira/ACT.HeartOfSabik
+#  有效性：目前仅EN客户端有效
+################## Windows 8 & 10 音效 #################
+#删去前方的#标签来选择声音
+define speaker "voice" "Microsoft Huihui Desktop" 2 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 2 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+
+alertall "AOE读条" before 2 speak "voice" "AOE"
+alertall "MT流血炮" before 7 speak "voice" "死刑"
+alertall "万变水波读条" before 3 speak "voice" "万变水波"
+alertall "左右斩读条" before 3 speak "voice" "左右斩"
+alertall "小拳拳读条" before 2 speak "voice" "小拳拳"
+alertall "磁极连线" before 4 speak "voice" "磁极，同色远塔，异色近塔"
+alertall "近塔判定+近塔出现" before 2 speak "voice" "踩近塔"
+alertall "远塔判定+远塔出现" before 2 speak "voice" "踩远塔"
+alertall "钢铁战车读条" before 4 speak "voice" "踩近塔，然后钢铁"
+alertall "月环读条" before 4 speak "voice" "踩远塔，然后月环"
+alertall "TLB" before 1 speak "voice" "坦克LB"
+alertall "万变水波+火圈读条" before 3 speak "voice" "水波加火圈"
+alertall "ST减血炮" before 6 speak "voice" "二仇死刑"
+alertall "大拳拳读条" before 2 speak "voice" "大拳拳"
+alertall "击退+分摊标记" before 3 speak "voice" "回中央分摊"
+alertall "直线分摊标记" before 2 speak "voice" "集合分摊"
+alertall "击退+左右斩读条" before 3 speak "voice" "左右斩"
+alertall "二段左右斩" before 3 speak "voice" "二段左右斩"
+alertall "中央炸弹（BC对角右下集合减伤）" before 8 speak "voice" "远离中央，BC角落集合"
+alertall "宝宝正义号模式" before 2 speak "voice" "宝宝正义号模式"
+alertall "背后集合流沙逆时针" before 8 speak "voice" "流沙背后集合，逆时针转向"
+alertall "射线点名THDD（十型放置）" before 4 speak "voice" "射线十字"
+alertall "射线点名THDD（×型放置）" before 4 speak "voice" "射线交叉"
+alertall "射线点名DHD（个型放置）" before 4 speak "voice" "射线D奶D"
+alertall "射线点名DHD（个型放置）" before 4 speak "voice" "射线D奶D"
+alertall "强制1血读条" before 3 speak "voice" "无心小天使"
+alertall "3连AOE读条" before 3 speak "voice" "三连AOE"
+alertall "狂暴" before 31 speak "voice" "30秒狂暴"
+alertall "MTST扇形攻击开始（引导至10点2点）" before 4 speak "voice" "大顺劈，人群背后"
+
+#============================TTS============================
+#右右右：readies Larboard Wave Cannon.
+#左左左：readies Starboard Wave Cannon.
+#右右右：readies Larboard Wave Cannon Surge.
+#左左左：readies Starboard Wave Cannon Surge.
+#============================================================
+#                          第一阶段
+#============================================================
+0 	--Start--	sync /Initiating direct analysis of subject group/ window 10,10
+7 	AOE读条	sync /readies Atomic Ray/ window 10,10
+12 	AOE
+18 	死刑读条	sync /readies Mustard Bomb/ window 10,10
+23 	MT流血炮
+25 	万变水波读条	sync /readies Flamethrower/ window 26,10
+34 	左右斩读条
+41 	左右斩读条
+52 	小拳拳读条	sync /readies Peripheral Synthesis/ window 53,10
+57 	拳拳出现
+61 	拳拳1读条
+66 	死刑读条	sync /readies Mustard Bomb/ window 10,10
+66 	拳拳2读条
+71	MT流血炮
+86 	转阶段读条	sync /readies Program Loop/ window 90,10
+90 	boss上天
+100 	小怪出现	sync /Program loop Omega: primary sequence initiated/ window 101,30
+108 	磁极连线	sync /readies Ferrofluid/
+109 	4塔出现
+116 	磁极+踩塔判定
+123 	第二轮踩塔	sync /Program loop Omega: secondary sequence initiated/ window 124,30
+131 	近塔出现
+136 	远塔出现
+138 	近塔判定+近塔出现	
+145 	远塔判定+远塔出现	
+147 	近塔判定+近塔出现
+152 	远塔判定+远塔出现
+154 	钢铁战车读条	sync /readies Reset/ window 155,30
+157 	钢铁战车判定
+160 	月环读条	sync /readies Reformat/ window 161,30
+163 	月环判定
+178 	小怪消灭	sync /Program loop Omega aborted/ window 179,30
+188 	TLB	sync /readies Delta Attack/ window 189,30
+198 	转阶段AOE判定
+209 	boss出现
+221 	万变水波+火圈读条	sync /readies Flamethrower/ window 10,10
+225 	万变水波1段	
+227 	万变水波2段
+229 	火圈落下
+230 	左右斩读条
+237 	左右斩读条
+250 	死刑读条	sync /readies Mustard Bomb/ window 10,10
+255 	MT流血炮
+258 	ST减血炮
+261 	AOE读条	sync /readies Atomic Ray/ window 10,10
+266 	AOE
+275 	大拳拳读条	sync /readies Peripheral Synthesis/ window 10,5
+280 	大拳拳连线THDD
+288 	眩晕
+291 	击退+分摊标记
+292 	分摊点名	sync /readies Electric Slide/ window 293,10
+298 	分摊判定
+302 	大拳拳读条	sync /readies Peripheral Synthesis/ window 10,5
+306 	大拳拳连线THDD
+314 	眩晕
+317 	击退+左右斩读条
+322 	左右斩1段
+322 	左右斩读条
+327 	左右斩2段
+336 	升级程序	sync /readies Update Program/ window 337,5
+349 	万变水波读条
+357 	二段左右斩
+361 	左右斩1段
+364 	左右斩2段
+374 	宝宝正义号模式	sync /readies Pantokrator/ window 375,30
+381 	背后集合流沙逆时针
+383 	流沙2
+385 	流沙3
+387 	流沙4
+389 	直线分摊标记	sync /readies Ballistics Systems/ window 100,30
+393 	分摊判定
+399 	射线点名THDD（十型放置）
+402 	流沙+射线判定
+407 	射线点名THDD（×型放置）
+410 	流沙+射线判定
+418 	中央炸弹（BC对角右下集合减伤）
+428 	ST减血炮
+430 	AOE读条	sync /readies Atomic Ray/ window 10,10
+435 	AOE
+442 	红烧小拳拳读条	sync /readies Peripheral Synthesis/ window 10,5
+446 	TLB
+335 	红烧小拳拳伤害
+465 	死刑读条	sync /readies Mustard Bomb/ window 10,10
+470 	MT流血炮
+478 	AOE读条	sync /readies Atomic Ray/ window 10,10
+483 	AOE
+487 	万变水波+火圈读条	sync /readies Flamethrower/ window 10,10
+491 	万变水波1段
+493 	万变水波2段
+495 	火圈落下
+495 	二段左右斩
+499 	左右斩1段
+502 	左右斩2段
+512 	宝宝正义号模式	sync /Pantokrator mode reengaged/ window 513,30
+520 	背后集合流沙逆时针
+522 	流沙2
+524 	流沙3（大转盘出现）
+526 	流沙4（迅速去转盘方向）
+540 	直线分摊标记	sync /readies Ballistics Systems/ window 10,10
+545 	分摊判定
+547 	MTST扇形攻击开始（引导至10点2点）
+552 	射线点名DHD（个型放置）
+555 	射线判定
+559 	射线点名DHD（个型放置）
+562 	射线判定
+571 	中央炸弹（BC对角右下集合减伤）
+580 	二段左右斩
+584 	左右斩1段
+587 	左右斩2段
+589 	二段左右斩
+593 	左右斩1段
+596 	左右斩2段
+602 	强制1血读条	sync /readies Charybdis/ window 603,5
+607 	判定！奶起来！
+615 	死刑读条	sync /readies Mustard Bomb/
+620 	MT流血炮
+623 	ST减血炮
+626 	3连AOE读条
+632 	AOE
+638 	AOE
+644 	AOE
+644 	狂暴读条	sync /Initiating deletion protocol/ window 645,5
+662 	狂暴
