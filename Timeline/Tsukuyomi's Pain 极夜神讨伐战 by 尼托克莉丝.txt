@@ -1,0 +1,118 @@
+﻿# The Minstrel's Ballad: Tsukuyomi's Pain
+# Created by Puktata Pako on Chocobo/尼托克莉丝 on 萌芽池
+# Last Updated: 05/24/2018
+#############################################################
+########CUSTOMIZE your timeline. Remove the hashtag from 
+########the beginning of the following lines to prevent 
+########them from appearing on your timeline.
+
+hideall "--Reset--"
+
+##############################################################
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+define speaker "voice" "Microsoft Huihui Desktop" 2 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 2 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+################ CUSTOMIZE Call Outs #####################
+########REMOVE THE HASHTAG to enable each call out
+alertall "换T" before 3 speak "voice" "死刑"
+#alertall "换T" before 0 speak "voice" "换替"
+alertall "AOE" before 7 speak "voice" "AOE"
+alertall "AOEx2" before 8 speak "voice" "2连AOE"
+alertall "随机枪铳读条" before 3 speak "voice" "看武器"
+alertall "陨石点名x3" before 8 speak "voice" "陨石点名"
+alertall "半边舞扇" before 7 speak "voice" "半边扇"
+alertall "旋转舞扇+分摊点名" before 8 speak "voice" "旋转分摊"
+alertall "半边舞扇+分散点名" before 8 speak "voice" "半边散开"
+alertall "月读" before 6 speak "voice" "月读"
+#filter:
+#14:2...:|282b|00:0044|00:0839
+#################################################################
+#                  前半阶段
+#################################################################
+0	"--Reset--" sync /Removing combatant Tsukuyomi.  Max HP: 13825875/ window 10000 jump 0
+0 	P1 sync /00:0044:Oh...it's going to be a long night.|00:0044:来享受夜晚的一切吧！/ window 9,1
+11 	AOE读条 sync /14:2BBA:/ window 12,1
+15 	AOE		
+21 	随机枪铳读条		
+25 	随机枪铳		
+42 	随机枪铳		
+68 	AOE		
+70 	P2读条 sync /14:2BC7:/ window 72,1
+76 	P2 sync /00:282b:Tsukuyomi uses Nightbloom.|发动了“月下彼岸花”/ window 76,1
+206 	P3 sync /14:2CAF:/ window 300,200
+232 	月读
+238 	双月环判定		
+251 	随机枪铳读条		
+255 	随机枪铳		
+268 	陨石点名x3		
+276 	陨石判定		
+279 	双月环出现		
+284 	双月环判定		
+286 	单月环出现		
+290 	陨石爆炸提示		
+292 	单月环判定		
+303 	月下美人（转阶段）		
+319 	AOE		
+322 	半边舞扇读条 sync /14:2BC5:/ window 9,1
+326 	半边舞扇 sync /00:282b:Tsukuyomi uses Zashiki-asobi./ window 9,1
+331 	随机枪铳读条		
+335 	随机枪铳		
+337 	舞扇判定1		
+340 	舞扇判定2		
+353 	换T sync /14:2EB2:/ window 360,50
+358 	死刑判定		
+371 	月读
+378 	双月环判定		
+391 	随机枪铳读条		
+395 	随机枪铳		
+408 	陨石点名x3		
+420 	双月环出现		
+427 	单月环出现		
+430 	陨石爆炸提示		
+443 	月下美人（转阶段）		
+446 	P3台词 sync /00:0044:No. No... Not yet. Not. Yet|00:0044:我不能输……我还没有/ window 450,20
+453 	死亡之舞 sync /00:282b:Tsukuyomi uses Dance of the Dead./ window 460,20
+462 	月环/远离提示		
+466 	左右斩读条		
+470 	左右斩判定		
+475 	月环/远离提示		
+479 	左右斩读条		
+484 	左右斩判定		
+495 	AOE		
+498 	月环/远离提示		
+501 	旋转舞扇+分摊点名		
+507 	分摊1		
+509 	分摊2		
+511 	分摊3		
+520 	左右斩判定
+525 	换T sync /14:2EB2:/ window 100,10
+530 	死刑判定		
+534 	月环/远离提示		
+538 	半边舞扇+分散点名
+544 	点名1
+545 	点名2		
+545 	舞扇判定1
+546 	点名3
+548 	舞扇判定2		
+549 	左右斩读条
+554 	左右斩判定
+563		AOEx2
+571		AOE
+578 	旋转舞扇+分摊点名
+583		分摊1
+586		分摊2
+589		分摊5
+592		左右斩读条
+597 	左右斩判定
+602 	换T sync /14:2EB2:/ window 100,10
+608 	死刑判定
+615 	半边舞扇+分散点名
+639		左右斩判定
+648		AOEx2
+655		AOE

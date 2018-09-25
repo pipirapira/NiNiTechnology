@@ -1,0 +1,417 @@
+﻿# J3SB
+# Created by Puktata Pako on Chocobo/尼托克莉丝 on 萌芽池
+# Last Updated: 06/05/2018
+#############################################################
+########CUSTOMIZE your timeline. Remove the hashtag from 
+########the beginning of the following lines to prevent 
+########them from appearing on your timeline.
+
+hideall "--Reset--"
+
+##############################################################
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+define speaker "voice" "Microsoft Huihui Desktop" 2 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 2 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+################ CUSTOMIZE Call Outs #####################
+
+alertall "螺旋气流判定" before 5 speak "voice" "螺旋"
+#alertall "绿标分摊" before 6 speak "voice" "绿标分摊"
+#alertall "绿圈出现" before 3 speak "voice" "绿圈出现"
+alertall "动起来躲羽毛" before 5 speak "voice" "羽毛"
+alertall "下行突风顺劈（MT减伤）" before 5 speak "voice" "顺劈"
+#alertall "邪恶风轮" before 7 speak "voice" "风轮"
+alertall "月环" before 5 speak "voice" "月环分摊"
+alertall "大气爆发（血仇群盾）" before 8 speak "voice" "大气爆发"
+
+#alertall "12点3点刷双分身。MT拉6点放邪恶风轮" before 7 speak "voice" "分身"
+#alertall "接线双分身出现" before 3 speak "voice" "分身"
+alertall "全屏AOE（击杀刺羽）" before 8 speak "voice" "AOE"
+
+#alertall "全屏AOE（击杀刺羽）" before 5 speak "voice" "萌光血仇"
+#alertall "骑士2层进圈（幕帘、群盾萌光罩子、病毒）" before 7 speak "voice" "幕帘群盾罩子"
+alertall "骑士2层进圈（幕帘、群盾萌光罩子、病毒）" before 3 speak "voice" "骑士进"
+#alertall "点名1，全员集合（萌光罩子、病毒）" before 5 speak "voice" "集合，上病毒"
+#alertall "点名2，全员集合（萌光罩子、病毒）" before 3 speak "voice" "集合，开翅膀"
+alertall "奶妈1层进圈（消层数）" before 3 speak "voice" "治疗远程进"
+alertall "诗人2层进圈（罩子、翅膀）" before 3 speak "voice" "战士进"
+alertall "召唤2层进圈（罩子、翅膀）" before 2 speak "voice" "龙骑进"
+
+alertall "火神冲锋位置出现" before 4 speak "voice" "龙骑吃球"
+alertall "地狱火炎（全屏AOE）" before 8 speak "voice" "地狱火炎"
+alertall "地狱火炎1（全屏AOE）" before 9 speak "voice" "地狱火炎"
+alertall "地狱火炎2（全屏AOE）" before 10 speak "voice" "地狱火炎"
+alertall "击退（摆脱群盾）" before 7 sound "SCH-群盾.wav"
+alertall "无敌三连喷1" before 4 speak "voice" "无敌三连喷"
+alertall "死斗保护三连喷1" before 7 speak "voice" "死斗一二保护三，合图战士"
+#alertall "火神之楔出现" before 5 speak "voice" "火柱出现"
+#alertall "热风转目标读条" before 3 speak "voice" "热风"
+#alertall "引火1" before 6 speak "voice" "引导"
+#alertall "十字冲位置出现（带往安全区）" before 4 speak "voice" "十字冲"
+alertall "boss上天，梯形冲位置出现" before 4 speak "voice" "梯形冲，逆时针跑"
+alertall "分摊火点名" before 5 speak "voice" "分摊"
+
+alertall "中央猛男空降" before 6 speak "voice" "猛男空降，召唤吃球"
+#alertall "大地之怒伤害判定" before 8 speak "voice" "大地之怒"
+alertall "猛男空降" before 10 speak "voice" "超级跳"
+alertall "顺劈接掀桌" before 3 speak "voice" "3"
+alertall "顺劈接掀桌" before 2 speak "voice" "2"
+alertall "顺劈接掀桌" before 1 speak "voice" "1"
+alertall "顺劈接掀桌" before 5 speak "voice" "顺劈掀桌"
+alertall "顺劈保护掀桌" before 6 speak "voice" "保护掀桌"
+
+alertall "死斗顺劈接掀桌" before 7 speak "voice" "顺劈掀桌"
+alertall "死斗顺劈接掀桌" before 5 speak "voice" "5"
+alertall "死斗顺劈接掀桌" before 4 speak "voice" "4"
+alertall "死斗顺劈接掀桌" before 3 speak "voice" "3"
+alertall "死斗顺劈接掀桌" before 2 speak "voice" "2"
+alertall "死斗顺劈接掀桌" before 1 speak "voice" "1"
+alertall "双流沙1判定" before 6 speak "voice" "双流沙"
+#alertall "一杆进洞" before 7 speak "voice" "一杆进洞"
+alertall "石牢点名x3" before 2 speak "voice" "排队石牢"
+#alertall "冲拳" before 3 speak "voice" "冲拳"
+#alertall "8连踩" before 5 speak "voice" "八连"
+alertall "石牢点名x1" before 5 speak "voice" "石牢"
+alertall "双冲拳1" before 5 speak "voice" "双冲拳"
+alertall "流沙1在12点引导" before 5 speak "voice" "12点集合顺时针"
+alertall "三流沙1" before 6 speak "voice" "三流沙"
+alertall "狂暴" before 11 speak "voice" "10秒狂暴"
+
+alertall "p4前吃球提醒" before 0 speak "voice" "学者吃球"
+
+alertall "二仇死刑" before 9 speak "voice" "二仇死刑"
+alertall "死刑（战士）" before 6 speak "voice" "战士死刑"
+alertall "死刑（骑士）" before 6 speak "voice" "骑士死刑"
+alertall "死刑（无敌）" before 6 speak "voice" "无敌死刑"
+alertall "死刑（死斗）" before 7 speak "voice" "死斗死刑"
+alertall "死刑（保护）" before 6 speak "voice" "保护死刑"
+alertall "吸附炸弹" before 4 speak "voice" "吸附蛋"
+#alertall "吸附炸弹（无敌）" before 4 speak "voice" "无敌吸附蛋"
+alertall "击退p4" before 6 sound "SCH-群盾.wav"
+alertall "p4分身接线" before 6 speak "voice" "接分身"
+alertall "引火1（p4）" before 7 speak "voice" "引火"
+#alertall "外场地火" before 3 speak "voice" "外场地火"
+alertall "内圈地火" before 3 speak "voice" "内圈地火"
+alertall "中央岩石炸弹p4" before 0 speak "voice" "走"
+alertall "AOE（p4）" before 6 speak "voice" "AOE"
+alertall "羽毛二连" before 4 speak "voice" "羽毛二连"
+alertall "羽毛（p4）" before 4 speak "voice" "羽毛"
+alertall "火神冲+双冲拳（暴击）" before 4 speak "voice" "火神"
+alertall "火神冲+双冲拳（暴击）" before 0 speak "voice" "走走走，热风接线！"
+
+alertall "三流沙，中央集合" before 9 speak "voice" "三流沙，中央集合"
+alertall "乱击三重奏读条" before 0 speak "voice" "乱击就位，乱击就位"
+alertall "顺劈" before 5 speak "voice" "顺劈"
+
+alertall "火分摊（后退一步）" before 12 speak "voice" "石牢集合"
+alertall "A点集合" before 2 speak "voice" "热风别动，人群A点"
+alertall "A点集合2" before 4 speak "voice" "A点集合，A点集合"
+alertall "热风消失" before 7 speak "voice" "别动"
+alertall "热风消失" before 1 speak "voice" "回中央"
+alertall "吸附炸弹爆炸" before 2 sound "SCH-群盾.wav"
+alertall "❤绿帽骑士" before 2 sound "SCH-绿帽骑士.wav"
+alertall "❤绿帽战士" before 2 sound "SCH-绿帽战士.wav"
+
+alertall "❤连线主T" before 2 sound "SCH-原谅主T.wav"
+alertall "❤连线骑士" before 2 sound "SCH-原谅骑士.wav"
+alertall "❤连线战士" before 2 sound "SCH-原谅战士.wav"
+alertall "撞球击退" before 10 speak "voice" "撞球面向A到，人群集合"
+
+
+alertall "究极（p4）" before 10 speak "voice" "究极"
+alertall "❤吃宝宝" before 3 sound "SCH-吃宝宝.wav"
+alertall "召夕月" before 3 sound "SCH-换夕月.wav"
+alertall "❤连环计" before 2 speak "voice" "连环计"
+alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
+alertall "❤幻光" before 2 sound "SCH-幻光.wav"
+alertall "❤萌光" before 3 sound "SCH-萌光.wav"
+alertall "❤低语" before 3 sound "SCH-低语.wav"
+alertall "❤展开盾" before 3 sound "SCH-展开盾.wav"
+alertall "❤神封" before 1 sound "SCH-神封印.wav"
+alertall "❤不屈" before 1 sound "SCH-不屈.wav"
+
+alertall "❤站姿" before 2 sound "Healer-站姿.wav"
+alertall "❤站姿爆发药" before 2 sound "Healer-站姿爆发药.wav"
+
+#Filter:      (] 14:2...:|282b|00:0044| 03:)
+#Filter2:			(] 14:2...:|282b|00:0044| 03:|:2B5F:|:2B4E:|:2B70:|:2B71:|:2C22:|:2B5A:|:2B4C:|:2B54:)
+#################################################################
+#                  Garuda
+#################################################################
+0	"--Reset--" sync /Removing combatant (Garuda|迦楼罗).  Max HP: 5293335/ window 10000 jump 0
+0	--Start-- sync /Heehee HAHA hahaha HEEHEE haha HEEEEEE|你们这些蝼蚁只有被我的狂风吹散的下场！/ window 9,1
+5 	螺旋气流读条+绿标分摊点名
+8 	螺旋气流判定 sync /(Garuda uses |迦楼罗发动了“) Slipstream/ window 9,1
+11	绿标分摊
+11 	MT回人群集合分摊，之后带去12点躲绿圈
+12	❤低语
+15	❤绿帽战士
+15 	绿圈出现
+19 	羽毛出现（骑士拉走刺羽，开减伤）
+20 	螺旋气流读条
+23 	螺旋气流判定 sync /(Garuda uses |迦楼罗发动了“) Slipstream/ window 9,2
+27 	下行突风顺劈（MT减伤）
+34 	上天
+36	动起来躲羽毛
+38 	集合引导躲开羽毛+刺羽第二层（骑士减伤）
+42 	全屏AOE（击杀刺羽）
+42	❤展开盾
+43	❤不屈
+45	❤幻光
+46 	骑士2层进圈（幕帘、群盾萌光罩子、病毒）
+51 	点名1，全员集合（萌光罩子、病毒）
+53 	奶妈1层进圈（消层数）
+57	❤罩子
+58 	点名2，全员集合（萌光罩子、病毒）
+59	❤萌光
+61 	召唤2层进圈（罩子、翅膀）
+64 	诗人2层进圈（罩子、翅膀）
+72 	动起来躲羽毛
+77 	大气爆发（血仇群盾） sync /(Garuda uses |迦楼罗发动了“)Aerial Blast/ window 50,10
+78	❤低语
+91 	动起来躲羽毛
+92	❤绿帽战士
+97 	12点3点刷双分身。MT拉6点放邪恶风轮
+101		邪恶风轮
+103 	中央分摊
+101		动起来躲羽毛
+102		❤连线战士
+102 	中央两绿圈
+111 	刷柔羽
+118 	接线双分身出现
+121		螺旋气流判定
+124 	双分身伤害判定+死斗下行突风
+128 	动起来躲羽毛
+138 	螺旋气流读条
+141 	螺旋气流判定 sync /(Garuda uses |迦楼罗发动了“) Slipstream/ window 9,1
+148 	邪恶风轮
+151		月环
+153 	下行突风分摊
+154		❤低语
+158 	螺旋气流读条
+161 	螺旋气流判定 sync /(Garuda uses |迦楼罗发动了“) Slipstream/ window 5,2
+173		狂暴
+#################################################################
+#                  Ifrit
+#################################################################
+1000 	p1结束 sync /My power... No...|怎……怎么可能……区区蝼蚁……/ window 1005,5
+1004 	火神冲锋位置出现
+1006 	安全区出现
+1009 	火神冲锋+全屏地火
+1008	❤罩子
+1019 	地狱火炎1（全屏AOE） sync /(Ifrit uses |发动了“) Hellfire/ window 1025,10
+1021 	Boss出现 sync /My flames shall consume thy flesh and soul both/ window 1025,10
+1024 	击退（摆脱群盾）
+1028 	无敌三连喷1
+1030 	三连喷2
+1034 	三连喷3
+1040	❤罩子
+1041	❤幻光
+1042 	火神之楔出现
+1046 	热风转目标读条
+1048 	热风
+1050	❤低语
+1050 	引火1
+1052 	引火2
+1054 	引火3
+1056 	引火4
+1056	❤萌光
+1062 	火神之楔12击杀
+1067 	火神之楔34击杀
+1069 	boss上天
+1072	❤罩子
+1076 	地狱火炎2（全屏AOE） sync /(Ifrit uses |发动了“) Hellfire/ window 30,10
+1085 	热风
+1088 	引火1
+1090 	引火2
+1092 	引火3
+1093 	十字冲位置出现（带往安全区）
+1093	❤绿帽骑士
+1094 	引火4
+1096 	十字冲判定
+1105 	热风 sync /(Ifrit uses |发动了“)Inferno Howl/ window 12,3
+1108	❤连线战士
+1108 	分摊火点名
+1110	❤低语
+1113 	分摊火
+1120 	boss上天，梯形冲位置出现
+1132 	梯形冲结束，boss出现
+1139 	死斗保护三连喷1
+1141 	三连喷2
+1145 	三连喷3
+1148 	引火1
+1151 	引火2
+1153 	引火3
+1155 	引火4
+1157 	分摊火点名
+1162 	分摊火
+1164 	狂暴
+#################################################################
+#                  Titan
+#################################################################
+
+2000 	p2结束 sync /The blessing of Light...defies me!?|祝福光芒……莫非命也……/ window 2005,5
+2006 	中央猛男空降
+2007	❤罩子
+2008 	可选中
+2013 	大地之怒伤害判定 sync /(uses |发动了“)Earthen Fury/ window 2015,5
+2020 	顺劈接掀桌
+2020	❤绿帽战士
+2023 	掀桌 sync /(uses |发动了“)Mountain Buster/ window 2025,10
+2027 	双流沙1判定
+2030 	双流沙2判定
+2030 	转向跳跃
+2035 	猛男空降 sync /uses Geocrush|发动了“大地粉碎”/ window 10,5
+2041	❤低语
+2041 	炸弹出现
+2044 	一杆进洞
+2046 	石牢点名x3
+2050 	冲拳
+2054 	石牢锁人x3
+2054 	冲拳
+2053	❤萌光
+2054	❤罩子
+2056 	8连踩
+2064 	8连踩结束
+2072 	双流沙1判定
+2075 	双流沙2判定
+2076 	双冲拳1
+2079 	双冲拳2
+2082 	转向跳跃
+2087	❤幻光
+2087 	猛男空降 sync /uses Geocrush|发动了“大地粉碎”/ window 30,10
+2090 	石牢点名x1
+2095	❤连线战士
+2097 	石牢锁人x1
+2104 	双冲拳1
+2105	❤罩子
+2106 	双冲拳2
+2106	❤低语
+2109 	8连踩
+2114 	8连踩结束
+2114	❤连线战士
+2117 	顺劈保护掀桌
+2121 	掀桌 sync /(uses |发动了“)Mountain Buster/ window 20,5
+2124 	流沙1在12点引导
+2127 	流沙2在1点引导
+2130 	流沙3在12点引导，躲冲拳
+2133 	双冲拳1
+2136 	双冲拳2
+2141 	死斗顺劈接掀桌
+2145 	掀桌 sync /(uses |发动了“)Mountain Buster/ window 10,3
+2149 	暴击三流沙1
+2152 	三流沙2
+2155 	三流沙3
+2157 	8连踩
+2164	8连踩结束
+2172	狂暴
+2500	p4前吃球提醒 sync /Hie, my children, into the dark! She will not be denied|我的……孩子们……终有一日……/ window 1000,10
+#################################################################
+#                  The Ultima Weapon
+#################################################################
+2968 	吃人啦 sync /See how the Heart of Sabik pulses with primal energy|再次吸取蛮神之力，/ window 3000,5
+2997	❤罩子
+2998	❤站姿爆发药
+3000	❤低语
+3000 	p4开始
+3003	❤绿帽战士
+3003 	AOE（p4）
+3005 	吸附炸弹
+3005	❤连环计
+3013 	死刑（骑士）
+3020	❤展开盾
+3025 	三重奏1 sync /(uses |发动了“)Ultimate Predation/ window 3025,20
+3033	❤罩子
+3034 	第一连
+3039 	第二连
+3044 	羽毛（p4）
+3055	❤绿帽骑士
+3055 	引火1（p4）
+3057 	引火2
+3059 	引火3
+3061 	引火4
+3065 	外场地火
+3065	❤低语
+3067	❤萌光
+3068 	中央岩石炸弹p4
+3073	冲拳1
+3074	❤罩子
+3076 	冲拳2
+3076	❤幻光
+3078 	8连踩
+3080 	吸附炸弹
+#3082	邪恶风轮
+3084 	8连踩结束
+3084	❤不屈
+3087 	AOE（p4）
+3090 	羽毛二连
+3094 	死刑（无敌）
+3102 	三重奏2 sync /(uses |发动了“)Ultimate Annihilation/ window 3105,20
+3108 	三流沙，中央集合
+3113	火分摊
+3114	❤绿帽战士
+3114 	等离子球1
+3114	❤罩子
+3115 	热风转目标读条
+3120 	羽毛（p4）
+3124 	火神冲+双冲拳（暴击）
+3126	❤低语
+3136	AOE（p4）
+3137	羽毛（p4）
+3138	A点集合
+3150	热风消失
+3151	死刑（保护） sync /:2B7B:Homing Lasers:/ window 5,5
+3158	内圈地火
+3164	❤罩子
+3165	顺劈
+3168	击退p4
+3176	死刑（死斗）
+3180	击退p4
+3183	顺劈
+#50血以下直接跳转到第三次运动会
+3187	乱击三重奏读条 sync /14:2D4D:/ window 3195,20
+3192	乱击三重奏 sync /uses Ultimate Suppression/ window 3195,20
+3198	引火1（乱击）
+3208 	羽毛二连
+3211 	羽毛
+3218	❤低语
+3219 	冲拳1
+3221 	冲拳2
+3222 	火分摊（后退一步）
+3224	❤罩子
+3226 	羽毛（p4）
+3227 	AOE（p4） sync /:2B87:Tank Purge:/ window 20,5
+3232	❤萌光
+3233	❤幻光
+3233	❤连环计
+3237	❤吃宝宝
+3241 	究极（p4）
+3244	❤展开盾
+3249	❤绿帽战士
+3249 	撞球击退
+3261 	A点集合2
+3276 	蛮神1登场
+3280	❤罩子
+3282	❤低语
+3283 	吸附炸弹爆炸
+3290	❤连线主T
+3291 	蛮神大招1
+3295	❤不屈
+3303 	吸附炸弹爆炸
+3310 	蛮神大招2
+3313	❤吃宝宝
+3320	❤罩子
+3323 	吸附炸弹爆炸
+3326	❤不屈
+3331 	蛮神大招3
+3333	消失
+3333	召夕月
+3334	❤站姿爆发药
+3336	出现
+3353	❤连环计
+3363 	狂暴开始
