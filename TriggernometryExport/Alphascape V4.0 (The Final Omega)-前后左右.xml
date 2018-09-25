@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder FFXIVJobFilterEnabled="false" FFXIVJobFilter="0" ZoneFilterEnabled="false" EventFilterEnabled="false" Id="e8f542f6-a879-4719-8561-629dc6d12cec" Name="o12s" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Name="左左左" Id="5a3f40de-7134-46a9-9bc6-33dbb30a642b" RegularExpression="starts using Unknown_3364" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+        <Actions>
+          <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="左左左" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+            <Conditions />
+          </Action>
+        </Actions>
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="左右左右" Id="c7fc6257-7ac4-4cec-8545-4bc936b8c2de" RegularExpression="starts using Unknown_3367" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+        <Actions>
+          <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="左右左右" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+            <Conditions />
+          </Action>
+        </Actions>
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="右右右" Id="f78dd54f-11a6-4b51-a9f0-715784366bc9" RegularExpression="starts using Unknown_3365" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+        <Actions>
+          <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="右右右" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+            <Conditions />
+          </Action>
+        </Actions>
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="前后前后" Id="97feb647-2537-4346-b16c-621a17d39b77" RegularExpression="starts using Unknown_3368" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+        <Actions>
+          <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="前后前后" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+            <Conditions />
+          </Action>
+        </Actions>
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
