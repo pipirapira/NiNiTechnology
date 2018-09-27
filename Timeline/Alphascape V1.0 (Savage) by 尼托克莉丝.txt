@@ -40,6 +40,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 #========================水开场时间轴========================
 #                          第一阶段
 #============================================================
+0	--Reset-- sync /04:Removing combatant Chaos.  Max HP: 19751250/ window 10000 jump 0
 100	--水开场--	sync /(正在发动“|readies) Damning Edict/ window 101,10 jump 1000
 200	--火开场-- sync /(正在发动“|readies) (Latitudinal Implosion|Longitudinal Implosion)/ window 201,10 jump 2000
 #========================火开场时间轴========================

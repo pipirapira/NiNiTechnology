@@ -22,29 +22,29 @@ alertall "万变水波读条" before 3 speak "voice" "万变水波"
 alertall "左右斩读条" before 3 speak "voice" "左右斩"
 alertall "小拳拳读条" before 2 speak "voice" "小拳拳"
 alertall "磁极连线" before 4 speak "voice" "磁极，同色远塔，异色近塔"
-alertall "近塔判定+近塔出现" before 2 speak "voice" "踩近塔"
-alertall "远塔判定+远塔出现" before 2 speak "voice" "踩远塔"
-alertall "钢铁战车读条" before 4 speak "voice" "踩近塔，然后钢铁"
-alertall "月环读条" before 4 speak "voice" "踩远塔，然后月环"
+alertall "近塔判定+近塔出现" before 3 speak "voice" "近塔"
+alertall "远塔判定+远塔出现" before 3 speak "voice" "远塔"
+alertall "钢铁战车读条" before 3 speak "voice" "近塔，然后钢铁"
+alertall "月环读条" before 3 speak "voice" "远塔，然后月环"
 alertall "TLB" before 1 speak "voice" "坦克LB"
-alertall "万变水波+火圈读条" before 3 speak "voice" "水波加火圈"
-alertall "ST减血炮" before 6 speak "voice" "二仇死刑"
+alertall "万变水波+火圈读条" before 6 speak "voice" "水波加火圈"
+alertall "ST减血炮" before 7 speak "voice" "二仇死刑"
 alertall "大拳拳读条" before 2 speak "voice" "大拳拳"
 alertall "击退+分摊标记" before 3 speak "voice" "回中央分摊"
-alertall "直线分摊标记" before 2 speak "voice" "集合分摊"
+alertall "直线分摊标记" before 2 speak "voice" "6点分摊"
 alertall "击退+左右斩读条" before 3 speak "voice" "左右斩"
 alertall "二段左右斩" before 3 speak "voice" "二段左右斩"
-alertall "中央炸弹（BC对角右下集合减伤）" before 8 speak "voice" "远离中央，BC角落集合"
+alertall "中央炸弹（BC对角右下集合减伤）" before 8 speak "voice" "远离中央，C点集合"
 alertall "宝宝正义号模式" before 2 speak "voice" "宝宝正义号模式"
-alertall "背后集合流沙逆时针" before 8 speak "voice" "流沙背后集合，逆时针转向"
-alertall "射线点名THDD（十型放置）" before 4 speak "voice" "射线十字"
-alertall "射线点名THDD（×型放置）" before 4 speak "voice" "射线交叉"
-alertall "射线点名DHD（个型放置）" before 4 speak "voice" "射线D奶D"
-alertall "射线点名DHD（个型放置）" before 4 speak "voice" "射线D奶D"
-alertall "强制1血读条" before 3 speak "voice" "无心小天使"
+alertall "背后集合流沙逆时针" before 8 speak "voice" "流沙6点顺时针"
+alertall "背后集合流沙逆时针2" before 8 speak "voice" "流沙12点"
+alertall "射线点名THDD（十型放置）" before 4 speak "voice" "4人射线"
+alertall "射线点名THDD（×型放置）" before 4 speak "voice" "4人射线"
+alertall "射线点名DHD（个型放置）" before 4 speak "voice" "3人射线"
+alertall "强制1血读条" before 3 speak "voice" "无心小天使，奶满副替"
 alertall "3连AOE读条" before 3 speak "voice" "三连AOE"
 alertall "狂暴" before 31 speak "voice" "30秒狂暴"
-alertall "MTST扇形攻击开始（引导至10点2点）" before 4 speak "voice" "大顺劈，人群背后"
+alertall "MTST扇形攻击开始（引导至10点2点）" before 5 speak "voice" "大顺劈，人群背后"
 
 #============================TTS============================
 #右右右：readies Larboard Wave Cannon.
@@ -54,6 +54,7 @@ alertall "MTST扇形攻击开始（引导至10点2点）" before 4 speak "voice"
 #============================================================
 #                          第一阶段
 #============================================================
+0	--Reset-- sync /Removing combatant (Omega|オメガ).  Max HP: 22059570/ window 10000 jump 0
 0 	--Start--	sync /Initiating direct analysis of subject group/ window 10,10
 7 	AOE读条	sync /readies Atomic Ray/ window 10,10
 12 	AOE
@@ -148,7 +149,7 @@ alertall "MTST扇形攻击开始（引导至10点2点）" before 4 speak "voice"
 499 	左右斩1段
 502 	左右斩2段
 512 	宝宝正义号模式	sync /Pantokrator mode reengaged/ window 513,30
-520 	背后集合流沙逆时针
+520 	背后集合流沙逆时针2
 522 	流沙2
 524 	流沙3（大转盘出现）
 526 	流沙4（迅速去转盘方向）

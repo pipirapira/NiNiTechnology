@@ -40,6 +40,7 @@ alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始�
 #============================================================
 #                          第一阶段
 #============================================================
+0	--Reset-- sync /04:Removing combatant Midgardsormr.  Max HP: 19407750/ window 10000 jump 0
 0 	--Start--	sync /I am Midgardsormr/ window 10,10
 15 	动作1	sync /The air about the elder wyrm begins to crackle/ window 16,10
 26 	动作2释放	sync /Midgardsormr unleashes his rage/

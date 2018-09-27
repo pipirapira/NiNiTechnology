@@ -296,14 +296,14 @@ alertall "❤站姿爆发药" before 2 sound "Healer-站姿爆发药.wav"
 2114 	8连踩结束
 2114	❤连线战士
 2117 	顺劈保护掀桌
-2121 	掀桌 sync /(uses |发动了“)Mountain Buster/ window 20,5
+2121 	掀桌 sync /uses Mountain Buster|发动了“山崩”/ window 20,5
 2124 	流沙1在12点引导
 2127 	流沙2在1点引导
 2130 	流沙3在12点引导，躲冲拳
 2133 	双冲拳1
 2136 	双冲拳2
 2141 	死斗顺劈接掀桌
-2145 	掀桌 sync /(uses |发动了“)Mountain Buster/ window 10,3
+2145 	掀桌 sync /uses Mountain Buster|发动了“山崩”/ window 10,3
 2149 	暴击三流沙1
 2152 	三流沙2
 2155 	三流沙3
