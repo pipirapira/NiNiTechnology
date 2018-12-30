@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder FFXIVJobFilterEnabled="false" FFXIVJobFilter="0" ZoneFilterEnabled="false" EventFilterEnabled="false" Id="5e4f62b9-0fef-4f5b-b86b-dfe39173224a" Name="阿尔法" Enabled="true">
+    <Folders>
+      <Folder FFXIVJobFilterEnabled="false" FFXIVJobFilter="0" ZoneFilterEnabled="false" EventFilterEnabled="false" Id="e8f542f6-a879-4719-8561-629dc6d12cec" Name="o12s" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="左左左" Id="5a3f40de-7134-46a9-9bc6-33dbb30a642b" RegularExpression="14:3364" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="左左左" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="左右左右" Id="c7fc6257-7ac4-4cec-8545-4bc936b8c2de" RegularExpression="14:3367" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="左右左右" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="右右右" Id="f78dd54f-11a6-4b51-a9f0-715784366bc9" RegularExpression="14:3365" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="右右右" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="前后前后" Id="97feb647-2537-4346-b16c-621a17d39b77" RegularExpression="14:3368" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="前后前后" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder FFXIVJobFilterEnabled="false" FFXIVJobFilter="0" ZoneFilterEnabled="false" EventFilterEnabled="false" Id="75a7dbaa-5b09-4db3-a2e6-55e30a078814" Name="o10s" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="第一次翻滚" Id="25ccf629-a125-4280-9bc7-558aef30d354" RegularExpression="(Midgardsormr|ミドガルズオルム):31AD:.*?:(Midgardsormr|ミドガルズオルム)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="fisrt_coil" VariableExpression="1" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="第一次盘旋" Id="9e919b35-2068-41ab-ad07-ecec8c5d62ee" RegularExpression="(Midgardsormr|ミドガルズオルム):31AC:.*?:(Midgardsormr|ミドガルズオルム)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="first_hover" VariableExpression="1" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="盘旋-翻滚" Id="b47bb6a8-44d2-4a01-929d-0938f7713e39" RegularExpression="(Midgardsormr|ミドガルズオルム):31B0:.*?:(Midgardsormr|ミドガルズオルム)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="月环靠近" UseTTSVolumeExpression="100" UseTTSRateExpression="2" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="1000" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="fisrt_coil" VariableExpression="0" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="3" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="first_hover" VariableExpression="0" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions>
+              <Condition OrderNumber="1" ExpressionL="${var:first_hover}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" Enabled="true" />
+            </Conditions>
+          </Trigger>
+          <Trigger Enabled="true" Name="翻滚-盘旋" Id="9a964c03-9e08-40b7-b7d0-ca659c46876b" RegularExpression="(Midgardsormr|ミドガルズオルム):31AE:.*?:(Midgardsormr|ミドガルズオルム)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="正点安全" UseTTSVolumeExpression="100" UseTTSRateExpression="2" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="1000" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="fisrt_coil" VariableExpression="0" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="3" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="first_hover" VariableExpression="0" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions>
+              <Condition OrderNumber="1" ExpressionL="${var:fisrt_coil}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" Enabled="true" />
+            </Conditions>
+          </Trigger>
+          <Trigger Enabled="true" Name="初始化参数" Id="8e0d5149-f054-4e5b-9811-70b4c6520069" RegularExpression="0039:(战斗开始|Engage)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" VariableName="fisrt_coil" VariableExpression="0" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" VariableName="first_hover" VariableExpression="0" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="死刑" Id="6fcb06c8-b372-4430-9d5c-46e4d065269c" RegularExpression="14:31AA" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="死刑" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="翻滚-翻滚" Id="20dd3689-e0e9-4758-9bff-9c54f5657a35" RegularExpression="(Midgardsormr|ミドガルズオルム):31B0:.*?:(Midgardsormr|ミドガルズオルム)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="四角安全" UseTTSVolumeExpression="100" UseTTSRateExpression="2" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="1000" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="fisrt_coil" VariableExpression="0" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="3" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="first_hover" VariableExpression="0" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions>
+              <Condition OrderNumber="1" ExpressionL="${var:fisrt_coil}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" Enabled="true" />
+            </Conditions>
+          </Trigger>
+          <Trigger Enabled="true" Name="盘旋-盘旋" Id="b44e454a-f07b-46e7-8864-4386a4406e2f" RegularExpression="(Midgardsormr|ミドガルズオルム):31AE:.*?:(Midgardsormr|ミドガルズオルム)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="钢铁远离" UseTTSVolumeExpression="100" UseTTSRateExpression="2" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="1000" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="fisrt_coil" VariableExpression="0" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="3" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="Variable" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="SetNumeric" VariableName="first_hover" VariableExpression="0" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions>
+              <Condition OrderNumber="1" ExpressionL="${var:first_hover}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" Enabled="true" />
+            </Conditions>
+          </Trigger>
+          <Trigger Enabled="false" Name="龙息点名" Id="178e5e5b-ea41-41bf-a3a4-04b1efd931d4" RegularExpression="^\[..:..:..\....\] 1B:.+:(?&lt;RoleName&gt;[^.]*):0000:.+:0017:0000:0000:0000:" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="true" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="标记点名" UseTTSVolumeExpression="100" UseTTSRateExpression="0" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions>
+              <Condition OrderNumber="1" ExpressionL="${RoleName}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="RegexMatch" Enabled="true" />
+            </Conditions>
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder FFXIVJobFilterEnabled="false" FFXIVJobFilter="0" ZoneFilterEnabled="false" EventFilterEnabled="false" Id="11861fd1-1b3f-4ba5-a7fc-b507d4e0c2ff" Name="o11s" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="右右右" Id="7b98571e-afc3-43d6-862e-12eecd322a2b" RegularExpression="14:(3264|3265|3283|3284)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="右右右" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="左左左x2" Id="abf385dd-4dd7-415b-abb7-8a9a71c68da1" RegularExpression="14:(3266|3267)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="左左左" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="4000" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="左左左" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="??" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="左左左" Id="2548dd7e-5667-445c-8164-f3718c9c8405" RegularExpression="14:(3262|3263|3281|3282)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="左左左" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="右右右x2" Id="2d2b0ebb-04c3-47c1-aeed-df10cae8759f" RegularExpression="14:(3268|3269)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="右右右" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+              <Action DiscordTts="false" OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="4000" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="右右右" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="??" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder FFXIVJobFilterEnabled="false" FFXIVJobFilter="0" ZoneFilterEnabled="false" EventFilterEnabled="false" Id="b907f4a6-1e61-4233-acc4-73547b31f7f1" Name="o9s" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="前后前后" Id="3efdbc39-3bdf-473f-84bd-432774033f95" RegularExpression="14:(3152|3173)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="前后前后" UseTTSVolumeExpression="100" UseTTSRateExpression="2" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="左右左右" Id="454b2248-0192-496d-b63e-b0890b527e47" RegularExpression="14:(3172|3151)" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Allow" RefirePeriodExpression="0">
+            <Actions>
+              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="左右左右" UseTTSVolumeExpression="100" UseTTSRateExpression="2" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
+                <Conditions />
+              </Action>
+            </Actions>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>
