@@ -16,8 +16,8 @@ define speaker "voice" "Microsoft Huihui Desktop" 2 100
 #define speaker "voice" "Microsoft Lili" 0 100
 
 
-alertall "动作1" before 5 speak "voice" "动作1"
-alertall "动作2释放" before 5 speak "voice" "动作2"
+alertall "动作1" before 6 speak "voice" "动作1"
+alertall "动作2释放" before 6 speak "voice" "动作2"
 alertall "死亡轮回读条" before 3 speak "voice" "分摊"
 alertall "死亡轮回读条（狂暴）" before 4 speak "voice" "狂暴死亡轮回"
 alertall "死刑读条" before 2 speak "voice" "死刑"
@@ -70,17 +70,23 @@ alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始�
 #============================================================
 199 	p2小怪阶段	sync /Come forth, my child!/ window 200,10
 202 	古龙出现	
-212 	顺劈	
-214 	读条AOE	sync /readies Rime Wreath/ window 214,0
-217 	AOE	
-222 	顺劈	
-232 	顺劈	
-236 	AOE	
-242 	顺劈	
+213 	顺劈	
+216 	读条AOE	sync /readies Rime Wreath/ window 214,0
+219 	AOE	
+223 	顺劈	
+234 	顺劈	
+238 	AOE	
+#235	AOE
+#237	顺劈
+247 	顺劈	
 251 	AOE	
-253 	顺劈	
-200 	小龙击杀AOE	sync /readies Dark Wave/ window 201,10
+#257 	顺劈	
+#267	AOE
+264 	小龙击杀AOE	sync /readies Dark Wave/ window 201,10
 265 	白圈出现	
+279		原恒星1
+280		原恒星2
+281		原恒星3
 #============================================================
 #                          第三阶段
 #============================================================

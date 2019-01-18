@@ -8,12 +8,12 @@
 #  有效性：目前仅EN客户端有效
 ################## Windows 8 & 10 音效 #################
 #删去前方的#标签来选择声音
-define speaker "voice" "Microsoft Huihui Desktop" 2 100
+#define speaker "voice" "Microsoft Huihui Desktop" 2 100
 #define speaker "voice" "Microsoft Hanhan Desktop" 2 100
 
 #################### Windows 7 音效 ####################
 #删去前方的#标签来选择声音
-#define speaker "voice" "Microsoft Lili" 0 100
+define speaker "voice" "Microsoft Lili" 0 100
 
 
 alertall "开场读条MT易伤" before 0 speak "voice" "易伤死刑"
@@ -24,16 +24,15 @@ alertall "【处理】连线2" before 2 speak "voice" "2"
 alertall "【处理】连线3" before 2 speak "voice" "3"
 alertall "【处理】连线4" before 2 speak "voice" "4"
 alertall "读条方向波动炮" before 2 speak "voice" "方向炮"
-alertall "读条双死刑" before 3 speak "voice" "双替死刑"
+alertall "读条双死刑" before 3 speak "voice" "双死刑"
 
-alertall "读条高伤AOE" before 3 speak "voice" "制裁之光"
+alertall "读条高伤AOE" before 3 speak "voice" "制裁"
 
 #alertall "地震AOE" before 5 speak "voice" "AOE"
-alertall "流沙集合引导" before 7 speak "voice" "流沙集合"
-#alertall "散开+分摊" before 7 speak "voice" "散开加分摊"
+alertall "流沙集合引导" before 7 speak "voice" "流沙"
+#alertall "散开+分摊" before 7 speak "voice" "散开分摊"
 
 alertall "读条HelloWorld" before 5 speak "voice" "Hello World，幕帘摆脱"
-alertall "全屏漏洞" before 5 speak "voice" "致命buff出现"
 alertall "读条转向浮游炮" before 6 speak "voice" "转向浮游炮"
 alertall "读条衰减浮游炮" before 6 speak "voice" "衰减浮游炮"
 alertall "读条自爆浮游炮" before 6 speak "voice" "自爆浮游炮"
@@ -41,7 +40,7 @@ alertall "读条自爆浮游炮" before 6 speak "voice" "自爆浮游炮"
 #alertall "读条波动炮" before 3 speak "voice" "波动炮"
 alertall "分摊组接毒" before 2 speak "voice" "分摊接毒"
 alertall "踩塔+致命错误buff出现" before 4 speak "voice" "踩塔"
-
+#alertall "踩塔+致命错误buff出现" before 0 speak "voice" "走"
 alertall "软狂暴开始" before 0 speak "voice" "60秒狂暴"
 alertall "软狂暴AOE1" before 16 speak "voice" "学者罩子"
 alertall "软狂暴AOE1" before 6 speak "voice" "骑士血仇"
@@ -52,160 +51,245 @@ alertall "软狂暴AOE4" before 15 speak "voice" "学者罩子"
 alertall "软狂暴AOE4" before 7 speak "voice" "战士摆脱"
 alertall "软狂暴AOE4" before 0 speak "voice" "10秒狂暴"
 
+alertall "■摆脱" before 3 speak "voice" "摆脱"
+alertall "■幕帘" before 3 speak "voice" "幕帘"
+alertall "■摆脱幕帘" before 3 speak "voice" "摆脱幕帘"
 #alertall "❤光速" before 2 sound "AST-光速.wav"
 #alertall "❤地星准备" before 2 sound "AST-地星准备.wav"
 #alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 #alertall "❤天星" before 1 sound "AST-天星.wav"
-#============================TTS============================
-#TTS: starts using Unknown_3367 on Omega 前后波动炮
-#     Omega starts using Unknown_3368 on Omega. 左右波动炮
+#alertall "❤光速天星" before 1 sound "AST-光速天星.wav"
+#alertall "❤慈爱医济" before 1 sound "AST-慈爱医济.wav"
+#alertall "❤不屈" before 1 sound "SCH-不屈.wav"
+alertall "❤学者以眼还眼" before 1 speak "voice" "学者以眼环眼"
+alertall "❤占星以眼还眼" before 1 speak "voice" "占星以眼环眼"
+alertall "▲龙骑牵制" before 1 speak "voice" "龙骑牵制"
+alertall "▲忍者牵制" before 1 speak "voice" "忍者牵制"
 
+#alertall "❤站姿爆发药" before 2 sound "Healer-站姿爆发药.wav"
+
+#============================TTS============================
+#TTS: 14:3367 前后波动炮
+#			14:3368 左右波动炮
+#		  14:3365	左死刑
+#			14:3364	右死刑
 #============================================================
 #                          第一阶段
 #============================================================
-0	--Reset-- sync /04:Removing combatant Omega.  Max HP: 26425455/ window 10000 jump 0
+0	--Reset-- sync /04:Removing combatant (Omega|オメガ|欧米茄).  Max HP: 26425455/ window 10000 jump 0
 0 	--Start--	sync /I am the Omega and the Alpha/ window 10,10
-10 	开场读条MT易伤	sync /readies Target Analysis/ window 11,10
+#0		❤开场醒梦天星
+10 	开场读条MT易伤	sync /14:336C/ window 11,10
 16 	MT易伤	
-18 	死斗死刑	
-22 	读条拉线	sync /readies Patch/ window 23,10
+17	❤地星准备
+18 	死斗死刑
+19	❤先天
+22 	读条拉线	sync /14:3376/ window 23,10
 26 	4组连线出现	
+#以眼还眼覆盖检索死刑+Efflux
+27	❤占星以眼还眼
 29 	【处理】连线1	
-28 	读条方向波动炮	sync /readies Diffuse Wave Cannon/ window 10,10
-29	❤地星准备
+28 	读条方向波动炮
 34 	方向波动炮判定	
 35 	【处理】连线2	
-36 	读条双死刑	sync /readies Oversampled Wave Cannon/ window 10,10
-42 	双死刑	
+#绿帽MT
+36 	读条双死刑
+42 	双死刑
 43 	【处理】连线3
+43	❤不屈
+46	❤光速
 47 	【处理】连线4
-47 	读条高伤AOE	sync /readies Ion Efflux/ window 30,10
-54 	高伤AOE	
+47 	读条高伤AOE	sync /14:3357/ window 30,10
+47	❤慈爱
+52	❤罩子
+53	❤天星
+54 	高伤AOE
 #============================================================
 #                      Hello World I
+#第一个大圈T受到124伤害，第二个大圈T受到3伤害之后挑衅boss
 #============================================================
-62 	读条HelloWorld	sync /hELLo, WOrlD/ window 70,10
-63	❤罩子
-65	❤天星
-68 	Buff出现	
+62 	读条HelloWorld	sync /14:336E/ window 70,10
+68 	Buff出现
 77 	溢出T+同步1
+88	❤地星准备
+80	❤先天
 81 	同步2
+#绿帽ST
 84 	溢出传染THD+同步1传染
-90	❤地星准备
 89 	同步2传染
-90 	读条致命错误	sync /readies Critical Error/ window 10,10
+90 	读条致命错误	sync /14:337E/ window 10,10
+91	❤不屈
 93 	溢出传染D	
+94	❤即刻阳星
 96 	致命buff出现
 104 	致命判定DHD
-105 	读条高伤AOE	sync /readies Ion Efflux/ window 30,10
+107		阳星
+105 	读条高伤AOE	sync /14:3357/ window 30,10
 112 	高伤AOE
-118 	读条转向浮游炮	sync /readies Archive Peripheral/ window 10,10
+#============================================================
+#                          浮游炮循环1
+#============================================================
+118 	读条转向浮游炮	sync /14:339A/ window 10,10
+#绿帽MT
+125		▲龙骑牵制
+128		❤先天
 128 	浮游炮构型可见
 138 	浮游炮判定
-138 	读条MT易伤	sync /readies Target Analysis/ window 10,10
+138 	读条MT易伤	sync /14:336C/ window 10,10
+142		❤学者以眼还眼
 144 	MT易伤	
+144		❤慈爱医济
 147 	分摊死刑	
-153 	读条方向波动炮	sync /readies Diffuse Wave Cannon/ window 10,10
+149		❤MT再生
+150		❤地星准备
+153 	读条方向波动炮
 159 	方向波动炮判定	
-162 	读条双死刑	sync /readies Oversampled Wave Cannon/ window 10,10
-162		❤罩子
-167 	双死刑	
-174		❤地星准备
-176 	读条衰减浮游炮	sync /readies Index and Archive Peripheral/ window 10,10
-186 	读条波动炮	sync /readies Wave Cannon/ window 10,10
-197 	读条MT易伤	sync /readies Target Analysis/ window 10,10
-200		❤天星
+162 	读条双死刑
+167 	双死刑
+#绿帽MT
+170		❤先天
+176 	读条衰减浮游炮	sync /14:336A/ window 10,10
+176		❤罩子
+177		❤光速天星
+185		❤即刻
+185		■摆脱幕帘
+195		衰减浮游炮判定
+197 	读条MT易伤	sync /14:336C/ window 10,10
+200		❤不屈
 203 	MT易伤	
 206 	死斗死刑
-227 	读条拉线	sync /readies Patch/ window 150,10
+209		▲忍者牵制
+216		❤先天
+225		❤地星准备
+227 	读条拉线	sync /14:3376/ window 150,10
 231 	4组连线出现	
-232 	读条方向波动炮	sync /readies Diffuse Wave Cannon/ window 10,10
+232 	读条方向波动炮
+232		❤占星以眼还眼
 234 	【处理】连线1	
-236		❤地星准备
+#绿帽MT
 239 	方向波动炮判定	
 239 	【处理】连线2	
-241 	读条双死刑	sync /readies Oversampled Wave Cannon/ window 10,10
-246 	双死刑	
+241 	读条双死刑
+245		❤慈爱医济
+246 	双死刑
 247 	【处理】连线3	
+247		❤不屈
+247		▲龙骑牵制
+248		❤MT再生
 252 	【处理】连线4	
-252 	读条高伤AOE	sync /readies Ion Efflux/ window 30,10
+252 	读条高伤AOE	sync /14:3357/ window 30,10
 258 	高伤AOE	
-262 	读条自爆浮游炮	sync /readies Archive All/ window 30,10
+262 	读条自爆浮游炮	sync /14:335D/ window 30,10
+264		❤两口阳星
 272 	浮游炮可选中	
+275		❤即刻医济
 280 	地震AOE	
-286 	流沙集合引导	
+286		❤地星准备
+286 	流沙集合引导
 290 	散开+分摊	
-295 	浮游炮自爆	
-298 	读条方向波动炮	sync /readies Diffuse Wave Cannon/ window 10,10
+295 	浮游炮自爆
+294		❤先天
+#绿帽MT
+298 	读条方向波动炮
 304 	方向波动炮判定	
 #============================================================
 #                      Hello World II
 #============================================================
-318 	读条HelloWorld	sync /readies Hello, World/ window 200,10
-319		❤地星准备
-320		❤罩子
-324		❤天星
+318 	读条HelloWorld	sync /14:336E/ window 200,10
+317		❤罩子
+318		❤光速天星
 325 	Buff出现	
+#绿帽	
 333 	溢出T+分摊1左
 338 	分摊2右
+339		❤即刻医济
 341 	分摊3左+3个传染大圈判定
 343 	分摊组接毒
+347		❤地星准备
 346 	分摊4右
+350		❤阳星
 353 	踩塔+致命错误buff出现
 361 	致命错误传染大圈判定	
-362 	读条高伤AOE	sync /readies Ion Efflux/ window 30,10
+362 	读条高伤AOE	sync /14:3357/ window 30,10
 370 	高伤AOE	
-375 	读条转向浮游炮	sync /readies Archive Peripheral/ window 10,10
-386 	浮游炮构型可见	
-396 	读条MT易伤	sync /readies Target Analysis/ window 10,10
+373		❤先天
+#============================================================
+#                          浮游炮循环2
+#============================================================
+375 	读条转向浮游炮	sync /14:339A/ window 10,10
+378		❤MT再生
+385		❤先天
+384		▲龙骑牵制
+386 	浮游炮构型可见
+396 	读条MT易伤	sync /14:336C/ window 10,10
+399		❤学者以眼还眼
 402 	MT易伤	
-404 	分摊死刑	
-411 	读条方向波动炮	sync /readies Diffuse Wave Cannon/ window 10,10
+403		❤即刻
+407		❤慈爱医济
+407		❤MT再生
+408		❤地星准备
+411 	读条方向波动炮
 416 	方向波动炮判定	
-419 	读条双死刑	sync /readies Oversampled Wave Cannon/ window 10,10
-420		❤罩子
-424 	双死刑	
-434 	读条衰减浮游炮	sync /readies Index and Archive Peripheral/ window 10,10
-444 	读条波动炮	sync /readies Wave Cannon/ window 10,10
-445		❤天星
-456 	读条MT易伤	sync /readies Target Analysis/ window 10,10
+419 	读条双死刑
+421		❤先天
+#绿帽MT
+424 	双死刑
+434 	读条衰减浮游炮	sync /14:336A/ window 10,10
+434		❤罩子
+435		❤光速天星
+444 	读条波动炮
+445		■摆脱
+454		衰减浮游炮判定
+456 	读条MT易伤	sync /14:336C/ window 10,10
+459		❤不屈
 462 	MT易伤	
 464 	分摊死刑	
-485 	读条拉线	sync /readies Patch/ window 10,10
+467		▲忍者牵制
+475		❤即刻
+482		❤地星准备
+485 	读条拉线	sync /14:3376/ window 10,10
+#绿帽MT
+486		❤先天
 490 	4组连线出现	
-491 	读条方向波动炮	sync /readies Diffuse Wave Cannon/ window 10,10
+491 	读条方向波动炮
+491		❤占星以眼还眼
 493 	【处理】连线1	
-494		❤地星准备
 497 	方向波动炮判定	
 499 	【处理】连线2	
-500 	读条双死刑	sync /readies Oversampled Wave Cannon/ window 10,10
+500 	读条双死刑
+500		■幕帘
 505 	双死刑	
 506 	【处理】连线3
+506		❤不屈
+506	▲龙骑牵制
 510 	【处理】连线4
-511 	读条高伤AOE	sync /readies Ion Efflux/ window 30,10
-512		❤罩子
-517 	高伤AOE	
-521 	读条自爆浮游炮	sync /readies Archive All/ window 30,10
+500		❤站姿爆发药
+511 	读条高伤AOE	sync /14:3357/ window 30,10
+517 	高伤AOE
+521 	读条自爆浮游炮	sync /14:335D/ window 30,10
 531 	浮游炮可选中	
+544		❤即刻医济
+545		❤罩子
 549 	地震AOE	
 544 	流沙集合引导	
+539		■摆脱
 549 	散开+分摊	
-553 	浮游炮自爆	
-558 	读条方向波动炮	sync /readies Diffuse Wave Cannon/ window 10,10
+550		❤先天
+553 	浮游炮自爆
+558 	读条方向波动炮
 563 	方向波动炮判定	
-577 	软狂暴开始	sync /readies Program Omega/ window 578,10
+577 	软狂暴开始	sync /14:360A/ window 578,10
 584 	地震AOE1	
-586 	5连小AOE	sync /readies Ion Efflux/ window 5,5
-
+586 	5连小AOE	sync /14:35E1/ window 5,5
 594 	软狂暴AOE1
-598 	地震AOE2	sync /readies Ion Efflux/ window 5,5
+598 	地震AOE2
 598		❤地星准备
 602		❤罩子
 606 	软狂暴AOE2
 606		❤天星
-610 	地震AOE3	sync /readies Ion Efflux/ window 5,5
+610 	地震AOE3
 618 	软狂暴AOE3
-622 	地震AOE4	sync /readies Ion Efflux/ window 5,5
+622 	地震AOE4
 630 	软狂暴AOE4
-632 	狂暴读条10秒	sync /readies Ion Efflux/ window 5,5
+632 	狂暴读条10秒	sync /14:337C/ window 5,5
 642 	狂暴

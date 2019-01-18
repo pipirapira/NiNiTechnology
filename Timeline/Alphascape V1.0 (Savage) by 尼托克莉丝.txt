@@ -37,6 +37,12 @@ alertall "治疗陨石" before 8 speak "voice" "治疗陨石"
 alertall "浮游炮" before 7 speak "voice" "浮游炮"
 alertall "岩咚" before 6 speak "voice" "岩咚"
 alertall "火圈击退散开" before 4 speak "voice" "散开"
+
+alertall "❤光速" before 2 sound "AST-光速.wav"
+alertall "❤地星准备" before 2 sound "AST-地星准备.wav"
+alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
+alertall "❤天星" before 1 sound "AST-天星.wav"
+
 #========================水开场时间轴========================
 #                          第一阶段
 #============================================================
@@ -57,6 +63,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 1045	火圈击退散开
 1057	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 58,10
 1063	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 38,10
+1049	❤地星准备
 1068	火AOE	
 1069	(buff)击退火圈buff
 1079  火圈击退散开
@@ -65,11 +72,14 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 1098	岩咚
 1101	连线小球出现	sync /Added new combatant Chaosphere/ window 102,10
 1107	浮游炮	
+1109	❤地星准备
 1123	(读条)风AOE	sync /(正在发动“|readies) Cyclone/ window 124,10
 1123	(信息_123)	sync /00:0044:Despair at your hollow fate! The winds will strip away your skin!/ window 124,60
 1129	(buff)顺逆风buff	
+1140	❤光速
 1142	超级跳跃	
 1151	半场攻击	
+1170	❤地星准备
 1170	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 102,10
 1176	(读条)风AOE	sync /(正在发动“|readies) Cyclone/ window 41,10
 1181	(buff)顺逆风buff
@@ -77,6 +87,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 1200	岩咚
 1203	连线小球出现	sync /Added new combatant Chaosphere/ window 92,10
 1213	接线	
+1231	❤地星准备
 1232	(信息_231)	sync /00:0044:Tremble before the might of a god!/ window 233,60
 1237	(buff)T奶风水dps火土	
 1238	风水火土站位	sync /(发动了“|uses|casts) Bowels of Agony/ window 239,10
@@ -92,6 +103,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 #============================================================
 #                          第三阶段
 #============================================================
+1291	❤地星准备
 1299	随机前后左右攻击	
 1307	(信息_307)	sync /00:0044:Scurry and flail, little mortals! The raging tide will claim you all!/ window 308,60
 1308	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 309,10
@@ -99,6 +111,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 1323	超级跳跃	
 1332	半场攻击
 1351	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 170,10
+1352	❤地星准备
 1357	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 38,10
 1362	(buff)环形水圈buff
 1373	治疗陨石
@@ -107,12 +120,15 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 1392	接线
 1408	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 409,10
 1408	(信息_407)	sync /00:0044:Hark, wretched creatures! The earth itself rumbles of your doom!/ window 409,60
+1412	❤地星准备
 1415	(buff)死超或无心
 1427	随机前后左右攻击	
 1446	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 85,10
+1452	❤光速
 1452	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 34,10
 1459	(buff)死超或无心
 1470	击退分摊
+1473	❤地星准备
 1475	岩咚
 1478	连线小球出现	sync /Added new combatant Chaosphere/ window 85,10
 1485	浮游炮
@@ -138,6 +154,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 2020	(buff)环形水圈buff	
 2030	超级跳跃	
 2039	半场攻击	
+2049	❤地星准备
 2057	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 58,10
 2063	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 38,10
 2069	(buff)环形水圈buff	
@@ -145,13 +162,16 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 2086	岩咚	
 2089	连线小球出现	sync /Added new combatant Chaosphere/ window 90,10
 2098	接线	
+2110	❤地星准备
 2114	(信息_114)	sync /00:0044:Hark, wretched creatures! The earth itself rumbles of your doom!/ window 115,60
 2114	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 115,10
 2121	(buff)死超或无心	
 2134	随机前后左右攻击	
 2153	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 85,10
+2159	❤光速
 2159	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 34,10
 2166	(buff)死超或无心	
+2171	❤地星准备
 2177	击退分摊
 2182	岩咚
 2185	连线小球出现	sync /Added new combatant Chaosphere/ window 85,10
@@ -165,6 +185,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 #                          第二阶段		
 #============================================================		
 2223	小球刷新(dps检测)	sync /Added new combatant Dark Crystal/ window 224,10
+2232	❤地星准备
 2254	(信息_253)	sync /00:0044:The crystal...destroyed!? YOU DARE!/ window 255,60
 2260	转阶段AOE	sync /(发动了“|uses|casts) Soul of Chaos/ window 261,10
 
@@ -179,6 +200,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 2309	火圈击退散开
 2316	随机前后左右攻击	
 2324	火圈击退散开
+2328	❤地星准备
 2335	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 171,10
 2341	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 37,10
 2347	火AOE	
@@ -189,12 +211,15 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 2376	岩咚	
 2380	连线小球出现	sync /Added new combatant Chaosphere/ window 184,10
 2386	浮游炮
+2389	❤地星准备
 2402	(读条)风AOE	sync /(正在发动“|readies) Cyclone/ window 403,10
 2402	(信息_401)	sync /00:0044:Despair at your hollow fate! The winds will strip away your skin!/ window 403,60
 2408	(buff)顺逆风buff	
+2418	❤光速
 2420	超级跳跃
 2430	半场攻击
 2448	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 102,10
+2450	❤地星准备
 2454	(读条)风AOE	sync /(正在发动“|readies) Cyclone/ window 41,10
 2460	(buff)顺逆风buff	
 2472	治疗陨石
@@ -202,6 +227,7 @@ alertall "火圈击退散开" before 4 speak "voice" "散开"
 2482	连线小球出现	sync /Added new combatant Chaosphere/ window 91,10
 2491	接线	
 2507	(信息_507)	sync /00:0044:Abandon this feeble hope. None may rise above me!/ window 508,60
+2511	❤地星准备
 2511	(读条)火AOE	
 2521	火AOE	
 2522	(buff)击退火圈buff	

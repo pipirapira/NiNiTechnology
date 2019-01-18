@@ -8,12 +8,12 @@
 #  有效性：目前仅EN客户端有效
 ################## Windows 8 & 10 音效 #################
 #删去前方的#标签来选择声音
-define speaker "voice" "Microsoft Huihui Desktop" 2 100
+#define speaker "voice" "Microsoft Huihui Desktop" 2 100
 #define speaker "voice" "Microsoft Hanhan Desktop" 2 100
 
 #################### Windows 7 音效 ####################
 #删去前方的#标签来选择声音
-#define speaker "voice" "Microsoft Lili" 0 100
+define speaker "voice" "Microsoft Lili" 0 100
 
 
 alertall "跳斩" before 5 speak "voice" "跳斩，然后分摊"
@@ -22,7 +22,7 @@ alertall "T带回中央" before 5 speak "voice" "回中央"
 alertall "散开爆炎" before 8 speak "voice" "散开爆炎"
 alertall "双分摊标记出现" before 5 speak "voice" "双分摊"
 alertall "F击退+M钢铁" before 5 speak "voice" "击退钢铁"
-alertall "(Buff)靠近或远离" before 2 speak "voice" "带位置"
+alertall "(Buff)靠近或远离" before 4 speak "voice" "带位置"
 alertall "读条Fundamental_Synergy" before 3 speak "voice" "极限切割"
 
 alertall "读条AOE" before 3 speak "voice" "AOE"
@@ -48,95 +48,121 @@ alertall "读条双重剑舞" before 5 speak "voice" "圣光剑舞，准备无�
 alertall "350度攻击" before 6 speak "voice" "背后"
 alertall "F350度攻击" before 6 speak "voice" "女人背后"
 alertall "狂暴" before 10 speak "voice" "10秒狂暴"
-#============================TTS============================
-#TTS:
-#
+alertall "■摆脱" before 3 speak "voice" "摆脱"
+alertall "■幕帘" before 3 speak "voice" "幕帘"
+alertall "■摆脱幕帘" before 3 speak "voice" "摆脱幕帘"
+#alertall "❤光速" before 2 sound "AST-光速.wav"
+#alertall "❤地星准备" before 2 sound "AST-地星准备.wav"
+#alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
+#alertall "❤天星" before 1 sound "AST-天星.wav"
+#alertall "▲牵制" before 1 speak "voice" "牵制"
 #============================================================
 #                          第一阶段
 #============================================================
-0	--Reset-- sync /Removing combatant Omega.  Max HP: 26425455/ window 10000 jump 0
-0 	--Start--	sync /I am the Omega and the Alpha/ window 10,10
+0	--Reset-- sync /Removing combatant (Omega|欧米茄).  Max HP: 26425455/ window 10000 jump 0
+0 	--Start--	sync /I am the Omega and the Alpha|我既是欧米茄，又是阿尔法/ window 10,10
 16 	开场读条Suppression	sync /readies Suppression/ window 10,10
+#19	❤地星准备
+18	▲牵制
 21 	读条Beyond_Defense	sync /readies Beyond Defense/ window 21,10
 26 	眼睛直线激光	
 27 	跳斩	
-31 	分摊	
+31 	分摊
 47 	读条Subject_Simulation_F	sync /Assessing influence of physical structure on combat/ window 50,10
+51	■摆脱
+#59	❤罩子
 63 	击退
 65	T带回中央
+65	■幕帘
 #带回中央
 72 	读条Synthetic_Blades	
 79 	读条Advanced_Suppression回中央	
+77	❤地星准备
 85 	读条Superliminal_Motion	
 89 	350度攻击
+89	❤罩子
 89	眼睛扇形激光	
 92 	散开爆炎	
-101 	读条Subject_Simulation_M	sync /Diverting energy to party member generation/ window 110,10
+101 	读条Subject_Simulation_M	sync /Diverting energy to party member generation|开始检测职能分担在战斗中的有效性/ window 110,10
 109 	双分摊标记出现	
-116 	分摊判定	
+116 	分摊判定
+118		❤光速
+120		❤天星
 124 	F击退+M钢铁	
-129 	读条Firewall	sync /readies Firewall/ window 130,10
+129 	读条Firewall	sync /readies Firewall|正在发动“防御程序/ window 130,10
 133 	(Buff)Packet_Filter_F&M
-139 	读条Resonance	sync /readies Resonance/
+139 	读条Resonance	sync /readies Resonance|正在发动“共鸣/
 #看眼睛带位置
-143 	(Buff)靠近或远离	
+138		❤地星准备
+143 	(Buff)靠近或远离
+#149		❤罩子	
 151 	读条Fundamental_Synergy	sync /readies Fundamental Synergy/ window 152,10
 157 	极限切割点名出现	
 165 	冲锋1	
 168 	眼睛扇形激光	
 170 	冲锋4	
-177 	读条AOE	sync /readies Laser Shower/ window 10,10
+177 	读条AOE	sync /readies Laser Shower|正在发动“激光骤雨/ window 10,10
 182 	AOE	
 186 	读条死刑	sync /readies Solar Ray/ window 10,10
 191 	死刑
 200		随机剑盾
-300		读条剑	sync /readies Synthetic Blades/ window 110,20 jump 1200
-400		读条盾	sync /readies Synthetic Shield/ window 210,20 jump 2200
+300		读条剑	sync /readies Synthetic Blades|正在发动“合成剑/ window 110,20 jump 1200
+400		读条盾	sync /readies Synthetic Shield|正在发动“合成盾/ window 210,20 jump 2200
 
 #============================================================
 #                          先剑后盾
 #============================================================
 1200 	读条剑
+1202	❤地星准备
 1208 	读条运动会	sync /readies Operational Synergy/ window 10,10
 1218 	F左右范围攻击
-1221 	F十字+M分摊	
-1227 	F350度攻击	
-1231 	爆炎散开+M钢铁	
-1236 	读条AOE	sync /readies Laser Shower/ window 10,10
+1221 	F十字+M分摊
+1227 	F350度攻击
+1228	❤光速
+1231 	爆炎散开+M钢铁
+1236 	读条AOE	sync /readies Laser Shower|正在发动“激光骤雨/ window 10,10
+1240	❤罩子
 1241 	AOE	
+1241	❤天星
 1249 	读条Firewall	sync /readies Firewall/ window 10,10
 1253 	(Buff)Packet_Filter_F&M	
 1259 	读条Resonance	sync /readies Resonance/ window 10,10
 #看眼睛带位置
-1263 	(Buff)靠近或远离	
+1263	❤地星准备
+1263 	(Buff)靠近或远离
 1271 	读条Fundamental_Synergy	sync /readies Fundamental Synergy/ window 50,10
 1276 	极限切割点名出现	
 1286 	冲锋开始	
 1287 	眼睛扇形激光	
 1290 	冲锋结束	
-1297 	读条AOE	sync /readies Laser Shower/ window 10,10
+1297 	读条AOE	sync /readies Laser Shower|正在发动“激光骤雨/ window 10,10
 1302 	AOE	
 1305 	读条死刑	sync /readies Solar Ray/ window 10,10
 1311 	死刑	
 #=======================运动会2===========================
-1319 	读条盾	sync /readies Synthetic Shield/ window 50,10
+1319 	读条盾	sync /readies Synthetic Shield|正在发动“合成盾/ window 50,10
+1325	❤地星准备
 1327 	读条运动会	sync /readies Operational Synergy/ window 50,10
 1340 	F十字+M跳斩	
-1344 	M分摊	
-1348 	F爆炎散开+M月环	
+1344 	M分摊
+1345	❤光速
+1348 	F爆炎散开+M月环
 1354 	M钢铁+FAOE	
 #看眼睛带位置
 1357 	读条AOE	
+1358	❤罩子
 1362 	AOE	
+1362	❤天星
 #=======================循环1===========================
 1377 	读条Suppression	sync /readies Suppression/ window 10,10
 1381 	陨石+箭雨点名	
+1385	❤地星准备
 1387 	眼睛直线激光	
 1388 	陨石判定	
 1389 	箭雨判定	
 1392 	读条高伤害AOE	sync /readies Cosmo Memory/ window 100,10
 1399 	高伤害AOE	
-1401 	读条AOE	sync /readies Laser Shower/
+1401 	读条AOE	sync /readies Laser Shower|正在发动“激光骤雨/ window 10,10
 1407 	AOE	
 1408 	读条双重剑舞	sync /readies Optimized Blade Dance/ window 100,10
 1414 	双重剑舞	
@@ -148,8 +174,10 @@ alertall "狂暴" before 10 speak "voice" "10秒狂暴"
 1439 	陨石判定	
 1440 	箭雨判定	
 1444 	读条高伤害AOE	sync /readies Cosmo Memory/ window 10,10
+1446	❤地星准备
+1449	❤罩子
 1451 	高伤害AOE	
-1453 	读条AOE	sync /readies Laser Shower/ window 10,10
+1453 	读条AOE	sync /readies Laser Shower|正在发动“激光骤雨/ window 10,10
 1458 	AOE	
 1460 	读条双重剑舞	sync /readies Optimized Blade Dance/ window 10,10
 1466 	双重剑舞	
@@ -158,16 +186,21 @@ alertall "狂暴" before 10 speak "voice" "10秒狂暴"
 #                          先盾后剑
 #============================================================
 2200 	读条盾
+2206	❤地星准备
 2208 	读条运动会	sync /readies Operational Synergy/ window 10,10
 2221 	F十字+M跳斩	
 2225 	分摊	
+2226	❤光速
 2229 	F爆炎散开+M月环	
 2235 	M钢铁+FAOE
 2238 	读条AOE
+2240	❤罩子
 2243 	AOE	
+2243	❤天星
 2251 	读条Firewall	sync /readies Firewall/ window 10,10
 2255 	(Buff)Packet_Filter_F&M	
 2261 	读条Resonance	sync /readies Resonance/ window 10,10
+2267	❤地星准备
 #看眼睛带位置
 2265 	(Buff)靠近或远离	
 2273 	读条Fundamental_Synergy	sync /readies Fundamental Synergy/ window 50,10
@@ -175,29 +208,34 @@ alertall "狂暴" before 10 speak "voice" "10秒狂暴"
 2288 	冲锋开始	
 2289 	眼睛扇形激光	
 2292 	冲锋结束	
-2299 	读条AOE	sync /readies Laser Shower/ window 10,10
+2299 	读条AOE	sync /readies Laser Shower|正在发动“激光骤雨/ window 10,10
 2304 	AOE	
 2307 	读条死刑	sync /readies Solar Ray/ window 10,10
 2313 	死刑	
 #=======================运动会2===========================
-2321 	读条剑	sync /readies Synthetic Blades/ window 50,10
+2321 	读条剑	sync /readies Synthetic Blades|正在发动“合成剑/ window 50,10
+2328	❤地星准备
 2329 	读条运动会	sync /readies Operational Synergy/ window 50,10
 2339 	F左右范围攻击	
 2342 	F十字+M分摊	
 2348 	F350度攻击	
+2349	❤光速
 2352 	爆炎散开+M钢铁	
 #看眼睛带位置
-2357 	读条AOE	sync /readies Laser Shower/ window 10,10
+2357 	读条AOE	sync /readies Laser Shower|正在发动“激光骤雨/ window 10,10
+2358	❤罩子
 2362 	AOE	
+2362	❤天星
 #=======================循环1===========================
 2377 	读条Suppression	sync /readies Suppression/ window 10,10
 2381 	陨石+箭雨点名	
 2387 	眼睛直线激光	
 2388 	陨石判定	
 2389 	箭雨判定	
+2389	❤地星准备
 2392 	读条高伤害AOE	sync /readies Cosmo Memory/ window 100,10
 2399 	高伤害AOE	
-2401 	读条AOE	sync /readies Laser Shower/ window 10,10
+2401 	读条AOE	sync /readies Laser Shower|正在发动“激光骤雨/ window 10,10
 2407 	AOE	
 2408 	读条双重剑舞	sync /readies Optimized Blade Dance/ window 100,10
 2414 	双重剑舞	
@@ -209,8 +247,10 @@ alertall "狂暴" before 10 speak "voice" "10秒狂暴"
 2439 	陨石判定	
 2440 	箭雨判定	
 2444 	读条高伤害AOE	sync /readies Cosmo Memory/ window 10,10
+2449	❤罩子
+2450	❤地星准备
 2451 	高伤害AOE	
-2453 	读条AOE	sync /readies Laser Shower/ window 10,10
+2453 	读条AOE	sync /readies Laser Shower|正在发动“激光骤雨/ window 10,10
 2458 	AOE	
 2460 	读条双重剑舞	sync /readies Optimized Blade Dance/ window 10,10
 2466 	双重剑舞	
