@@ -38,31 +38,31 @@ alertall "浮游炮" before 7 speak "voice" "浮游炮"
 alertall "岩咚" before 6 speak "voice" "岩咚"
 alertall "火圈击退散开" before 4 speak "voice" "散开"
 
-alertall "❤光速" before 2 sound "AST-光速.wav"
-alertall "❤地星准备" before 2 sound "AST-地星准备.wav"
-alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
-alertall "❤天星" before 1 sound "AST-天星.wav"
+#alertall "❤光速" before 2 sound "AST-光速.wav"
+#alertall "❤地星准备" before 2 sound "AST-地星准备.wav"
+#alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
+#alertall "❤天星" before 1 sound "AST-天星.wav"
 
 #========================水开场时间轴========================
 #                          第一阶段
 #============================================================
-0	--Reset-- sync /04:Removing combatant Chaos.  Max HP: 19751250/ window 10000 jump 0
-100	--水开场--	sync /(正在发动“|readies) Damning Edict/ window 101,10 jump 1000
-200	--火开场-- sync /(正在发动“|readies) (Latitudinal Implosion|Longitudinal Implosion)/ window 201,10 jump 2000
+0	--Reset-- sync /04:Removing combatant (Chaos|卡奥斯).  Max HP: 19751250/ window 10000 jump 0
+100	--水开场--	sync /(正在发动“|readies) (Damning Edict|诅咒敕令)/ window 101,10 jump 1000
+200	--火开场-- sync /(正在发动“|readies) (Latitudinal Implosion|Longitudinal Implosion|纬度聚爆|经度聚爆)/ window 201,10 jump 2000
 #========================火开场时间轴========================
 #                          第一阶段
 #============================================================
 1000	--Start--
 1007	半场攻击	
 1014	(信息_13)	sync /00:0044:Grovel in terror! The flames hunger for your flesh!/ window 15,60
-1014	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 15,10
+1014	(读条)火AOE	sync /(正在发动“|readies) (Blaze|烈焰)/ window 15,10
 1020	火AOE	
 1021	(buff)击退火圈buff
 1030	火圈击退散开
 1037	随机前后左右攻击	
 1045	火圈击退散开
 1057	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 58,10
-1063	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 38,10
+1063	(读条)火AOE	sync /(正在发动“|readies) (Blaze|烈焰)/ window 38,10
 1049	❤地星准备
 1068	火AOE	
 1069	(buff)击退火圈buff
@@ -98,7 +98,7 @@ alertall "❤天星" before 1 sound "AST-天星.wav"
 #============================================================
 1244	小球刷新(dps检测)	sync /Added new combatant Dark Crystal/ window 245,10
 1269	(信息_268)	sync /00:0044:The crystal...destroyed!? YOU DARE!/ window 270,60
-1275	转阶段AOE	sync /(发动了“|uses|casts) Soul of Chaos/ window 276,10
+1275	转阶段AOE	sync /(发动了“|uses|casts) (Soul of Chaos|混沌之魂)/ window 276,10
 
 #============================================================
 #                          第三阶段
@@ -106,26 +106,26 @@ alertall "❤天星" before 1 sound "AST-天星.wav"
 1291	❤地星准备
 1299	随机前后左右攻击	
 1307	(信息_307)	sync /00:0044:Scurry and flail, little mortals! The raging tide will claim you all!/ window 308,60
-1308	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 309,10
+1308	(读条)水AOE	sync /(正在发动“|readies) (Tsunami|海啸)/ window 309,10
 1313	(buff)环形水圈buff
 1323	超级跳跃	
 1332	半场攻击
 1351	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 170,10
 1352	❤地星准备
-1357	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 38,10
+1357	(读条)水AOE	sync /(正在发动“|readies) (Tsunami|海啸)/ window 38,10
 1362	(buff)环形水圈buff
 1373	治疗陨石
 1379	岩咚
 1383	连线小球出现	sync /Added new combatant Chaosphere/ window 168,10
 1392	接线
-1408	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 409,10
+1408	(读条)土AOE	sync /(正在发动“|readies) (Earthquake|地震)/ window 409,10
 1408	(信息_407)	sync /00:0044:Hark, wretched creatures! The earth itself rumbles of your doom!/ window 409,60
 1412	❤地星准备
 1415	(buff)死超或无心
 1427	随机前后左右攻击	
 1446	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 85,10
 1452	❤光速
-1452	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 34,10
+1452	(读条)土AOE	sync /(正在发动“|readies) (Earthquake|地震)/ window 34,10
 1459	(buff)死超或无心
 1470	击退分摊
 1473	❤地星准备
@@ -133,14 +133,14 @@ alertall "❤天星" before 1 sound "AST-天星.wav"
 1478	连线小球出现	sync /Added new combatant Chaosphere/ window 85,10
 1485	浮游炮
 1501	(信息_500)	sync /00:0044:Abandon this feeble hope. None may rise above me!/ window 502,60
-1504	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 430,10
+1504	(读条)火AOE	sync /(正在发动“|readies) (Blaze|烈焰)/ window 430,10
 1514	火AOE
 1515	(buff)击退火圈buff	
-1517	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 149,10
+1517	(读条)水AOE	sync /(正在发动“|readies) (Tsunami|海啸)/ window 149,10
 1527	(buff)环形水圈buff	
 1530	(读条)风AOE	sync /(正在发动“|readies) Cyclone/ window 343,10
 1540	(buff)顺逆风buff	
-1543	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 79,10
+1543	(读条)土AOE	sync /(正在发动“|readies) (Earthquake|地震)/ window 79,10
 1555	(buff)死超或无心	
 1556	(读条)狂暴	sync /(正在发动“|readies) Bowels of Agony/ window 200,10
 		
@@ -149,14 +149,14 @@ alertall "❤天星" before 1 sound "AST-天星.wav"
 #============================================================		
 2000	--Start--
 2006	随机前后左右攻击	
-2014	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 15,10
+2014	(读条)水AOE	sync /(正在发动“|readies) (Tsunami|海啸)/ window 15,10
 2014	(信息_14)	sync /00:0044:Scurry and flail, little mortals! The raging tide will claim you all!/ window 15,60
 2020	(buff)环形水圈buff	
 2030	超级跳跃	
 2039	半场攻击	
 2049	❤地星准备
 2057	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 58,10
-2063	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 38,10
+2063	(读条)水AOE	sync /(正在发动“|readies) (Tsunami|海啸)/ window 38,10
 2069	(buff)环形水圈buff	
 2079	治疗陨石	
 2086	岩咚	
@@ -164,12 +164,12 @@ alertall "❤天星" before 1 sound "AST-天星.wav"
 2098	接线	
 2110	❤地星准备
 2114	(信息_114)	sync /00:0044:Hark, wretched creatures! The earth itself rumbles of your doom!/ window 115,60
-2114	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 115,10
+2114	(读条)土AOE	sync /(正在发动“|readies) (Earthquake|地震)/ window 115,10
 2121	(buff)死超或无心	
 2134	随机前后左右攻击	
 2153	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 85,10
 2159	❤光速
-2159	(读条)土AOE	sync /(正在发动“|readies) Earthquake/ window 34,10
+2159	(读条)土AOE	sync /(正在发动“|readies) (Earthquake|地震)/ window 34,10
 2166	(buff)死超或无心	
 2171	❤地星准备
 2177	击退分摊
@@ -194,7 +194,7 @@ alertall "❤天星" before 1 sound "AST-天星.wav"
 #============================================================		
 2285	半场攻击	
 2292	(信息_292)	sync /00:0044:Grovel in terror! The flames hunger for your flesh!/ window 293,60
-2293	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 294,10
+2293	(读条)火AOE	sync /(正在发动“|readies) (Blaze|烈焰)/ window 294,10
 2298	火AOE	
 2299	(buff)击退火圈buff	
 2309	火圈击退散开
@@ -202,7 +202,7 @@ alertall "❤天星" before 1 sound "AST-天星.wav"
 2324	火圈击退散开
 2328	❤地星准备
 2335	死刑换T	sync /(发动了“|uses|casts) Chaotic Dispersion/ window 171,10
-2341	(读条)火AOE	sync /(正在发动“|readies) Blaze/ window 37,10
+2341	(读条)火AOE	sync /(正在发动“|readies) (Blaze|烈焰)/ window 37,10
 2347	火AOE	
 2348	(buff)击退火圈buff	
 2358  火圈击退散开
@@ -231,7 +231,7 @@ alertall "❤天星" before 1 sound "AST-天星.wav"
 2511	(读条)火AOE	
 2521	火AOE	
 2522	(buff)击退火圈buff	
-2523	(读条)水AOE	sync /(正在发动“|readies) Tsunami/ window 449,10
+2523	(读条)水AOE	sync /(正在发动“|readies) (Tsunami|海啸)/ window 449,10
 2534	(buff)环形水圈buff	
 2537	(读条)风AOE	
 2547	(buff)顺逆风buff	

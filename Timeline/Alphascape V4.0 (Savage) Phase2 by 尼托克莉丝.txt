@@ -8,12 +8,12 @@
 #  有效性：目前仅EN客户端有效
 ################## Windows 8 & 10 音效 #################
 #删去前方的#标签来选择声音
-#define speaker "voice" "Microsoft Huihui Desktop" 2 100
+define speaker "voice" "Microsoft Huihui Desktop" 2 100
 #define speaker "voice" "Microsoft Hanhan Desktop" 2 100
 
 #################### Windows 7 音效 ####################
 #删去前方的#标签来选择声音
-define speaker "voice" "Microsoft Lili" 0 100
+#define speaker "voice" "Microsoft Lili" 0 100
 
 
 alertall "开场读条MT易伤" before 0 speak "voice" "易伤死刑"
@@ -51,9 +51,9 @@ alertall "软狂暴AOE4" before 15 speak "voice" "学者罩子"
 alertall "软狂暴AOE4" before 7 speak "voice" "战士摆脱"
 alertall "软狂暴AOE4" before 0 speak "voice" "10秒狂暴"
 
-alertall "■摆脱" before 3 speak "voice" "摆脱"
-alertall "■幕帘" before 3 speak "voice" "幕帘"
-alertall "■摆脱幕帘" before 3 speak "voice" "摆脱幕帘"
+#alertall "■摆脱" before 3 speak "voice" "摆脱"
+#alertall "■幕帘" before 3 speak "voice" "幕帘"
+#alertall "■摆脱幕帘" before 3 speak "voice" "摆脱幕帘"
 #alertall "❤光速" before 2 sound "AST-光速.wav"
 #alertall "❤地星准备" before 2 sound "AST-地星准备.wav"
 #alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
@@ -61,12 +61,14 @@ alertall "■摆脱幕帘" before 3 speak "voice" "摆脱幕帘"
 #alertall "❤光速天星" before 1 sound "AST-光速天星.wav"
 #alertall "❤慈爱医济" before 1 sound "AST-慈爱医济.wav"
 #alertall "❤不屈" before 1 sound "SCH-不屈.wav"
-alertall "❤学者以眼还眼" before 1 speak "voice" "学者以眼环眼"
-alertall "❤占星以眼还眼" before 1 speak "voice" "占星以眼环眼"
-alertall "▲龙骑牵制" before 1 speak "voice" "龙骑牵制"
-alertall "▲忍者牵制" before 1 speak "voice" "忍者牵制"
+#alertall "❤学者以眼还眼" before 1 speak "voice" "学者以眼环眼"
+#alertall "❤占星以眼还眼" before 1 speak "voice" "占星以眼环眼"
+#alertall "▲龙骑牵制" before 1 speak "voice" "龙骑牵制"
+#alertall "▲忍者牵制" before 1 speak "voice" "忍者牵制"
 
 #alertall "❤站姿爆发药" before 2 sound "Healer-站姿爆发药.wav"
+
+#alertall "❤先天" before 2 sound "叮4_中.wav"
 
 #============================TTS============================
 #TTS: 14:3367 前后波动炮

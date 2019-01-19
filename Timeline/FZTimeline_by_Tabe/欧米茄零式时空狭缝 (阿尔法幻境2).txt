@@ -1,0 +1,134 @@
+﻿# Alphascape V1.0 (Chaos)
+# Created by Tabe Tabe on Asura/Tabe on 紫水栈桥
+########################################################
+# 有效性：目前仅EN客户端有效
+########################################################
+alertall "动作1" before 5 sound "tts 动作1"
+alertall "动作2释放" before 5 sound "tts 动作2"
+alertall "死亡轮回读条" before 3 sound "tts 分摊"
+alertall "死亡轮回读条（狂暴）" before 4 sound "tts 狂暴死亡轮回"
+alertall "死刑读条" before 2 sound "tts 死刑"
+alertall "八方向振翅点名" before 3 sound "tts 八振翅"
+alertall "百雷点名" before 3 sound "tts 雷散开"
+alertall "换T读条" before 6 sound "tts 天地换替"
+alertall "滑板鞋" before 3 sound "tts 滑板鞋"
+alertall "流沙集合引导" before 4 sound "tts 流沙流沙"
+alertall "顺劈" before 4 sound "tts 顺劈"
+alertall "AOE" before 5 sound "tts AOE"
+alertall "白圈出现" before 2 sound "tts 白圈出现"
+alertall "流沙+百雷集合散开" before 6 sound "tts 流沙百雷"
+alertall "点名1" before 1 sound "tts 点名传标"
+alertall "火球②出现" before 5 sound "tts 找安全点"
+alertall "流沙③动作1中央引导" before 5 sound "tts 流沙引导"
+alertall "Exaflare+冰圈" before 7 sound "tts 冰圈加第火"
+alertall "Exaflare" before 8 sound "tts 第火俯冲"
+alertall "散开机制" before 8 sound "tts 散开"
+alertall "火尾" before 7 sound "tts 人群穿对角，拉线左边开始。"
+hideall "--Reset--"
+hideall "--Start--"
+#============================================================
+#             第一阶段
+#============================================================
+0 "--Reset--" sync /Removing combatant 尘世幻龙. Max HP: 19407750.
+/ window 10000 jump 0
+0 "--Start--" sync /我乃尘世幻龙…… 乃是龙中之龙！
+
+/ window 10000
+15 动作1 sync /尘世幻龙的魔力已经充满！
+/ window 16,10
+26 动作2释放 sync /尘世幻龙释放了自身的魔力！
+/
+39 动作1 
+42 死亡轮回读条 sync /14:31AB/ window 30,10
+46 死亡轮回 
+57 动作2释放 
+65 死刑读条 sync /14:31AA
+/ window 30,10
+80 动作1 
+88 八方向振翅点名
+92 动作2释放 
+103 动作1 
+106 死刑读条
+112 百雷点名
+117 动作2释放
+124 换T读条 sync /14:32FF/ window 30,10
+135 死刑读条 
+149 动作1 
+153 滑板鞋 sync /14:3625/ window 30,10
+164 动作2释放
+167 2天光+2冰圈 sync /14:3622/ window 30,10
+179 动作1 
+188 流沙集合引导
+192 动作2释放
+#============================================================
+#             第二阶段
+#============================================================
+199 p2小怪阶段 sync /我的眷属啊…… 向傲慢的人类露出你的尖牙吧！
+/ window 200,10
+202 古龙出现 
+212 顺劈 
+214 读条AOE sync /14:33F2/ window 214,0
+217 AOE 
+222 顺劈 
+232 顺劈 
+236 AOE 
+242 顺劈 
+251 AOE 
+253 顺劈 
+200 小龙击杀AOE sync /14:341A/ window 201,10
+265 白圈出现 
+#============================================================
+#             第三阶段
+#============================================================
+288 流沙+百雷集合散开
+289 俯冲读条 sync /14:3240/ window 289,0
+293 百雷+俯冲 
+298 流沙+百雷集合散开
+299 俯冲读条
+303 百雷+俯冲
+308 Boss出现 
+314 换T读条 sync /14:32FF/ window 100,40
+325 点名1
+331 喷火1 
+338 喷火2 
+345 喷火3 
+352 喷火4（出现标记） 
+355 连线出现 
+356 火球②出现
+365 流沙③动作1中央引导 sync /14:31B9/ window 20,5
+370 回中央 
+372 绿buff接线，其余侧面躲避 
+376 火尾 
+385 上天 
+387 Exaflare 
+388 流沙中央引导
+389 俯冲读条 sync /14:3240/ window 50,0
+398 流沙引导
+399 俯冲读条
+409 boss出现 
+419 死刑读条 sync /14:31AA/ window 200,10
+429 死亡轮回读条 sync /14:31AB/ window 200,10
+441 流沙+百雷集合散开
+455 动作1 
+458 死刑读条
+464 散开机制
+467 动作2释放 
+472 换T读条 sync /14:32FF/ window 100,10
+484 Exaflare+冰圈
+491 死亡轮回读条
+515 动作1 
+518 滑板鞋 sync /14:3625/ window 100,10
+524 散开机制
+528 动作2释放
+534 流沙 
+545 2天光
+550 死刑读条
+565 动作1 
+569 死刑读条
+576 散开机制
+580 动作2释放 
+586 换T读条 sync /14:32FF/ window 50,10
+597 Exaflare+冰圈 
+604 死亡轮回读条
+629 动作1 
+632 死亡轮回读条（狂暴）

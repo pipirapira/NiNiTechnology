@@ -8,12 +8,12 @@
 #  有效性：目前仅EN客户端有效
 ################## Windows 8 & 10 音效 #################
 #删去前方的#标签来选择声音
-#define speaker "voice" "Microsoft Huihui Desktop" 2 100
+define speaker "voice" "Microsoft Huihui Desktop" 2 100
 #define speaker "voice" "Microsoft Hanhan Desktop" 2 100
 
 #################### Windows 7 音效 ####################
 #删去前方的#标签来选择声音
-define speaker "voice" "Microsoft Lili" 0 100
+#define speaker "voice" "Microsoft Lili" 0 100
 
 
 alertall "跳斩" before 5 speak "voice" "跳斩，然后分摊"
@@ -48,9 +48,9 @@ alertall "读条双重剑舞" before 5 speak "voice" "圣光剑舞，准备无�
 alertall "350度攻击" before 6 speak "voice" "背后"
 alertall "F350度攻击" before 6 speak "voice" "女人背后"
 alertall "狂暴" before 10 speak "voice" "10秒狂暴"
-alertall "■摆脱" before 3 speak "voice" "摆脱"
-alertall "■幕帘" before 3 speak "voice" "幕帘"
-alertall "■摆脱幕帘" before 3 speak "voice" "摆脱幕帘"
+#alertall "■摆脱" before 3 speak "voice" "摆脱"
+#alertall "■幕帘" before 3 speak "voice" "幕帘"
+#alertall "■摆脱幕帘" before 3 speak "voice" "摆脱幕帘"
 #alertall "❤光速" before 2 sound "AST-光速.wav"
 #alertall "❤地星准备" before 2 sound "AST-地星准备.wav"
 #alertall "❤罩子" before 2 sound "SCH-进罩子.wav"

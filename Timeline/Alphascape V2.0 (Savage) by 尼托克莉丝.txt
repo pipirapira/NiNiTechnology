@@ -40,8 +40,8 @@ alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始�
 #============================================================
 #                          第一阶段
 #============================================================
-0	--Reset-- sync /04:Removing combatant Midgardsormr.  Max HP: 19407750/ window 10000 jump 0
-0 	--Start--	sync /I am Midgardsormr/ window 10,10
+0	--Reset-- sync /04:Removing combatant (Midgardsormr|尘世幻龙).  Max HP: 19407750/ window 10000 jump 0
+0 	--Start--	sync /I am Midgardsormr|我乃尘世幻龙/ window 10,10
 15 	动作1	sync /The air about the elder wyrm begins to crackle/ window 16,10
 26 	动作2释放	sync /Midgardsormr unleashes his rage/
 39 	动作1	
@@ -56,7 +56,7 @@ alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始�
 106 	死刑读条
 112 	百雷点名
 117 	动作2释放
-124 	换T读条	sync /readies Time Immemorial/ window 30,10
+124 	换T读条	sync /readies Time Immemorial|正在发动“开天辟地/ window 30,10
 135 	死刑读条	
 149 	动作1	
 153 	滑板鞋	sync /readies Northern Cross/ window 30,10
@@ -68,7 +68,7 @@ alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始�
 #============================================================
 #                          第二阶段
 #============================================================
-199 	p2小怪阶段	sync /Come forth, my child!/ window 200,10
+199 	p2小怪阶段	sync /Come forth, my child!|我的眷属啊/ window 200,10
 202 	古龙出现	
 213 	顺劈	
 216 	读条AOE	sync /readies Rime Wreath/ window 214,0
@@ -82,7 +82,7 @@ alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始�
 251 	AOE	
 #257 	顺劈	
 #267	AOE
-264 	小龙击杀AOE	sync /readies Dark Wave/ window 201,10
+264 	小龙击杀AOE	sync /readies Dark Wave|正在发动“黑暗波动/ window 201,10
 265 	白圈出现	
 279		原恒星1
 280		原恒星2
@@ -91,13 +91,13 @@ alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始�
 #                          第三阶段
 #============================================================
 288 	流沙+百雷集合散开
-289 	俯冲读条	sync /readies Cauterize/ window 289,0
+289 	俯冲读条	sync /readies Cauterize|正在发动“灼热俯冲/ window 289,0
 293 	百雷+俯冲	
 298 	流沙+百雷集合散开
 299 	俯冲读条
 303 	百雷+俯冲
 308 	Boss出现	
-314 	换T读条	sync /readies Time Immemorial/ window 100,40
+314 	换T读条	sync /readies Time Immemorial|正在发动“开天辟地/ window 100,40
 325 	点名1
 331 	喷火1	
 338 	喷火2	
@@ -112,7 +112,7 @@ alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始�
 385 	上天	
 387 	Exaflare	
 388 	流沙中央引导
-389 	俯冲读条	sync /readies Cauterize/ window 50,0
+389 	俯冲读条	sync /readies Cauterize|正在发动“灼热俯冲/ window 50,0
 398 	流沙引导
 399 	俯冲读条
 409 	boss出现	
@@ -123,7 +123,7 @@ alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始�
 458 	死刑读条
 464 	散开机制
 467 	动作2释放	
-472 	换T读条	sync /readies Time Immemorial/ window 100,10
+472 	换T读条	sync /readies Time Immemorial|正在发动“开天辟地/ window 100,10
 484 	Exaflare+冰圈
 491 	死亡轮回读条
 515 	动作1	
@@ -137,7 +137,7 @@ alertall "火尾" before 7 speak "voice" "人群穿对角，拉线左边开始�
 569 	死刑读条
 576 	散开机制
 580 	动作2释放	
-586 	换T读条	sync /readies Time Immemorial/ window 50,10
+586 	换T读条	sync /readies Time Immemorial|正在发动“开天辟地/ window 50,10
 597 	Exaflare+冰圈	
 604 	死亡轮回读条
 629 	动作1	

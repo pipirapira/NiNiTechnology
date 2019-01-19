@@ -1,0 +1,220 @@
+﻿# Alphascape V1.0 (Chaos)
+# Created by Tabe Tabe on Asura/Tabe on 紫水栈桥
+########################################################
+#  有效性：目前仅EN客户端有效
+########################################################
+alertall "超级跳跃" before 7 sound "tts 超级跳"
+#alertall "半场攻击" before 8 sound "tts 躲背后"
+alertall "接线" before 8 sound "tts 替接线"
+alertall "(buff)T奶风水dps火土" before 10 sound "tts 风水火土站位"
+alertall "小球刷新(dps检测)" before 6 sound "tts 小怪阶段"
+alertall "转阶段AOE" before 6 sound "tts 转阶段做减伤"
+alertall "(读条)水AOE" before 3 sound "tts 海啸"
+alertall "(读条)火AOE" before 3 sound "tts 火炎"
+alertall "(读条)风AOE" before 3 sound "tts 暴风"
+alertall "(读条)土AOE" before 3 sound "tts 地震"
+alertall "(buff)击退火圈buff" before 1 sound "tts 火圈"
+alertall "(buff)顺逆风buff" before 1 sound "tts 顺逆风"
+alertall "(buff)死超或无心" before 2 sound "tts 死超无心"
+alertall "(buff)环形水圈buff" before 1 sound "tts 环形水圈"
+#alertall "死刑换T" before 8 sound "tts 死刑换替"
+alertall "击退分摊" before 9 sound "tts 击退分摊"
+alertall "点名分摊" before 7 sound "tts 分摊站位"
+alertall "治疗陨石" before 8 sound "tts 治疗陨石"
+alertall "浮游炮" before 7 sound "tts 浮游炮"
+alertall "岩咚" before 6 sound "tts 岩咚"
+alertall "火圈击退散开" before 4 sound "tts 散开"
+hideall "--Reset--"
+hideall "--Start--"
+#========================水开场时间轴========================
+#                          第一阶段
+#============================================================
+0 "--Reset--" sync /Removing combatant 卡奥斯.  Max HP: 19751250.
+/ window 10000 jump 0
+100 "--Start--" sync /14:317(2|3)/ window 101,10 jump 1000
+200 "--Start--" sync /14:3171/ window 201,10 jump 2000
+#========================火开场时间轴========================
+#                          第一阶段
+#============================================================
+1000 "--火开场--"
+1007 半场攻击 
+1014 (信息_13) sync /顺从、屈服、畏惧吧！ 红莲的火焰将把你们烧为灰烬！
+/ window 15,60
+1014 (读条)火AOE sync /14:3186/ window 15,10
+1020 火AOE 
+1021 (buff)击退火圈buff
+1030 火圈击退散开
+1037 随机前后左右攻击 
+1045 火圈击退散开
+1057 死刑换T sync /14:3170/ window 58,10
+1063 (读条)火AOE sync /14:3186/ window 38,10
+1068 火AOE 
+1069 (buff)击退火圈buff
+1079  火圈击退散开
+1087 点名分摊
+1094 火圈击退散开
+1098 岩咚
+1101 连线小球出现 sync /Added new combatant 混沌晶球/ window 102,10
+1107 浮游炮 
+1123 (读条)风AOE sync /14:3188/ window 124,10
+1123 (信息_123) sync /体会绝望吧，虚无缥缈之人！ 混沌的龙卷风将在你们身上留下不可磨灭的印记！
+/ window 124,60
+1129 (buff)顺逆风buff 
+1142 超级跳跃 
+1151 半场攻击 
+1170 死刑换T sync /14:3170/ window 102,10
+1176 (读条)风AOE sync /14:3188/ window 41,10
+1181 (buff)顺逆风buff
+1193 治疗陨石
+1200 岩咚
+1203 连线小球出现 sync /Added new combatant 混沌晶球/ window 92,10
+1213 接线 
+1232 (信息_231) sync /在神之力面前颤抖吧！
+/ window 233,60
+1237 (buff)T奶风水dps火土 
+1238 风水火土站位 sync /14:318A/ window 239,10
+1244 (信息_243) sync /黑水晶出现了！
+/ window 245,60
+
+#============================================================
+#                          第二阶段
+#============================================================
+1244 小球刷新(dps检测) sync /Added new combatant 黑水晶/ window 245,10
+1269 (信息_268) sync /居然……把黑水晶给…… 可恶啊！！
+/ window 270,60
+1275 转阶段AOE sync /(发动了“|uses|casts) Soul of Chaos/ window 276,10
+
+#============================================================
+#                          第三阶段
+#============================================================
+1299 随机前后左右攻击 
+1307 (信息_307) sync /弱者啊，就如同露水一样消失吧！ 无常的大浪将冲净一切！
+/ window 308,60
+1308 (读条)水AOE sync /14:3187/ window 309,10
+1313 (buff)环形水圈buff
+1323 超级跳跃 
+1332 半场攻击
+1351 死刑换T sync /14:3170/ window 170,10
+1357 (读条)水AOE sync /14:3187/ window 38,10
+1362 (buff)环形水圈buff
+1373 治疗陨石
+1379 岩咚
+1383 连线小球出现 sync /Added new combatant 混沌晶球/ window 168,10
+1392 接线
+1408 (读条)土AOE sync /14:3189/ window 409,10
+1408 (信息_407) sync /注目吧，可悲之人啊！ 呼唤终焉的地震即将到来！
+/ window 409,60
+1415 (buff)死超或无心
+1427 随机前后左右攻击 
+1446 死刑换T sync /14:3170/ window 85,10
+1452 (读条)土AOE sync /14:3189/ window 34,10
+1459 (buff)死超或无心
+1470 击退分摊
+1475 岩咚
+1478 连线小球出现 sync /Added new combatant 混沌晶球/ window 85,10
+1485 浮游炮
+1501 (信息_500) sync /根本不存在任何的希望！ 我决不允许有人能够超越我！
+/ window 502,60
+1504 (读条)火AOE sync /14:3186/ window 430,10
+1514 火AOE
+1515 (buff)击退火圈buff 
+1517 (读条)水AOE sync /14:3187/ window 149,10
+1527 (buff)环形水圈buff 
+1530 (读条)风AOE sync /14:3188/ window 343,10
+1540 (buff)顺逆风buff 
+1543 (读条)土AOE sync /14:3189/ window 79,10
+1555 (buff)死超或无心 
+1556 (读条)狂暴 sync /14:318A/ window 200,10
+  
+#========================水开场时间轴========================  
+#                          第一阶段  
+#============================================================  
+2000 "--水开场--"
+2006 随机前后左右攻击 
+2014 (读条)水AOE sync /14:3187/ window 15,10
+2014 (信息_14) sync /弱者啊，就如同露水一样消失吧！ 无常的大浪将冲净一切！
+/ window 15,60
+2020 (buff)环形水圈buff 
+2030 超级跳跃 
+2039 半场攻击 
+2057 死刑换T sync /14:3170/ window 58,10
+2063 (读条)水AOE sync /14:3187/ window 38,10
+2069 (buff)环形水圈buff 
+2079 治疗陨石 
+2086 岩咚 
+2089 连线小球出现 sync /Added new combatant 混沌晶球/ window 90,10
+2098 接线 
+2114 (信息_114) sync /注目吧，可悲之人啊！ 呼唤终焉的地震即将到来！
+/ window 115,60
+2114 (读条)土AOE sync /14:3189/ window 115,10
+2121 (buff)死超或无心 
+2134 随机前后左右攻击 
+2153 死刑换T sync /14:3170/ window 85,10
+2159 (读条)土AOE sync /14:3189/ window 34,10
+2166 (buff)死超或无心 
+2177 击退分摊
+2182 岩咚
+2185 连线小球出现 sync /Added new combatant 混沌晶球/ window 85,10
+2191 浮游炮
+2210 (信息_210) sync /在神之力面前颤抖吧！
+/ window 211,60
+2215 (buff)T奶风水dps火土 
+2216 风水火土站位 sync /14:318A/ window 217,10
+2222 (信息_222) sync /黑水晶出现了！
+/ window 223,60
+ 
+#============================================================  
+#                          第二阶段  
+#============================================================  
+2223 小球刷新(dps检测) sync /Added new combatant 黑水晶/ window 224,10
+2254 (信息_253) sync /居然……把黑水晶给…… 可恶啊！！
+/ window 255,60
+2260 转阶段AOE sync /(发动了“|uses|casts) Soul of Chaos/ window 261,10
+
+#============================================================  
+#                          第三阶段  
+#============================================================  
+2285 半场攻击 
+2292 (信息_292) sync /顺从、屈服、畏惧吧！ 红莲的火焰将把你们烧为灰烬！
+/ window 293,60
+2293 (读条)火AOE sync /14:3186/ window 294,10
+2298 火AOE 
+2299 (buff)击退火圈buff 
+2309 火圈击退散开
+2316 随机前后左右攻击 
+2324 火圈击退散开
+2335 死刑换T sync /14:3170/ window 171,10
+2341 (读条)火AOE sync /14:3186/ window 37,10
+2347 火AOE 
+2348 (buff)击退火圈buff 
+2358  火圈击退散开
+2365 点名分摊
+2372  火圈击退散开
+2376 岩咚 
+2380 连线小球出现 sync /Added new combatant 混沌晶球/ window 184,10
+2386 浮游炮
+2402 (读条)风AOE sync /14:3188/ window 403,10
+2402 (信息_401) sync /体会绝望吧，虚无缥缈之人！ 混沌的龙卷风将在你们身上留下不可磨灭的印记！
+/ window 403,60
+2408 (buff)顺逆风buff 
+2420 超级跳跃
+2430 半场攻击
+2448 死刑换T sync /14:3170/ window 102,10
+2454 (读条)风AOE sync /14:3188/ window 41,10
+2460 (buff)顺逆风buff 
+2472 治疗陨石
+2479 岩咚
+2482 连线小球出现 sync /Added new combatant 混沌晶球/ window 91,10
+2491 接线 
+2507 (信息_507) sync /根本不存在任何的希望！ 我决不允许有人能够超越我！
+/ window 508,60
+2511 (读条)火AOE 
+2521 火AOE 
+2522 (buff)击退火圈buff 
+2523 (读条)水AOE sync /14:3187/ window 449,10
+2534 (buff)环形水圈buff 
+2537 (读条)风AOE 
+2547 (buff)顺逆风buff 
+2550 (读条)土AOE 
+2562 (buff)死超或无心
+2563 (读条)狂暴 sync /14:318A/ window 200,10
