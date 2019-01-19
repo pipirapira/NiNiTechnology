@@ -210,21 +210,6 @@
             </Actions>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="南北塔检测" Id="9ca28398-3ecd-4f05-a6d3-842de2756206" RegularExpression="等级检测仪:3254:磁力:.*?:(?&lt;x&gt;.*?):(?&lt;y&gt;.*?):(?&lt;z&gt;.*?):44:44:" DebugLevel="Inherit" PrevActions="Keep" PrevActionsRefire="Allow" Scheduling="FromFire" PeriodRefire="Deny" RefirePeriodExpression="1000">
-            <Actions>
-              <Action DiscordTts="false" OrderNumber="1" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="南南南" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="宋体" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
-                <Conditions>
-                  <Condition OrderNumber="1" ExpressionL="abs(${x}-100)" ExpressionTypeL="Numeric" ExpressionR="10" ExpressionTypeR="Numeric" ConditionType="NumericGreater" Enabled="true" />
-                </Conditions>
-              </Action>
-              <Action DiscordTts="false" OrderNumber="2" AuraImageMode="Normal" TextAuraAlignment="MiddleCenter" TextAuraFontSize="9" TextAuraEffect="None" TextAuraUseOutline="false" Enabled="true" ActionType="UseTTS" ExecutionDelayExpression="0" Asynchronous="true" DebugLevel="Inherit" RefireInterrupt="false" RefireRequeue="true" SystemBeepFreqExpression="1000" SystemBeepLengthExpression="100" PlaySoundVolumeExpression="100" PlaySoundExclusive="true" UseTTSTextExpression="北北北" UseTTSVolumeExpression="100" UseTTSRateExpression="3" UseTTSExclusive="true" LaunchProcessWindowStyle="Normal" ExecScriptType="CSharp" MessageBoxIconType="None" VariableOp="Unset" ListVariableOp="Unset" ListVariableExpressionType="String" TriggerOp="FireTrigger" TriggerForce="" TriggerId="00000000-0000-0000-0000-000000000000" FolderOp="EnableFolder" FolderId="00000000-0000-0000-0000-000000000000" AuraOp="ActivateAura" TextAuraOp="ActivateAura" TextAuraFontName="??" TextAuraForeground="Black" TextAuraBackground="Transparent" TextAuraOutline="White" OBSControlType="StartStreaming">
-                <Conditions>
-                  <Condition OrderNumber="1" ExpressionL="abs(${y}-100)" ExpressionTypeL="Numeric" ExpressionR="10" ExpressionTypeR="Numeric" ConditionType="NumericGreater" Enabled="true" />
-                </Conditions>
-              </Action>
-            </Actions>
-            <Conditions />
-          </Trigger>
         </Triggers>
       </Folder>
       <Folder FFXIVJobFilterEnabled="false" FFXIVJobFilter="0" ZoneFilterEnabled="false" EventFilterEnabled="false" Id="b907f4a6-1e61-4233-acc4-73547b31f7f1" Name="o9s" Enabled="true">
