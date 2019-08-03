@@ -86,9 +86,7 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 33	流沙格判定
 34	扩散格出现 sync /(starts using|readies|begins casting) Evil Earth/ window 30,10
 37	黄标判定
-39	❤双相位
 41	橙标x8
-45	❤地星准备
 48	橙标判定
 55	AOE
 61	超级跳读条 sync /(starts using|readies|begins casting) Geocrush/ window 60,10
@@ -106,7 +104,6 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 1080	机车击退 
 1082	橙黄标判定 
 1086	冲锋死刑
-1088	❤光速
 1087	月环读条 sync /(starts using|readies|begins casting) Magnitude 5/ window 210,20
 1090	黄标x8
 1096	黄标判定 
@@ -115,7 +112,6 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 1103	陨石点名 sync /(starts using|readies|begins casting) Crumbling Down/ window 125,20
 1108	陨石AD放置 
 1108	陨石点名2
-1110	❤地星准备
 1114	陨石BC放置 
 1115	陨石伤害 
 1117	石阵【-1-】 
@@ -132,11 +128,8 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 1173	超级跳
 
 1177	变形-猛男形态 
-1177	❤天星
-1180	❤光速
 1183	橙黄标判定 
 1183	冲拳1进
-1184	❤地星准备
 1186	冲拳2出
 1197	AOE
 1208	跳跃冲拳
@@ -159,13 +152,11 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 2077	冲拳1进
 2080	冲拳2出
 2091	AOE
-2100	❤光速
 2102	跳跃冲拳
 2102	石阵【十】
 2104	左右刀读条 
 2106	石阵【∷】
 2107	左右刀判定 
-2110	❤地星准备
 2110	左右刀反向判定1 
 2113	左右刀反向判定2 
 2114	石阵【十】爆炸 
@@ -177,7 +168,6 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 2133	陨石点名2
 2139	陨石BC放置
 2140	陨石伤害
-2142	❤天星
 2142	石阵【-1-】
 2144	陨石伤害2 
 2144	石阵【2--】
@@ -188,15 +178,12 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 2167	AOE
 2170	易伤死刑读条 sync /(starts using|readies|begins casting) Stonecrusher/ window 100,10
 2175	易伤死刑
-2175	❤地星
 2198	超级跳
-2200	❤光速
 2201	变形-车车形态
 2202	橙标x5黄标x3
 2206	机车击退
 2208	橙黄标判定
 2212	冲锋死刑
-2213	❤双相位
 2213	月环读条 sync /(starts using|readies|begins casting) Magnitude 5/ window 210,20
 2216	黄标x8
 2222	黄标判定
@@ -208,7 +195,6 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 #                          P2--巨大化
 #============================================================
 3239	（过场30秒）
-3245	❤地星准备
 3254	Boss落地
 3256	P2开始 sync /Bow down, overdweller!/ window 3250,10
 3263	大地之怒AOE伤害
@@ -220,10 +206,8 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 3294	蓝标判定
 3295	双T死刑
 3301	双T分摊
-3311	❤光速
 3311	高低地读条 sync /(starts using|readies|begins casting) Tectonic Uplift/ window 3310,20
 3312	蓝标x2低地
-3315	❤地星准备
 3318	高低地
 3319	蓝标判定
 3322	高低地三色标
@@ -234,11 +218,8 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 3364	拆地板1
 3364	石牢x2出现
 3378	拆地板2
-3385	❤地星准备
-3390	❤双相位
 3391	拆地板3
 3395	大地之怒读条
-3402	❤光速
 3403	大地之怒五连踩
 3406	5连踩读条 sync /(starts using|readies|begins casting) Tumult/ window 3400,20
 3411	5连踩2
@@ -249,9 +230,7 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 3430	双T死刑
 3430	蓝标判定
 3433	扩散格出现
-3446	❤地星准备
 3449	高低地读条 sync /(starts using|readies|begins casting) Tectonic Uplift/ window 60,10
-3454	❤罩子
 3455	高低地石牢
 3457	橙标判定
 3465	石牢x2出现
@@ -265,19 +244,14 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 #第二轮黄标，站单流沙低地的两个散开。
 3497	高低地蓝橙标
 3504	蓝橙标判定
-3505	❤光速
-3507	❤地星准备
 3514	大地之怒五连踩
-3515	❤双相位
 3517	5连踩读条 sync /(starts using|readies|begins casting) Tumult/ window 60,10
 3522	5连踩2
 3542	拆地板1
 3553	双T分摊
 3561	蓝标x2橙标x2黄标x2
 3567	拆地板2
-3568	❤地星准备
 3570	三色标判定
-3576	❤罩子
 3580	大地之怒AOE伤害
 #============================================================
 #                          P3--小泰坦出现
@@ -291,20 +265,17 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 3624	流沙地洞炮结束
 3627	大拳拳出现
 3628	蓝标x1击退
-3629	❤地星准备
 3632	大拳拳判定
 3634	蓝标判定
 3635	双T死刑
 3645	双AOE五连踩
 3647	5连踩
-3650	❤光速双相位
 3657	AOE
 3668	大地之怒AOE伤害 
 3676	流沙地洞炮
 3680	橙标x4黄标x4_T奶外围
 3687	橙黄标判定 
 3689	流沙地洞炮结束 
-3690	❤地星准备
 3690	左右拳蓄力 sync /Titan Maximum is gathering aetherial energy/ window 3690,10
 3703	易伤死刑读条 sync /(starts using|readies|begins casting) Stonecrusher/ window 400,20
 3709	易伤死刑
@@ -314,13 +285,9 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 3752	橙黄标判定
 3755	流沙地洞炮结束
 3756	左右拳蓄力
-3760	❤地星准备
 3768	软狂暴开始 sync /(starts using|readies|begins casting) Voice of the Land/ window 30,2
 3773	狂暴AOE1
-3775	❤罩子
 3776	5连踩
-3777	❤天星
-3780	❤光速双相位
 3785	狂暴AOE2
 3788	5连踩
 3797	狂暴AOE3
