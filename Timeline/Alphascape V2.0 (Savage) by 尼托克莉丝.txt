@@ -1,10 +1,10 @@
 ﻿########################################################
 # Alphascape V2.0 (Midgardsormr)
-# Created by Puktata Pako on Asura/尼托克莉丝 on 萌芽池
+# Created by Puktata Pako on Asura
 # Last Updated: 2018年9月19日, 星期三
 ########################################################
 #  更新地址：
-#  https://github.com/pipirapira/ACT.HeartOfSabik
+#  https://github.com/pipirapira/NiNiTechnology
 #  有效性：目前仅EN客户端有效
 ################## Windows 8 & 10 音效 #################
 #删去前方的#标签来选择声音

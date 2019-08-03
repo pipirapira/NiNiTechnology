@@ -1,0 +1,144 @@
+﻿########################################################
+# Eden V3.0 (Leviathan)
+# Created by Puktata Pako on Asura
+# Last Updated: 2019年7月31日, 星期三
+########################################################
+#  有效性：目前仅EN客户端有效
+################## Windows 8 & 10 音效 #################
+#删去前方的#标签来选择声音
+define speaker "voice" "Microsoft Huihui Desktop" 2 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 2 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+
+alertall "AOE" before 6 speak "voice" "AOE"
+alertall "二连AOE" before 6 speak "voice" "二连AOE"
+#alertall "死刑" before 6 speak "voice" "死刑"
+
+alertall "看水柱" before 3 speak "voice" "看水柱"
+alertall "击退+地裂" before 3 speak "voice" "地裂击退"
+alertall "中央地裂" before 3 speak "voice" "中央地裂"
+alertall "外侧地裂" before 3 speak "voice" "外侧地裂"
+
+alertall "斜冲读条" before 3 speak "voice" "斜冲"
+alertall "二连斜冲读条" before 3 speak "voice" "二连斜冲"
+alertall "斜冲2" before 5 speak "voice" "反向躲避"
+alertall "第一次大海啸" before 12 speak "voice" "大海啸"
+alertall "第二次大海啸" before 12 speak "voice" "第二次大海啸"
+
+alertall "大时化" before 10 speak "voice" "运动会，左侧起跑"
+
+alertall "水圈集合" before 3 speak "voice" "水圈俯冲"
+
+#alertall "中心击退" before 3 speak "voice" "目标击退"
+alertall "双分摊" before 3 speak "voice" "双分摊"
+alertall "双喷水" before 3 speak "voice" "双喷水"
+#alertall "前击退" before 4 speak "voice" "前击退"
+#alertall "后击退" before 4 speak "voice" "后击退"
+alertall "大圈远离" before 3 speak "voice" "大饼远离"
+
+alertall "两替扇形攻击" before 4 speak "voice" "两替扇形攻击"
+alertall "灵泉出现" before 3 speak "voice" "灵泉预备"
+
+alertall "软狂暴AOE" before 7 speak "voice" "软狂暴，二连AOE"
+
+alertall "三连增伤" before 6 speak "voice" "三连增伤"
+alertall "一层AOE" before 5 speak "voice" "一层AOE"
+alertall "二层AOE" before 5 speak "voice" "二层AOE"
+alertall "三层AOE" before 5 speak "voice" "三层AOE"
+
+alertall "狂暴" before 61 speak "voice" "60秒狂暴"
+alertall "狂暴" before 31 speak "voice" "30秒狂暴"
+#============================================================
+#                          时间轴
+#============================================================
+0 	--Reset-- sync /Removing combatant Leviathan.  Max HP: 1194946560/ window 10000 jump 0
+0 	--Start-- sync /Rise, oceans! Swallow this forsaken land!/ window 10,10
+12 	AOE 
+24 	死刑 
+36 	看水柱 
+38 	boss台词 sync /All shall crumble before me/ window 30,10
+44 	击退+地裂 
+46 	斜冲读条 
+50 	斜冲 
+58 	猛烈波动读条 sync /(starts using|readies|begins casting) Drenching Pulse/ window 50,10
+61 	流沙集合 
+69 	斜冲读条
+69 	先放圈后斜冲 
+73 	斜冲 
+88 	水圈集合 
+93 	看俯冲 
+111 	AOE 
+122 	大海啸读条 sync /(starts using|readies|begins casting) Tsunami/ window 120,20
+132 	第一次大海啸 
+140 	前击退
+146 	中央地裂
+152 	斜冲读条
+157 	斜冲+分摊
+168 	AOE 
+180 	斜冲读条 
+186 	斜冲
+198 	AOE 
+207 	转阶段boss台词 sync /mine for the taking/ window 200,10
+207 	转阶段读条 sync /(starts using|readies|begins casting) Refreshing Shower/ window 200,20
+210 	P2 
+222 	AOE 
+228 	看水柱 
+236 	击退+地裂 
+239 	二连斜冲读条 
+243		斜冲1
+248		斜冲2
+252 	猛烈波动读条 sync /(starts using|readies|begins casting) Drenching Pulse/ window 50,10
+255 	流沙集合 
+262 	二连斜冲读条
+267 	斜冲1 
+273 	斜冲2
+286 	水圈集合 
+292 	看俯冲 
+315 	AOE 
+323 	死刑 
+334 	大时化 sync /(starts using|readies|begins casting) Stormy Horizon/ window 330,20
+347 	二连斜冲读条
+352 	斜冲1
+357 	斜冲2
+362 	回中央，五连分摊 
+372 	二连AOE 
+382 	AOE 
+398 	猛烈波动读条 sync /(starts using|readies|begins casting) Drenching Pulse/ window 50,10
+398 	流沙集合
+413 	外侧地裂
+416 	第二次大海啸读条 sync /(starts using|readies|begins casting) Tsunami/ window 200,20
+426 	第二次大海啸 
+435 	中心击退 
+440 	双分摊 
+443 	双喷水 
+448 	前击退 
+453 	后击退 
+456 	大圈远离 
+459 	二连斜冲读条
+464 	斜冲1 
+469 	斜冲2
+476 	二连AOE 
+487 	AOE 
+499 	死刑 
+512 	苛烈波动读条 sync /(starts using|readies|begins casting) Roiling Pulse/ window 50,10
+515 	流沙集合
+519 	中央地裂
+528 	两替扇形攻击 sync /(starts using|readies|begins casting) Black Smokers/ window 500,10
+533 	灵泉出现
+540 	灵泉1
+543 	灵泉2
+545 	灵泉3
+549 	灵泉4
+555 	二连斜冲读条
+560 	斜冲1
+565 	斜冲2
+576 	软狂暴AOE
+587 	AOE
+605 	三连增伤 sync /(starts using|readies|begins casting) The Calm/ window 600,20	 
+617 	一层AOE
+624 	二层AOE
+633 	三层AOE
+659 	狂暴

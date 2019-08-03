@@ -1,10 +1,10 @@
 ﻿# J3SB
-# Created by Puktata Pako on Chocobo/尼托克莉丝 on 萌芽池
+# Created by Puktata Pako on Asura
 # Last Updated: 06/05/2018
 ########################################################
 #  更新地址：
-#  https://github.com/pipirapira/Timeline-and-TTS-for-FFXIV
-#  有效性：国际服英文版 国服请使用黑暗无际版插件（见nga）
+#  https://github.com/pipirapira/NiNiTechnology
+#  有效性：国际服英文版 国服中文版
 
 hideall "--Reset--"
 

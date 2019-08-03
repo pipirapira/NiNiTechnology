@@ -1,5 +1,5 @@
 ﻿# The Minstrel's Ballad: Tsukuyomi's Pain
-# Created by Puktata Pako on Chocobo/尼托克莉丝 on 萌芽池
+# Created by Puktata Pako on Chocobo
 # Last Updated: 05/24/2018
 #############################################################
 ########CUSTOMIZE your timeline. Remove the hashtag from 
