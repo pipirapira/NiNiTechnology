@@ -1,56 +1,49 @@
 ﻿########################################################
 # Eden V3.0 (Leviathan)
-# Created by Puktata Pako on Asura
+# Created by Puktata Pako/Tabe Tabe on Asura
 # Last Updated: 2019年8月7日, 星期三
 ########################################################
-#  有效性：EN/CN/JP客户端
-################## Windows 8 & 10 音效 #################
-#删去前方的#标签来选择声音
-define speaker "voice" "Microsoft Huihui Desktop" 2 100
-#define speaker "voice" "Microsoft Hanhan Desktop" 2 100
 
-#################### Windows 7 音效 ####################
-#删去前方的#标签来选择声音
-#define speaker "voice" "Microsoft Lili" 0 100
+alertall "AOE" before 6 sound "tts AOE"
+alertall "二连AOE" before 6 sound "tts 二连AOE"
+alertall "死刑" before 7 sound "tts 死刑"
 
-alertall "AOE" before 6 speak "voice" "AOE"
-alertall "二连AOE" before 6 speak "voice" "二连AOE"
-alertall "死刑" before 7 speak "voice" "死刑"
-alertall "水圈集合" before 3 speak "voice" "水圈俯冲"
+alertall "看水柱" before 3 sound "tts 看水柱"
+alertall "击退+地裂" before 3 sound "tts 地裂击退"
+alertall "中央地裂" before 3 sound "tts 海峡两岸"
+alertall "外侧地裂" before 3 sound "tts 外侧地裂"
 
-alertall "看水柱" before 3 speak "voice" "看水柱"
-alertall "击退+地裂" before 3 speak "voice" "地裂击退"
-alertall "中央地裂" before 5 speak "voice" "海峡两岸"
-alertall "外侧地裂" before 5 speak "voice" "外侧地裂"
+alertall "斜冲读条" before 3 sound "tts 斜冲"
+alertall "二连斜冲读条" before 3 sound "tts 二连斜冲"
+alertall "斜冲2" before 5 sound "tts 反向躲避"
+alertall "第一次大海啸" before 12 sound "tts 大海啸"
+alertall "第二次大海啸" before 12 sound "tts 第二次大海啸"
 
-alertall "斜冲读条" before 3 speak "voice" "斜冲"
-alertall "二连斜冲读条" before 3 speak "voice" "二连斜冲"
-alertall "斜冲2" before 5 speak "voice" "反向躲避"
+alertall "大时化" before 10 sound "tts 运动会，左侧起跑"
 
-alertall "第一次大海啸" before 12 speak "voice" "大海啸"
-alertall "第二次大海啸" before 12 speak "voice" "第二次大海啸"
-alertall "大时化" before 10 speak "voice" "运动会，左侧起跑"
+alertall "水圈集合" before 3 sound "tts 水圈俯冲"
+alertall "猛烈波动读条" before 1 sound "tts 流沙后散开"
+alertall "猛烈波动读条（外侧散开）" before 2 sound "tts 流沙后外侧散开"
+alertall "苛烈波动读条" before 1 sound "tts 流沙后GA100"
+#alertall "中心击退" before 3 sound "tts 目标击退"
+alertall "双分摊" before 3 sound "tts 双分摊"
+alertall "双喷水" before 3 sound "tts 双喷水"
+#alertall "前击退" before 4 sound "tts 前击退"
+#alertall "后击退" before 4 sound "tts 后击退"
+alertall "大圈远离" before 3 sound "tts 大饼远离"
 
-alertall "猛烈波动读条" before 1 speak "voice" "流沙后散开"
-alertall "猛烈波动读条（外侧散开）" before 2 speak "voice" "流沙后外侧散开"
-alertall "苛烈波动读条" before 1 speak "voice" "流沙后GA100"
-#alertall "中心击退" before 3 speak "voice" "目标击退"
-alertall "双分摊" before 3 speak "voice" "双分摊"
-alertall "双喷水" before 3 speak "voice" "双喷水"
-#alertall "前击退" before 4 speak "voice" "前击退"
-#alertall "后击退" before 4 speak "voice" "后击退"
-alertall "大圈远离" before 3 speak "voice" "大饼远离"
+alertall "两T扇形攻击" before 4 sound "tts 两替扇形攻击"
+alertall "灵泉出现" before 3 sound "tts 灵泉预备"
 
-alertall "两T扇形攻击" before 4 speak "voice" "两替扇形攻击"
-alertall "灵泉出现" before 3 speak "voice" "灵泉预备"
+alertall "软狂暴AOE" before 7 sound "tts 软狂暴，二连AOE"
 
-alertall "三连增伤" before 6 speak "voice" "三连增伤"
-alertall "一层AOE" before 5 speak "voice" "一层AOE"
-alertall "二层AOE" before 5 speak "voice" "二层AOE"
-alertall "三层AOE" before 5 speak "voice" "三层AOE"
+alertall "三连增伤" before 6 sound "tts 三连增伤"
+alertall "一层AOE" before 5 sound "tts 一层AOE"
+alertall "二层AOE" before 5 sound "tts 二层AOE"
+alertall "三层AOE" before 5 sound "tts 三层AOE"
 
-alertall "狂暴" before 61 speak "voice" "60秒狂暴"
-alertall "狂暴" before 31 speak "voice" "30秒狂暴"
+alertall "狂暴" before 61 sound "tts 60秒狂暴"
+alertall "狂暴" before 31 sound "tts 30秒狂暴"
 #============================================================
 #                          时间轴
 #============================================================
