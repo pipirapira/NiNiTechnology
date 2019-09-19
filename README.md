@@ -1,15 +1,15 @@
 # NiNiTechnology
   
-## ff14时间轴和触发器
+### ff14时间轴和触发器
   
 时间轴使用ACT.Timeline.dll和FZTimeline.dll插件导入。(所有时间轴已支持EN/CN/JP语言客户端）
   
 触发器使用Triggernometry.dll插件导入。(Triggernometry TTS已支持所有语言客户端）
   
-## CardcaptorAST
+### CardcaptorAST
 5.0占星用卡牌优化系统，使用Triggernometry.dll插件导入。
   
-## 尼尼科技指挥插件
+### 尼尼科技指挥插件
 
 经过测试的环境：
 * ACT国服适配整合1.19.9（肥肥咖啡版） + FFXIV_ACT_Plugin1.7.2.10 +  国服客户端4.57 √
