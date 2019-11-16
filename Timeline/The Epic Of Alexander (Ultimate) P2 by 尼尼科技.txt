@@ -1,0 +1,180 @@
+﻿# The Epic Of Alexander (Ultimate)
+# Created by Puktata Pako on Asura
+# Last Updated: 11/16/2019
+########################################################
+
+hideall "--Reset--"
+hideall "读条"
+hideall "台词"
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+define speaker "voice" "Microsoft Huihui Desktop" 2 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 2 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+################ CUSTOMIZE Call Outs #####################
+
+alertall "顺劈" before 3 speak "voice" "顺劈"
+#alertall "☂罩子" before 2 sound "SCH-进罩子.wav"
+#alertall "（✪）" before 2 sound "AST-地星准备.wav"
+#alertall "☀天星" before 2 sound "AST-天星.wav"
+#alertall "★光速" before 2 sound "AST-光速.wav"
+#alertall "★双相" before 2 sound "AST-双相.wav"
+#alertall "★爆发药" before 2 sound "Healer-爆发药.wav"
+
+alertall "正义飞踢" before 5 speak "voice" "集合减伤"
+#alertall "爆炸1" before 1 speak "voice" "1"
+#alertall "爆炸2" before 1 speak "voice" "2"
+#alertall "爆炸3" before 1 speak "voice" "3"
+#alertall "爆炸4" before 1 speak "voice" "4"
+#alertall "爆炸5" before 1 speak "voice" "5"
+#alertall "爆炸6" before 1 speak "voice" "1"
+#alertall "爆炸7" before 1 speak "voice" "2"
+#alertall "爆炸8" before 1 speak "voice" "3"
+#alertall "爆炸9" before 1 speak "voice" "4"
+#alertall "爆炸10" before 1 speak "voice" "十"
+alertall "AOE" before 5 speak "voice" "AOE"
+alertall "2连AOE" before 7 speak "voice" "二连AOE"
+alertall "4毒buff" before 5 speak "voice" "散开接毒"
+alertall "光子" before 6 speak "voice" "光子"
+alertall "火泥引导" before 8 speak "voice" "远程引导"
+alertall "传毒" before 1 speak "voice" "传毒"
+alertall "驱逐者死刑" before 7 speak "voice" "顺劈躲开"
+alertall "地雷+双计数圈" before 5 speak "voice" "计数踩雷"
+alertall "混乱风暴" before 7 speak "voice" "超级闪光，排队蓝橙紫绿"
+alertall "双重火箭飞拳" before 7 speak "voice" "死刑"
+alertall "超级跳" before 8 speak "voice" "超级跳引导"
+alertall "向后扇形攻击" before 4 speak "voice" "向后喷火"
+alertall "场外飞轮出现" before 2 speak "voice" "飞盘散开"
+alertall "制导和飞轮区域判定" before 1 speak "voice" "回中央"
+alertall "护盾喷火2" before 8 speak "voice" "喷火"
+alertall "水雷1" before 7 speak "voice" "水雷1"
+alertall "水雷2" before 7 speak "voice" "水雷2"
+alertall "终审读条" before 0 speak "voice" "终审开始"
+#################################################################
+#                  P1
+#################################################################
+# -2秒地星准备
+0	"--Reset--" sync /Removing combatant (.*?) Max HP: 680756288/ window 10000 jump 0
+0 	开始 sync /] 15:400.....:(Living Liquid|リビングリキッド|有生命活水):4978:/ window 10,1
+7 	顺劈
+12 	倾泄读条 sync /] 14:4826/ window 12,5
+12	☂罩子
+16 	倾泄
+17 	分身和水龙卷出现
+29 	4小怪出现
+30 	外场水波引导x3
+32 	远近拍手
+34	★光速
+34 	顺劈
+35 	外场水波二连x3
+36 	小怪叠层
+38 	水球出现
+39 	水量均等
+39	★双相
+47 	小怪叠层
+45	☀天星
+53 	顺劈
+59	（✪）
+63 	万变水波引导x4
+66 	水量均等
+68 	内侧水波外侧水圈
+71 	万变水波三连x4
+77 	六连AOE
+78	☂罩子
+83 	双T接线伤害
+83 	六连AOE结束
+84 	倾泄读条 sync /] 14:4826/ window 50,10
+86 	水量均等
+88 	倾泄
+89 	外场水龙卷改变
+92 	窒息x6
+100 	万变水波引导x4
+105 	水量均等
+105 	内侧水波外侧水圈
+106 	外场水波引导x3
+108 	水圈判定
+108		☀天星
+109 	万变水波三连x4
+111 	外场水波二连x3
+116 	水球出现
+120 	远近拍手
+120		（✪）
+124 	六连AOE
+125		★光速
+126 	水量均等
+129 	六连AOE结束
+130 	顺劈
+132 	狂暴读条 sync /] 14:49B3/ window 60,10
+134 	狂暴被打断 sync /Intruders to central calculation system detected|階差閉宇宙ヲ、脅カス敵ヲ発見……撃滅スル！/ window 135,20
+
+#################################################################
+#                  P2 顺劈前2秒高达出现
+#################################################################
+137 	麻将点名出现
+139 	爆炸1
+141 	爆炸2
+144 	爆炸3
+146 	爆炸4
+147 	麻将顺劈1
+148 	爆炸5
+148 	麻将冲锋2
+150 	爆炸6
+151 	麻将顺劈3
+152 	爆炸7
+153 	麻将冲锋4
+155 	爆炸8
+156 	麻将顺劈5
+157 	爆炸9
+157 	麻将冲锋6
+159 	爆炸10
+161 	麻将顺劈7
+162 	麻将冲锋8
+165 	P2台词 sync /Designation: Brute Justice. Temporal interlopers identified|想定外ノ時空改変者ヲ発見……鉄槌ヲ下ス！/ window 50,10
+162		☂罩子
+167 	正义飞踢
+168		☀天星
+169 	双boss出现
+174 	驱逐者读条龙卷
+179 	AOE
+181 	4毒buff
+185		（✪）
+187 	水雷buff
+188 	场外飞轮出现
+193 	制导读条 sync /] 14:482F:/ window 50,10
+196 	制导和飞轮区域判定
+200 	制导爆炸
+203 	光子
+203		传毒
+212		驱逐者死刑
+217 	水雷1
+225 	火泥引导
+227 	地雷+双计数圈
+232 	计数圈判定
+232		传毒
+242 	终审读条 sync /] 14:483B:/ window 50,10
+247 	水雷2
+248		☀天星
+249 	反毒出现
+249		（✪）
+257 	护盾喷火2
+262		传毒
+268 	AOE
+277 	水雷2
+289 	混乱风暴
+292 	Gavel读条	sync /] 14:483C:/ window 50,10
+294 	混乱风暴判定
+298 	终审判定
+309 	光子
+310		☀天星
+316 	双重火箭飞拳
+318		（✪）
+324 	超级跳
+327 	向后扇形攻击
+337 	2连AOE
+346 	AOE
+361 	狂暴
