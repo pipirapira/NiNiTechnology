@@ -2,9 +2,9 @@
 ### 绝亚历山大
 
 麻将圈圈计数器工作后显示如下：<br>
-![image](https://github.com/pipirapira/NiNiTechnology/blob/master/resources/hawk2.gif)
+![image](https://github.com/pipirapira/NiNiTechnology/blob/master/resources/hawk2.gif)<br>
 打法参照1A式，即按1256,3478散开。动态图如下：<br>
-![image](https://github.com/pipirapira/NiNiTechnology/blob/master/resources/hawk1.gif)
+![image](https://github.com/pipirapira/NiNiTechnology/blob/master/resources/hawk1.gif)<br>
 
 ### ff14时间轴和触发器
   
