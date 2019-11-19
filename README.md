@@ -25,7 +25,7 @@ P2打法参照1A式，即按1256,3478散开。动态图如下：<br>
   
 触发器使用Triggernometry.dll插件导入。(Triggernometry TTS已支持所有语言客户端）<br>
   
-### CardcaptorAST
+## CardcaptorAST
 5.0占星用卡牌优化系统，使用Triggernometry.dll插件导入。<br>
   
 ## 尼尼科技指挥插件
