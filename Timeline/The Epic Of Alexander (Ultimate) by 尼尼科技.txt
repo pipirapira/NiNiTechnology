@@ -27,34 +27,40 @@ alertall "顺劈" before 3 speak "voice" "顺劈"
 #alertall "★爆发药" before 2 sound "Healer-爆发药.wav"
 
 alertall "正义飞踢" before 5 speak "voice" "集合减伤"
-#alertall "爆炸1" before 1 speak "voice" "1"
-#alertall "爆炸2" before 1 speak "voice" "2"
-#alertall "爆炸3" before 1 speak "voice" "3"
-#alertall "爆炸4" before 1 speak "voice" "4"
+alertall "爆炸1" before 1 speak "voice" "1"
+alertall "爆炸2" before 1 speak "voice" "2"
+alertall "爆炸3" before 1 speak "voice" "3"
+alertall "爆炸4" before 1 speak "voice" "4"
 #alertall "爆炸5" before 1 speak "voice" "5"
-#alertall "爆炸6" before 1 speak "voice" "1"
-#alertall "爆炸7" before 1 speak "voice" "2"
-#alertall "爆炸8" before 1 speak "voice" "3"
-#alertall "爆炸9" before 1 speak "voice" "4"
+alertall "爆炸6" before 1 speak "voice" "1"
+alertall "爆炸7" before 1 speak "voice" "2"
+alertall "爆炸8" before 1 speak "voice" "3"
+alertall "爆炸9" before 1 speak "voice" "4"
 #alertall "爆炸10" before 1 speak "voice" "十"
 alertall "AOE" before 5 speak "voice" "AOE"
 alertall "2连AOE" before 7 speak "voice" "二连AOE"
 alertall "4毒buff" before 5 speak "voice" "散开接毒"
-alertall "光子" before 6 speak "voice" "光子"
+alertall "光子" before 7 speak "voice" "光子"
 alertall "火泥引导" before 8 speak "voice" "远程引导"
 alertall "传毒" before 1 speak "voice" "传毒"
-alertall "驱逐者死刑" before 7 speak "voice" "顺劈躲开"
+alertall "回旋碎踢" before 7 speak "voice" "回旋碎踢"
 alertall "地雷+双计数圈" before 5 speak "voice" "计数踩雷"
-alertall "混乱风暴" before 7 speak "voice" "超级闪光，排队蓝橙紫绿"
-alertall "双重火箭飞拳" before 7 speak "voice" "死刑"
-alertall "超级跳" before 8 speak "voice" "超级跳引导"
+alertall "混乱风暴" before 7 speak "voice" "超级闪光，蓝橙紫绿"
+alertall "双重火箭飞拳" before 7 speak "voice" "火箭飞拳"
+alertall "超级跳" before 10 speak "voice" "超级跳，引导站位"
 alertall "向后扇形攻击" before 4 speak "voice" "向后喷火"
 alertall "场外飞轮出现" before 2 speak "voice" "飞盘散开"
 alertall "制导和飞轮区域判定" before 1 speak "voice" "回中央"
 alertall "护盾喷火2" before 8 speak "voice" "喷火"
+#alertall "护盾喷火2" before 0 speak "voice" "集火护盾"
 alertall "水雷1" before 7 speak "voice" "水雷1"
 alertall "水雷2" before 7 speak "voice" "水雷2"
-alertall "终审读条" before 0 speak "voice" "终审开始"
+alertall "水雷3" before 7 speak "voice" "水雷3"
+alertall "喷火1" before 7 speak "voice" "引导喷火"
+alertall "反毒出现" before 1 speak "voice" "反毒出现"
+alertall "神罚射线（死刑）" before 5 speak "voice" "死刑"
+alertall "神罚射线（死刑）" before 1 speak "voice" "三连顺劈"
+alertall "亚历山大十字" before 3 speak "voice" "十字十字"
 #################################################################
 #                  P1
 #################################################################
@@ -131,50 +137,112 @@ alertall "终审读条" before 0 speak "voice" "终审开始"
 156 	麻将顺劈5
 157 	爆炸9
 157 	麻将冲锋6
-159 	爆炸10
+159 	爆炸10	
 161 	麻将顺劈7
 162 	麻将冲锋8
-165 	P2台词 sync /Designation: Brute Justice. Temporal interlopers identified|想定外ノ時空改変者ヲ発見……鉄槌ヲ下ス！/ window 50,10
-162		☂罩子
-167 	正义飞踢
-168		☀天星
-169 	双boss出现
-174 	驱逐者读条龙卷
-179 	AOE
+162		★光速
+165 	P2台词 sync /Designation: Brute Justice. Temporal interlopers identified|想定外ノ時空改変者ヲ発見……鉄槌ヲ下ス！/ window 165,10
+
+#################################################################
+#                  基本策略：
+#		罩子地星：水雷13, 双相天星：水雷2前合图奶T+水雷2刷盾
+#		天宫图：光子1  水雷3前AOE  最后AOE
+#		光速：起手，水雷3后跑位至冰块的时间挂合图奶T。
+#		占卜：起手一次，排队后一次
+#################################################################
+
+166 	正义飞踢
+167		☀天星
+168 	双boss出现
+173 	驱逐者读条龙卷
+178 	AOE
 181 	4毒buff
-185		（✪）
 187 	水雷buff
 188 	场外飞轮出现
 193 	制导读条 sync /] 14:482F:/ window 50,10
 196 	制导和飞轮区域判定
+198		（✪）
 200 	制导爆炸
 203 	光子
 203		传毒
-212		驱逐者死刑
+212		回旋碎踢
+215		☂罩子
 217 	水雷1
+225		★双相
 225 	火泥引导
 227 	地雷+双计数圈
 232 	计数圈判定
 232		传毒
-242 	终审读条 sync /] 14:483B:/ window 50,10
+245 	开庭读条 sync /] 14:483B:/ window 50,10
 247 	水雷2
 248		☀天星
 249 	反毒出现
-249		（✪）
-257 	护盾喷火2
+256 	护盾喷火2
+259		（✪）
 262		传毒
 268 	AOE
-277 	水雷2
+276		☂罩子
+277 	水雷3
 289 	混乱风暴
-292 	Gavel读条	sync /] 14:483C:/ window 50,10
+292 	闭庭读条	sync /] 14:483C:/ window 50,10
 294 	混乱风暴判定
 298 	终审判定
 309 	光子
 310		☀天星
 316 	双重火箭飞拳
-318		（✪）
+320		（✪）
 324 	超级跳
 327 	向后扇形攻击
+336		☂罩子
 337 	2连AOE
 346 	AOE
 361 	狂暴
+
+#################################################################
+#                  P3 
+#################################################################
+360 	p3台词 sync /who would prove yourself worthy of your utopia|理想郷に到る道を導くため/ window 360,20
+362 	三体出现
+364 	buff出现
+374 	时间停止
+384 	boss出现
+390 	神罚射线读条 sync /] 14:4A80:/ window 50,10
+395 	神罚射线（死刑）
+398 	3连顺劈
+400 	顺劈
+402 	顺劈
+414 	boss消失
+416 	场边出现
+418 	连线球出现
+426 	审判结晶点名出现
+432 	真心出现
+442 	喷火1
+445 	喷火2
+447 	喷火3
+449 	buff出现
+454 	结晶破碎提示
+461 	结晶破碎
+463 	buff清算+十字
+463		亚历山大十字
+468 	巡航者顺劈1
+469 	巡航者顺劈2
+470 	巡航者顺劈3
+472 	超级跳，引导
+474 	boss出现
+479 	神罚射线读条 sync /] 14:4A80:/ window 50,10
+484 	神罚射线（死刑）
+489 	3连顺劈
+491 	顺劈
+493 	顺劈
+505 	boss消失
+508 	场边出现
+515 	麻将点名出现
+516 	飞盘出现（正义号脚下集合）
+523 	飞盘判定
+524 	麻将顺劈1+超级跳
+526 	麻将冲锋2+十字提示出现
+520		亚历山大十字
+527 	向中央扇形攻击
+528 	麻将顺劈3+灵泉炸裂
+530 	麻将冲锋4
+532 	麻将顺劈5
