@@ -1,0 +1,107 @@
+﻿# J3SB
+# Created by Puktata Pako on Asura
+# Last Updated: 11/01/2019
+########################################################
+
+hideall "--Reset--"
+hideall "读条"
+hideall "台词"
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+define speaker "voice" "Microsoft Huihui Desktop" 2 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 2 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+################ CUSTOMIZE Call Outs #####################
+
+alertall "万变水波1" before 8 speak "voice" "万变水波"
+alertall "左右刀1" before 8 speak "voice" "左右刀"
+alertall "死刑1" before 8 speak "voice" "死刑"
+alertall "双死刑" before 6 speak "voice" "死刑"
+alertall "魔法阵" before 7 speak "voice" "魔法阵"
+alertall "掉大饼" before 7 speak "voice" "掉大饼"
+alertall "冰火AOE" before 7 speak "voice" "AOE"
+alertall "AOE" before 7 speak "voice" "AOE"
+alertall "双分摊" before 8 speak "voice" "双分摊"
+
+alertall "冰火击退" before 10 speak "voice" "击退"
+alertall "至高无上" before 10 speak "voice" "至高无上"
+alertall "踩塔" before 12 speak "voice" "踩塔"
+#################################################################
+#                  P1
+#################################################################
+0	"--Reset--" sync /Removing combatant (.*?) Max HP: 292914688/ window 10000 jump 0
+0 	--Start-- sync /00:0044:Hades:Show me your “vaunted” strength. And I shall expose the lie of your fragmented existence!/ window 10,1
+6 	读条 sync /14:47A5/ window 7,1
+10 	古代复读
+18 	万变水波1
+21 	万变水波2
+29 	左右刀1
+32 	左右刀2
+41 	死刑1
+44 	死刑2
+50 	魔法阵
+58 	魔法阵判定
+67 	掉大饼
+107 	魔法阵
+115 	魔法阵判定
+128 	万变水波1
+131 	万变水波2
+139 	左右刀1
+142 	左右刀2
+#################################################################
+#                  P2
+#################################################################
+146 	台词 sync /00:0044:Hades:Pitiful, malformed, wretched creatures!/ window 150,60
+177 	小怪1出现 sync /14:47B8/ window 180,60
+187 	4扇形
+200 	双分摊
+205 	爆震III
+210 	台词 sync /00:0044:Hades:Emerge, Lahabrea! Rise, Igeyorhm!/ window 210,60
+218 	小怪2出现 sync /14:47BE/ window 220,10
+223 	冰火AOE
+237 	冰火线出现
+242 	双死刑
+245 	冰火线判定
+254 	冰火AOE
+267 	双死刑
+275 	台词 sync /00:0044:Hades:Our plea transcends the very boundaries of the soul!/ window 275,60
+282 	小怪3出现 sync /14:47C8/ window 282,60
+293 	法则变更
+314 	AOE
+326 	死刑
+336 	双分摊
+346 	AOE
+349 	boss上天 sync /00:0044:Hades:Your meager convictions will crumble before our might!/ window 350,60
+#################################################################
+#                  P3
+#################################################################
+394 	boss落地 sync /00:0044:Hades:Remember, my brethren!/ window 400,60
+395 	读条 sync /14:47D5/ window 400,60
+399 	踩塔
+407 	奶牢
+423 	奶牢打掉 sync /Hades cancels Chorus of the Lost/ window 425,60
+426 	读条 sync /14:47DE/ window 430,60
+440 	冰火击退
+459 	双分摊
+485 	两边中间1
+501 	boss上天 sync /00:0044:Hades:Drown in despair!/ window 500,120
+583 	boss落地 sync /00:0044:Hades:Let the darkness consume you!/ window 600,120
+584 	读条 sync /14:47F0/ window 590,20
+588 	地火
+613 	AOE
+621 	双AOE
+625 	踩塔
+632 	至高无上
+642 	读条 sync /14:47F0/ window 20,10
+646 	地火
+671 	AOE
+679 	双AOE
+683 	踩塔
+690 	至高无上
+702 	读条 sync /00:0044:Hades:For you, who never should have been, this is the end!/ window 705,120
+727 	狂暴
