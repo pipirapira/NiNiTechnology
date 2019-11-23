@@ -19,13 +19,6 @@ define speaker "voice" "Microsoft Huihui Desktop" 2 100
 ################ CUSTOMIZE Call Outs #####################
 
 alertall "顺劈" before 3 speak "voice" "顺劈"
-#alertall "☂罩子" before 2 sound "SCH-进罩子.wav"
-#alertall "（✪）" before 2 sound "AST-地星准备.wav"
-#alertall "☀天星" before 2 sound "AST-天星.wav"
-#alertall "★光速" before 2 sound "AST-光速.wav"
-#alertall "★双相" before 2 sound "AST-双相.wav"
-#alertall "★爆发药" before 2 sound "Healer-爆发药.wav"
-
 alertall "正义飞踢" before 5 speak "voice" "集合减伤"
 alertall "爆炸1" before 1 speak "voice" "1"
 alertall "爆炸2" before 1 speak "voice" "2"
@@ -37,30 +30,45 @@ alertall "爆炸7" before 1 speak "voice" "2"
 alertall "爆炸8" before 1 speak "voice" "3"
 alertall "爆炸9" before 1 speak "voice" "4"
 #alertall "爆炸10" before 1 speak "voice" "十"
-alertall "AOE" before 5 speak "voice" "AOE"
+#alertall "AOE" before 5 speak "voice" "AOE"
 alertall "2连AOE" before 7 speak "voice" "二连AOE"
-alertall "4毒buff" before 5 speak "voice" "散开接毒"
+#alertall "4毒buff" before 5 speak "voice" "散开接毒"
 alertall "光子" before 7 speak "voice" "光子"
-alertall "火泥引导" before 8 speak "voice" "远程引导"
+#alertall "火泥引导" before 8 speak "voice" "远程引导"
 alertall "传毒" before 1 speak "voice" "传毒"
 alertall "回旋碎踢" before 7 speak "voice" "回旋碎踢"
-alertall "地雷+双计数圈" before 5 speak "voice" "计数踩雷"
+#alertall "地雷+双计数圈" before 5 speak "voice" "计数踩雷"
 alertall "混乱风暴" before 7 speak "voice" "超级闪光，蓝橙紫绿"
-alertall "双重火箭飞拳" before 7 speak "voice" "火箭飞拳"
-alertall "超级跳" before 10 speak "voice" "超级跳，引导站位"
-alertall "向后扇形攻击" before 4 speak "voice" "向后喷火"
-alertall "场外飞轮出现" before 2 speak "voice" "飞盘散开"
+#alertall "双重火箭飞拳" before 7 speak "voice" "火箭飞拳"
+#alertall "超级跳" before 10 speak "voice" "超级跳，引导站位"
+#alertall "向后扇形攻击" before 4 speak "voice" "向后喷火"
+alertall "场外飞轮出现" before 2 speak "voice" "飞盘"
 alertall "制导和飞轮区域判定" before 1 speak "voice" "回中央"
 alertall "护盾喷火2" before 8 speak "voice" "喷火"
 #alertall "护盾喷火2" before 0 speak "voice" "集火护盾"
-alertall "水雷1" before 7 speak "voice" "水雷1"
-alertall "水雷2" before 7 speak "voice" "水雷2"
-alertall "水雷3" before 7 speak "voice" "水雷3"
-alertall "喷火1" before 7 speak "voice" "引导喷火"
-alertall "反毒出现" before 1 speak "voice" "反毒出现"
+alertall "水雷1" before 8 speak "voice" "水雷1"
+alertall "水雷2" before 8 speak "voice" "水雷2"
+alertall "水雷3" before 8 speak "voice" "水雷3"
+alertall "喷火1" before 9 speak "voice" "喷火站位"
+#alertall "反毒出现" before 1 speak "voice" "反毒出现"
 alertall "神罚射线（死刑）" before 5 speak "voice" "死刑"
 alertall "神罚射线（死刑）" before 1 speak "voice" "三连顺劈"
 alertall "亚历山大十字" before 3 speak "voice" "十字十字"
+
+alertall "巡航者顺劈1" before 5 speak "voice" "引导顺劈"
+alertall "正义号出现（二运）" before 1 speak "voice" "正义号集合"
+#alertall "灵泉1" before 2 speak "voice" "灵泉1"
+#alertall "灵泉2" before 2 speak "voice" "灵泉2"
+#alertall "灵泉3" before 2 speak "voice" "灵泉3"
+alertall "幕帘" before 2 speak "voice" "幕帘"
+alertall "扩散盾" before 3 speak "voice" "地神幻光扩散盾"
+alertall "火龙卷4" before 4 speak "voice" "天使盾，魔抗"
+alertall "火龙卷5" before 2 speak "voice" "低语"
+alertall "火龙卷6" before 2 speak "voice" "罩子，真言"
+alertall "火龙卷7" before 2 speak "voice" "血仇，行吟"
+alertall "火龙卷10" before 3 speak "voice" "大翅膀"
+alertall "中央分摊" before 6 speak "voice" "中央集合，幕帘群盾"
+alertall "百万神圣" before 8 speak "voice" "百万神圣，罩子血仇昏乱"
 #################################################################
 #                  P1
 #################################################################
@@ -69,29 +77,23 @@ alertall "亚历山大十字" before 3 speak "voice" "十字十字"
 0 	开始 sync /] 15:400.....:(Living Liquid|リビングリキッド|有生命活水):4978:/ window 10,1
 7 	顺劈
 12 	倾泄读条 sync /] 14:4826/ window 12,5
-12	☂罩子
 16 	倾泄
 17 	分身和水龙卷出现
 29 	4小怪出现
 30 	外场水波引导x3
 32 	远近拍手
-34	★光速
 34 	顺劈
 35 	外场水波二连x3
 36 	小怪叠层
 38 	水球出现
 39 	水量均等
-39	★双相
 47 	小怪叠层
-45	☀天星
 53 	顺劈
-59	（✪）
 63 	万变水波引导x4
 66 	水量均等
 68 	内侧水波外侧水圈
 71 	万变水波三连x4
 77 	六连AOE
-78	☂罩子
 83 	双T接线伤害
 83 	六连AOE结束
 84 	倾泄读条 sync /] 14:4826/ window 50,10
@@ -104,14 +106,11 @@ alertall "亚历山大十字" before 3 speak "voice" "十字十字"
 105 	内侧水波外侧水圈
 106 	外场水波引导x3
 108 	水圈判定
-108		☀天星
 109 	万变水波三连x4
 111 	外场水波二连x3
 116 	水球出现
 120 	远近拍手
-120		（✪）
 124 	六连AOE
-125		★光速
 126 	水量均等
 129 	六连AOE结束
 130 	顺劈
@@ -140,19 +139,8 @@ alertall "亚历山大十字" before 3 speak "voice" "十字十字"
 159 	爆炸10	
 161 	麻将顺劈7
 162 	麻将冲锋8
-162		★光速
 165 	P2台词 sync /Designation: Brute Justice. Temporal interlopers identified|想定外ノ時空改変者ヲ発見……鉄槌ヲ下ス！/ window 165,10
-
-#################################################################
-#                  基本策略：
-#		罩子地星：水雷13, 双相天星：水雷2前合图奶T+水雷2刷盾
-#		天宫图：光子1  水雷3前AOE  最后AOE
-#		光速：起手，水雷3后跑位至冰块的时间挂合图奶T。
-#		占卜：起手一次，排队后一次
-#################################################################
-
 166 	正义飞踢
-167		☀天星
 168 	双boss出现
 173 	驱逐者读条龙卷
 178 	AOE
@@ -161,39 +149,30 @@ alertall "亚历山大十字" before 3 speak "voice" "十字十字"
 188 	场外飞轮出现
 193 	制导读条 sync /] 14:482F:/ window 50,10
 196 	制导和飞轮区域判定
-198		（✪）
 200 	制导爆炸
 203 	光子
 203		传毒
 212		回旋碎踢
-215		☂罩子
 217 	水雷1
-225		★双相
 225 	火泥引导
 227 	地雷+双计数圈
 232 	计数圈判定
-232		传毒
+233		传毒
 245 	开庭读条 sync /] 14:483B:/ window 50,10
 247 	水雷2
-248		☀天星
 249 	反毒出现
 256 	护盾喷火2
-259		（✪）
-262		传毒
+263		传毒
 268 	AOE
-276		☂罩子
 277 	水雷3
 289 	混乱风暴
 292 	闭庭读条	sync /] 14:483C:/ window 50,10
 294 	混乱风暴判定
 298 	终审判定
 309 	光子
-310		☀天星
 316 	双重火箭飞拳
-320		（✪）
 324 	超级跳
 327 	向后扇形攻击
-336		☂罩子
 337 	2连AOE
 346 	AOE
 361 	狂暴
@@ -211,8 +190,10 @@ alertall "亚历山大十字" before 3 speak "voice" "十字十字"
 398 	3连顺劈
 400 	顺劈
 402 	顺劈
+403		幕帘
+410		扩散盾
 414 	boss消失
-416 	场边出现
+417		猫出现
 418 	连线球出现
 426 	审判结晶点名出现
 432 	真心出现
@@ -220,8 +201,7 @@ alertall "亚历山大十字" before 3 speak "voice" "十字十字"
 445 	喷火2
 447 	喷火3
 449 	buff出现
-454 	结晶破碎提示
-461 	结晶破碎
+457 	金心就位
 463 	buff清算+十字
 463		亚历山大十字
 468 	巡航者顺劈1
@@ -235,14 +215,37 @@ alertall "亚历山大十字" before 3 speak "voice" "十字十字"
 491 	顺劈
 493 	顺劈
 505 	boss消失
-508 	场边出现
-515 	麻将点名出现
-516 	飞盘出现（正义号脚下集合）
-523 	飞盘判定
-524 	麻将顺劈1+超级跳
-526 	麻将冲锋2+十字提示出现
-520		亚历山大十字
-527 	向中央扇形攻击
-528 	麻将顺劈3+灵泉炸裂
-530 	麻将冲锋4
-532 	麻将顺劈5
+507 	正义号出现（二运）
+514 	麻将点名出现
+523 	麻将12巡航者出现
+523 	超级跳
+526 	末世宣言开始
+527 	麻将34巡航者出现
+528 	灵泉1
+531 	十字判定
+531 	麻将56巡航者出现
+532 	灵泉2
+535 	麻将78巡航者出现
+536 	灵泉3
+543 	中央分摊
+547 	boss出现
+548 	计数圈判定
+556 	百万神圣
+563 	百万神圣2
+575		扩散盾
+579 	boss消失
+580 	火龙卷落地伤害
+584 	火龙卷1
+587 	火龙卷2
+590 	火龙卷3
+593 	火龙卷4
+596 	火龙卷5
+599 	火龙卷6
+602 	火龙卷7
+602 	巡航者狂暴
+605 	火龙卷8
+608 	火龙卷9
+611 	火龙卷10
+614 	火龙卷11
+617 	火龙卷12
+655 	本体狂暴
