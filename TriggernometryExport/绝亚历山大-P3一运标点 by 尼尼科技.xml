@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedTrigger Enabled="true" Name="一运标点" Id="d7659f34-d87a-400b-b68a-e1aed5deadf7" RegularExpression="Added new combatant (Shanoa|シャノア|夏诺雅).*?Pos: \((?&lt;x&gt;.*?),(?&lt;y&gt;.*?)," PeriodRefire="Deny" RefirePeriodExpression="2000">
+    <Actions>
+      <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2005/place" JsonPayloadExpression="{&quot;A&quot;:{&quot;X&quot;:82,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:91,&quot;Y&quot;:0,&quot;Z&quot;:115.6,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:109,&quot;Y&quot;:0,&quot;Z&quot;:115.6,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:118,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:105.5,&quot;Y&quot;:0,&quot;Z&quot;:94,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:94.5,&quot;Y&quot;:0,&quot;Z&quot;:94,&quot;ID&quot;:5,&quot;Active&quot;:true}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="Numeric" ExpressionR="78.5" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+        <Conditions />
+      </Action>
+      <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2005/place" JsonPayloadExpression="{&quot;A&quot;:{&quot;X&quot;:82,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:91,&quot;Y&quot;:0,&quot;Z&quot;:84.4,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:109,&quot;Y&quot;:0,&quot;Z&quot;:84.4,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:118,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:105.5,&quot;Y&quot;:0,&quot;Z&quot;:106,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:94.5,&quot;Y&quot;:0,&quot;Z&quot;:106,&quot;ID&quot;:5,&quot;Active&quot;:true}}" TextAuraFontSize="9" TextAuraFontName="??" ActionType="GenericJson">
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${y}" ExpressionTypeL="Numeric" ExpressionR="121.5" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+        <Conditions />
+      </Action>
+      <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2005/place" JsonPayloadExpression="{&quot;A&quot;:{&quot;X&quot;:96,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0,&quot;Z&quot;:96,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:106,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0.0,&quot;Z&quot;:104,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:119,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:5,&quot;Active&quot;:true}}" TextAuraFontSize="9" TextAuraFontName="??" ActionType="GenericJson" ExecutionDelayExpression="33000">
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Action>
+      <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:2005/place" JsonPayloadExpression="{&quot;A&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0.0,&quot;Z&quot;:85,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:115,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0,&quot;Z&quot;:115,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:85,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:100,&quot;Y&quot;:0,&quot;Z&quot;:100,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:5,&quot;Active&quot;:false}}" TextAuraFontSize="9" TextAuraFontName="??" ActionType="GenericJson" ExecutionDelayExpression="22000">
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Action>
+    </Actions>
+    <Condition Enabled="false" Grouping="Or" />
+  </ExportedTrigger>
+</TriggernometryExport>
