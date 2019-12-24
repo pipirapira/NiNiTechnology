@@ -29,7 +29,7 @@ hideall "台词"
 #                          时间轴
 #============================================================
 0	--Reset-- sync /Removing combatant (.*?) Max HP: 1147732096/ window 10000 jump 0
-0	--Start-- sync /this world is not yours to claim|ここで終わりなき戦いに終止符を打つ/ window 10,10
+0	--Start-- sync /this world is not yours to claim|ここで終わりなき戦いに終止符を打つ|我将在这里终结这永无止境的战斗/ window 10,10
 5	读条万变水波 sync /] 14:3E63:/ window 50,10
 10	万变水波
 24	分摊
@@ -58,7 +58,7 @@ hideall "台词"
 259	死刑
 264	读条AOE sync /] 14:3E6F:/ window 30,10
 271	AOE
-275	台词 sync /Ravager of worlds, judgment is upon you|貴様たちに、定めを示してみせよう/ window 275,10
+275	台词 sync /Ravager of worlds, judgment is upon you|貴様たちに、定めを示してみせよう|由我来为你们指引命运吧/ window 275,10
 284	万变水波
 294	分摊
 303	月环或直线

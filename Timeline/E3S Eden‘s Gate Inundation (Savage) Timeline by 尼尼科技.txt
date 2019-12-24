@@ -55,7 +55,7 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 #                          时间轴
 #============================================================
 0 	--Reset-- sync /Removing combatant (.*?) Max HP: 1194946560/ window 10000 jump 0
-0 	--Start-- sync /Rise, oceans! Swallow this forsaken land!|失われた水底より来たりし、渦巻く者|我名为利维亚桑/ window 10,10
+0 	--Start-- sync /Rise, oceans! Swallow this forsaken land!|失われた水底より来たりし、渦巻く者|我名为利维亚桑|吾乃利维亚桑/ window 10,10
 12 	AOE 
 24 	死刑 
 36 	看水柱 
