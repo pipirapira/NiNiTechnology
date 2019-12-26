@@ -135,7 +135,7 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 1216	左右刀反向判定1
 1219	左右刀反向判定2
 1220	石阵【十】爆炸
-1224	Boss上天 sync /Now you too shall go the way of all the earth|我は、そなたの心を映す鏡|让我回应你的心灵/ window 220,30 jump 3224
+1224	Boss上天 sync /Now you too shall go the way of all the earth|我は、そなたの心を映す鏡|让我回应你的心灵|我就回应/ window 220,30 jump 3224
 1239	（过场30秒）
 1254	Boss落地
 
@@ -182,7 +182,7 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 2213	月环读条 sync /] 14:4121:/ window 210,20
 2216	黄标x8
 2222	黄标判定
-2224	Boss上天 sync /Now you too shall go the way of all the earth|我は、そなたの心を映す鏡|让我回应你的心灵/ window 220,30 jump 3224
+2224	Boss上天 sync /Now you too shall go the way of all the earth|我は、そなたの心を映す鏡|让我回应你的心灵|我就回应/ window 220,30 jump 3224
 2239	（过场30秒）
 2254	Boss落地
 
@@ -191,7 +191,7 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 #============================================================
 3239	（过场30秒）
 3254	Boss落地
-3256	P2开始 sync /Bow down, overdweller!|大地の怒りに砕け散れ！！|在大地的愤怒中/ window 3250,10
+3256	P2开始 sync /Bow down, overdweller!|大地の怒りに砕け散れ！！|在大地的愤怒中|在愤怒的大地面前/ window 3250,10
 3263	大地之怒AOE伤害
 3270	左右拳蓄力
 3276	流沙格出现
@@ -271,7 +271,7 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 3680	橙标x4黄标x4_T奶外围
 3687	橙黄标判定 
 3689	流沙地洞炮结束 
-3690	左右拳蓄力 sync /Titan Maximum is gathering aetherial energy|极限泰坦正在积蓄力量/ window 3690,10
+3690	左右拳蓄力 sync /Titan Maximum is gathering aetherial energy|极限泰坦正在积蓄力量|极大泰坦正在积蓄力量|/ window 3690,10
 3703	易伤死刑读条 sync /] 14:4116:/ window 400,20
 3709	易伤死刑
 3715	双T死刑
