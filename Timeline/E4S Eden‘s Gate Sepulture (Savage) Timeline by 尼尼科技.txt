@@ -271,7 +271,7 @@ alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 3680	橙标x4黄标x4_T奶外围
 3687	橙黄标判定 
 3689	流沙地洞炮结束 
-3690	左右拳蓄力 sync /Titan Maximum is gathering aetherial energy|极限泰坦正在积蓄力量|极大泰坦正在积蓄力量|/ window 3690,10
+3690	左右拳蓄力 sync /Titan Maximum is gathering aetherial energy|极限泰坦正在积蓄力量|极大泰坦正在积蓄力量/ window 3690,10
 3703	易伤死刑读条 sync /] 14:4116:/ window 400,20
 3709	易伤死刑
 3715	双T死刑
