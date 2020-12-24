@@ -13,45 +13,38 @@
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" LogMessageText=":horoscope_party_spread:6:10:" LogProcess="True" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Action>
-                  <Action OrderNumber="3" UseTTSTextExpression="雷散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                  <Action OrderNumber="2" UseTTSTextExpression="雷散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="5000">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="八方火" Id="71476c74-0c8c-47dd-8782-48a0578674fc" RegularExpression="] 14:5663:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="八方火，八方散开" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                  <Action OrderNumber="1" UseTTSTextExpression="八方火" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" UseTTSTextExpression="两两分摊" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                  <Action OrderNumber="2" UseTTSTextExpression="四分摊" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="5000">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="八方光" Id="49ab3d18-b7ee-494e-93b6-ce7ad42e4acb" RegularExpression="] 14:5668:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="八方光，准备前方分摊" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                  <Action OrderNumber="1" UseTTSTextExpression="八方光" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="2" UseTTSTextExpression="前方分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="5000">
+                  <Action OrderNumber="2" UseTTSTextExpression="233" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="5000">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -62,15 +55,12 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="直线雷，准备远离" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="远离远离" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="6000">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="直线火" Id="24412891-6c61-42ce-8071-3056afa5ad41" RegularExpression="] 14:5652:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
@@ -84,7 +74,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="直线光" Id="76181366-5188-4fed-a2ad-0f4c810b8b15" RegularExpression="] 14:5656:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
@@ -110,7 +99,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -129,7 +117,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="点名光" Id="7e06badd-450b-4a15-b6cd-2f020bdead17" RegularExpression="] 14:565F:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
@@ -139,7 +126,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="点名雷" Id="ed9a6585-5bc7-414f-a066-7d58887952d8" RegularExpression="] 14:565B:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
@@ -153,7 +139,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -168,7 +153,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="火俯冲" Id="a3760202-e3b4-4e99-95c0-6033a9e3fa89" RegularExpression="] 14:5679:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
@@ -178,17 +162,15 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="光俯冲" Id="02c5b21b-4a68-4a48-8b92-c5304c7f6a32" RegularExpression="] 14:567D:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="光冲锋，注意流沙" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3500">
+                  <Action OrderNumber="1" UseTTSTextExpression="光冲锋，集合" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3500">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="false" Name="光俯冲后的流沙倒计时" Id="ee77a5a0-8f18-4deb-a475-5701005c8d68" RegularExpression="] 15:.{8}:Fatebreaker's Image:567D:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
@@ -210,7 +192,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -237,7 +218,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="连续剑-光" Id="f5738e01-2b3a-44a2-ae26-856a9d3d0fc9" RegularExpression="] 14:569A:" RefirePeriodExpression="1000">
                 <Actions>
@@ -271,7 +251,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="连续剑-火" Id="b754d454-045e-4eeb-8b5c-6d08c2adf2bb" RegularExpression="] 14:568A:" RefirePeriodExpression="1000">
                 <Actions>
@@ -293,7 +272,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -303,9 +281,48 @@
       <Folder Id="83a3afe1-51fc-4657-966c-a16a541965d0" Name="迷雾" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="迷雾冲锋" Id="6af24cef-d90e-4711-9faa-9c952413e3fa" RegularExpression="] 14:56A5:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="false" Name="迷雾冲锋" Id="6af24cef-d90e-4711-9faa-9c952413e3fa" RegularExpression="] 14:56A5:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="抬手跳跃" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="雾龙观测-NiNiTechnology" Id="a9f5f9a4-f0ee-4450-ad2f-deaca1baf5ea" RegularExpression="] 26:(?&lt;id&gt;4[0-9A-F]{7}):.*?:00505000:14800000:14800000:10000:10000:0:0:.*?:E0000000:" Description="尼尼科技—科技改变生活！">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="fatebreaker_image_caster" ListVariableExpression="round(4-arctan2(${_ffxiventity[${id}].x}-100,${_ffxiventity[${id}].y}-100)*4/pi)%4" UseTTSTextExpression="第一次弟火" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="test" VariableExpression="distance(${x}, ${y}, 14, -75)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="2300" Description="记录雾龙的方位" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${func:format(System.Int32,&quot;X&quot;):${numeric:hex2dec(${id})-1}}].casttargetid}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="fatebreaker_image_caster" ListVariableExpression="(4-arctan2(${_ffxiventity[${id}].x},${_ffxiventity[${id}].y})*4/pi)%4" UseTTSTextExpression="ACAC" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="test" VariableExpression="distance(${x}, ${y}, 14, -75)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="200" RefireRequeue="False" Description="↑↓方向报ACAC（标点不同请修改播报内容）" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="fatebreaker_image_caster" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="ListDoesNotContain" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="fatebreaker_image_caster" ListVariableExpression="(4-arctan2(${_ffxiventity[${id}].x},${_ffxiventity[${id}].y})*4/pi)%4" UseTTSTextExpression="二四二四" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="test" VariableExpression="distance(${x}, ${y}, 14, -75)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False" Description="↙↗方向报2424（标点不同请修改播报内容）" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="fatebreaker_image_caster" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="ListDoesNotContain" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="fatebreaker_image_caster" ListVariableExpression="(4-arctan2(${_ffxiventity[${id}].x},${_ffxiventity[${id}].y})*4/pi)%4" UseTTSTextExpression="BDBD" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="test" VariableExpression="distance(${x}, ${y}, 14, -75)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False" Description="←→方向报BDBD（标点不同请修改播报内容）" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="fatebreaker_image_caster" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="ListDoesNotContain" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="fatebreaker_image_caster" ListVariableExpression="(4-arctan2(${_ffxiventity[${id}].x},${_ffxiventity[${id}].y})*4/pi)%4" UseTTSTextExpression="一三一三" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="test" VariableExpression="distance(${x}, ${y}, 14, -75)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False" Description="↖↘方向报1313（标点不同请修改播报内容）" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="fatebreaker_image_caster" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="ListDoesNotContain" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" ListVariableExpressionType="Numeric" ListVariableName="fatebreaker_image_caster" ListVariableExpression="round(4-arctan2(${_ffxiventity[${id}].x}-100,${_ffxiventity[${id}].y}-100)*4/pi)%4" UseTTSTextExpression="第一次弟火" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="test" VariableExpression="distance(${x}, ${y}, 14, -75)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="1000" RefireRequeue="False" Description="重置方位" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
@@ -322,15 +339,12 @@
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="圈圈运动会" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="2" UseTTSTextExpression="火火火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="堕獄絶技-火 Sundered Sky" Id="10094eb9-d0aa-4805-83da-d1849dc65526" RegularExpression="] 14:5677:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -344,49 +358,39 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="四天召-雷 Right of the Heavens" Id="d2f4b976-e43c-47de-892d-2fe550a06713" RegularExpression="] 14:566F:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="镜子镜子" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="2" UseTTSTextExpression="火火火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="5000">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="転輪召-雷 Turn of the Heavens" Id="568707ca-7799-46f4-9535-29433c4d050a" RegularExpression="] 14:566A:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="雷圈雷圈" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="2" UseTTSTextExpression="雷圈安全" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="8000">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="堕獄絶技-雷 Sundered Sky" Id="09361e74-a596-4fe5-8ba4-608866bc8e56" RegularExpression="] 14:5678:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="镜子运动会" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="2" UseTTSTextExpression="雷雷雷" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="8000">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="迷雾 Prismatic Deception" Id="b529de6b-8bf1-4e28-86b0-a2541b0cc67e" RegularExpression="] 14:5672:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -396,7 +400,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="四天召-火 Right of the Heavens" Id="4abcb3e3-63de-49ee-a587-68fc77a3d1a6" RegularExpression="] 14:566E:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -410,7 +413,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="転輪召-火 Turn of the Heavens" Id="f965da68-1d37-46cf-b061-3c676c73a8af" RegularExpression="] 14:566B:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -424,7 +426,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="至天絶技-火 Shifting Sky" Id="aab9bf88-beb7-4674-9e13-c71d6b38adb6" RegularExpression="] 14:5675:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
@@ -438,7 +439,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -449,21 +449,17 @@
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="死刑" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="AOE" Id="c5e49dc0-87fd-449e-9e0b-7ff72a4679e3" RegularExpression="] 14:(5529|5650|56A4):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -474,15 +470,12 @@
             <Actions>
               <Action OrderNumber="1" LogMessageText="multijob_trigger:MortalPowderMark:${_ffxivparty[${name}].job}:100:1:2:" LogProcess="True" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="2" LogMessageText="multijob_trigger:waterbuff2:${_ffxivparty[${name}].job}:100:1:2:" LogProcess="True" UseTTSTextExpression="神圣" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2500">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="(爆印Powder Mark) 18秒" Id="1e3994c6-5e16-44a8-8acd-86a8ff18a57c" RegularExpression="1A:........:(?&lt;name&gt;.*?) gains the effect of (爆印|Powder Mark) from" PeriodRefire="Deny" RefirePeriodExpression="20000">
             <Actions>
@@ -500,7 +493,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
