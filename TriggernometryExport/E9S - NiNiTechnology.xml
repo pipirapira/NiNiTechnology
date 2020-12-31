@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="12cbab81-4726-42f5-aa18-8c884d6bf538" Name="E9S" Enabled="true">
+  <ExportedFolder Id="12cbab81-4726-42f5-aa18-8c884d6bf538" Name="E9S" Enabled="false">
     <Folders>
       <Folder Id="cd2d4465-1395-4a47-b7d7-610feb82960b" Name="零式波动炮" Enabled="true">
         <Folders />
@@ -150,11 +150,9 @@
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="双死刑" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="marker_record" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
               <Action OrderNumber="2" UseTTSTextExpression="双死刑" UseTTSRateExpression="2" VariableName="marker_record" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="5000">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -165,13 +163,11 @@
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="false" ExpressionL="${evar:marker_record}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="2" UseTTSTextExpression="双死刑" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="marker_offset" VariableExpression="hex2dec(${id})-${var:marker_record}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="100">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${evar:marker_record}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -187,25 +183,21 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="E3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="2" UseTTSTextExpression="左左左" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="E4" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="3" UseTTSTextExpression="四分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="E5" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Action>
               <Action OrderNumber="4" UseTTSTextExpression="八方散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="E6" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="Or">
@@ -214,27 +206,136 @@
           </Trigger>
         </Triggers>
       </Folder>
+      <Folder Id="731fea57-318b-4596-9d4d-d74994854314" Name="分身左右刀" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="BossID收集" Id="c0b9753d-cd2d-467c-b49c-4beb5b9abd7b" RegularExpression="] 16:(?&lt;id&gt;4.......):[^:]*?:55EF:" PeriodRefire="Deny" RefirePeriodExpression="10000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetString" VariableName="e9s_boss_id" VariableExpression="${id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="e9s_add_id_1" VariableExpression="${func:format(System.Int32,&quot;X&quot;):${numeric:hex2dec(${var:e9s_boss_id})-1}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="e9s_add_id_2" VariableExpression="${func:format(System.Int32,&quot;X&quot;):${numeric:hex2dec(${var:e9s_boss_id})-2}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="分身阶段" Id="e081ebd1-22af-4536-ad1f-eca29c762fb0" RegularExpression="] 14:5019:">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="e9s_summon" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableName="e9s_summon" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="20000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="分身判断" Id="c3173713-eabd-451f-88c7-675916453417" RegularExpression="] 14:5A9(?&lt;type&gt;5|6):">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="boss_heading" VariableExpression="round(4-${_ffxiventity[${var:e9s_boss_id}].heading}*4/pi)%8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="add_heading_1" VariableExpression="round(8-${_ffxiventity[${var:e9s_add_id_1}].heading}*4/pi)%8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="add_heading_2" VariableExpression="round(8-${_ffxiventity[${var:e9s_add_id_2}].heading}*4/pi)%8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="add_relative_heading_1" VariableExpression="(8+${var:add_heading_1}-${var:boss_heading})%8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="计算分身1的相对方向" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="add_relative_heading_2" VariableExpression="(8+${var:add_heading_2}-${var:boss_heading})%8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="计算分身2的相对方向" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="relative_safe_zone" VariableExpression="max(${var:add_relative_heading_1},${var:add_relative_heading_2})" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="如果相对安全点在左" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="max(${var:add_relative_heading_1},${var:add_relative_heading_2})" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="relative_safe_zone" VariableExpression="min(${var:add_relative_heading_1},${var:add_relative_heading_2})-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="如果相对安全点在右" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="min(${var:add_relative_heading_1},${var:add_relative_heading_2})" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="min(${var:add_relative_heading_1},${var:add_relative_heading_2})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="relative_safe_zone" VariableExpression="if(${type}=5,4,3)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="如果相对安全点在后" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="max(${var:add_relative_heading_1},${var:add_relative_heading_2})" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                    <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="max(${var:add_relative_heading_1},${var:add_relative_heading_2})" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                    <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" UseTTSTextExpression="逼上逼上" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="safe_zone" VariableExpression="(${var:relative_safe_zone}+${var:boss_heading})%8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" RefireRequeue="False" Description="计算安全点的绝对方向" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" UseTTSTextExpression="${func:substring(${numeric:${var:safe_zone}*5},5):A右A右 逼上逼上 逼下逼下 C右C右 C左C左 D下D下 D上D上 A左A左 }" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="100" RefireRequeue="False">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:e9s_summon}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="左右刀-右安全 (the Art of Darkness|闇の戦技)" Id="5f089ad4-c215-4443-a689-2d0b676f0333" RegularExpression="] 14:(5224|55FC|5A96):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="右右右" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:e9s_summon}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="左右刀-左安全 (the Art of Darkness|闇の戦技)" Id="c3b34e18-5a01-414b-b456-1319cd15751d" RegularExpression="] 14:(5223|55FF|5A95):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="左左左" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${evar:e9s_summon}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
     </Folders>
     <Triggers>
       <Trigger Enabled="true" Name="AOE (Ground-razing Particle Beam|放射式 波動砲)" Id="5811572e-f18f-49b6-aae4-0b95db5983ee" RegularExpression="] 14:5625:" PeriodRefire="Deny" RefirePeriodExpression="1000">
         <Actions>
           <Action OrderNumber="1" UseTTSTextExpression="AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-        </Actions>
-        <Condition Enabled="false" Grouping="Or" />
-      </Trigger>
-      <Trigger Enabled="true" Name="左右刀-右安全 (the Art of Darkness|闇の戦技)" Id="57e9a4de-8a6c-459e-bf01-c1c22e18153b" RegularExpression="] 14:(5224|55FC|5A96):" PeriodRefire="Deny" RefirePeriodExpression="1000">
-        <Actions>
-          <Action OrderNumber="1" UseTTSTextExpression="右右右" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-            <Condition Enabled="false" Grouping="Or" />
-          </Action>
-        </Actions>
-        <Condition Enabled="false" Grouping="Or" />
-      </Trigger>
-      <Trigger Enabled="true" Name="左右刀-左安全 (the Art of Darkness|闇の戦技)" Id="59f38344-7d17-4d93-b841-68f8ef145e04" RegularExpression="] 14:(5223|55FF|5A95):" PeriodRefire="Deny" RefirePeriodExpression="1000">
-        <Actions>
-          <Action OrderNumber="1" UseTTSTextExpression="左左左" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
