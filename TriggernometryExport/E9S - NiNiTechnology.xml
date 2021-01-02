@@ -206,10 +206,10 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="731fea57-318b-4596-9d4d-d74994854314" Name="分身左右刀" Enabled="true">
+      <Folder Id="b9b9f71e-81c5-48e7-9b8e-845fb08df382" Name="分身左右刀" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="BossID收集" Id="c0b9753d-cd2d-467c-b49c-4beb5b9abd7b" RegularExpression="] 16:(?&lt;id&gt;4.......):[^:]*?:55EF:" PeriodRefire="Deny" RefirePeriodExpression="10000">
+          <Trigger Enabled="true" Name="BossID收集" Id="aff89cec-849a-4aef-af51-daa3f8abb919" RegularExpression="] 16:(?&lt;id&gt;4.......):[^:]*?:55EF:" PeriodRefire="Deny" RefirePeriodExpression="10000">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetString" VariableName="e9s_boss_id" VariableExpression="${id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -227,7 +227,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="分身阶段" Id="e081ebd1-22af-4536-ad1f-eca29c762fb0" RegularExpression="] 14:5019:">
+          <Trigger Enabled="true" Name="分身阶段" Id="a5e0b577-72e4-4929-940b-fa4dd90fd5ad" RegularExpression="] 14:5019:">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="e9s_summon" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -241,7 +241,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="分身判断" Id="c3173713-eabd-451f-88c7-675916453417" RegularExpression="] 14:5A9(?&lt;type&gt;5|6):">
+          <Trigger Enabled="true" Sequential="True" Name="分身判断" Id="3f7720fc-7ea0-415b-8c54-5d8b4cfa297a" RegularExpression="] 14:5A9(?&lt;type&gt;5|6):">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="boss_heading" VariableExpression="round(4-${_ffxiventity[${var:e9s_boss_id}].heading}*4/pi)%8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
@@ -285,7 +285,7 @@
                     <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   </ConditionGroup>
                   <ConditionGroup Enabled="true" Grouping="And">
-                    <ConditionSingle Enabled="true" ExpressionL="max(${var:add_relative_heading_1},${var:add_relative_heading_2})" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                    <ConditionSingle Enabled="true" ExpressionL="min(${var:add_relative_heading_1},${var:add_relative_heading_2})" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                     <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                   </ConditionGroup>
                 </Condition>
@@ -305,7 +305,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="左右刀-右安全 (the Art of Darkness|闇の戦技)" Id="5f089ad4-c215-4443-a689-2d0b676f0333" RegularExpression="] 14:(5224|55FC|5A96):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="左右刀-右安全 (the Art of Darkness|闇の戦技)" Id="ff4bdf46-4309-43ad-b5c7-46714a9e75ae" RegularExpression="] 14:(5224|55FC|5A96):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="右右右" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -317,7 +317,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="左右刀-左安全 (the Art of Darkness|闇の戦技)" Id="c3b34e18-5a01-414b-b456-1319cd15751d" RegularExpression="] 14:(5223|55FF|5A95):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="左右刀-左安全 (the Art of Darkness|闇の戦技)" Id="43871606-9297-479a-beb5-864be40c3831" RegularExpression="] 14:(5223|55FF|5A95):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="左左左" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
