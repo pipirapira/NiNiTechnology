@@ -1,0 +1,583 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder FFXIVJobFilter="4294967296" Id="5a768575-f219-4904-91cc-60f2da8f706d" Name="Cardcaptor AST v5.0 Lite" Enabled="true">
+    <Folders>
+      <Folder Id="59d9e6ea-1d55-4b9b-9a84-ae5ffec8715a" Name="encounter_reader" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Sequential="True" Name="encounter_header_reader" Id="1b76f799-ca00-43f1-b229-bbc5107b1a83" RegularExpression="ehr:\((?&lt;min&gt;[0-9]*?):(?&lt;sec&gt;[0-9]*?)\).*(?&lt;details&gt;[\s\S]*)">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="encounter_last_duration" VariableExpression="${var:encounter_duration}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="encounter_duration" VariableExpression="${min}*60+${sec}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="encounter_start_timestamp" VariableExpression="${_timestampms}-${var:encounter_duration}*1000" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:encounter_last_duration}" ExpressionTypeL="Numeric" ExpressionR="${var:encounter_duration}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_timestampms}-${var:encounter_duration}*1000" ExpressionTypeL="Numeric" ExpressionR="${var:encounter_start_timestamp}+${var:encounter_interval}*1000" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="encounter_current_index" VariableExpression="floor((${_timestampms}-${var:encounter_start_timestamp})/(1000*${var:encounter_interval}))+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="2679de66-4b35-4380-a3d1-f29b51af70d2" TriggerText="ei:${details}" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="encounter_step" Id="0d00b82b-4053-4481-85fb-41d04e862d47" RegularExpression="encounter_step">
+            <Actions>
+              <Action OrderNumber="1" SystemBeepFreqExpression="4000" SystemBeepLengthExpression="25" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="SystemBeep">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" LogProcess="True" TextAuraAlignment="TopLeft" TextAuraFontSize="9" TextAuraForeground="White" TextAuraName="dps_encounter" TextAuraExpression="${_activeencounter}" TextAuraXIniExpression="1282" TextAuraYIniExpression="457" TextAuraWIniExpression="247" TextAuraHIniExpression="253" TextAuraOIniExpression="100" TextAuraFontName="宋体" TriggerId="1b76f799-ca00-43f1-b229-bbc5107b1a83" TriggerText="ehr:${_activeencounter}" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="0d00b82b-4053-4481-85fb-41d04e862d47" TriggerText="encounter_step" ActionType="Trigger" ExecutionDelayExpression="${var:encounter_interval}*1000-1" RefireRequeue="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="encounter_iterator" Id="2679de66-4b35-4380-a3d1-f29b51af70d2" RegularExpression="ei:\s*(?&lt;name5&gt;.*?) \| (?&lt;dps&gt;[\.0-9]*)(?&lt;k&gt;K?)(?&lt;others&gt;[\s\S]*)">
+            <Actions>
+              <Action OrderNumber="1" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="damage_encounter" TableVariableExpression="if(${func:length:${k}},${numeric:${dps}*1000},${dps})*${var:encounter_duration}" TableVariableX="${var:encounter_current_index}" TableVariableY="${tvarrl:party[${name5}][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="other[${name5}]" VariableExpression="${others}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="2679de66-4b35-4380-a3d1-f29b51af70d2" TriggerText="ei:${others}" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetString" VariableName="other[${name5}]" VariableExpression="${others}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="9f36d2ae-b997-4971-a07a-6b449f4e2ac6" TriggerText="dps_calculator:${var:encounter_current_index}:1:" ActionType="Trigger" ExecutionDelayExpression="100" RefireRequeue="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="party_init" Id="442aa6cf-4953-4bfc-bf64-dfc342187ce1" RegularExpression="party_init:(?&lt;i&gt;[1-8]):">
+            <Actions>
+              <Action OrderNumber="1" TableVariableName="party" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${i}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict_short" ListVariableExpression="0" ListVariableIndex="9" TableVariableName="party" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${i}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict_long" ListVariableExpression="0" ListVariableIndex="9" TableVariableName="party" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${i}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict" ListVariableExpression="0" ListVariableIndex="9" TableVariableName="party" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${i}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="card_loss_percentage" ListVariableExpression="0" ListVariableIndex="9" TableVariableName="party" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${i}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="melee_card_gain" ListVariableExpression="0" ListVariableIndex="9" TableVariableName="party" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${i}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="ranged_card_gain" ListVariableExpression="0" ListVariableIndex="9" TableVariableName="party" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${i}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" TableVariableOp="Set" TableVariableName="party" TableVariableExpression="YOU" TableVariableX="1" TableVariableY="${i}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${i}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="9" TableVariableOp="Set" TableVariableName="party" TableVariableExpression="${func:trim:${func:substring(0, 5):${_ffxivparty[${i}].name}}}" TableVariableX="1" TableVariableY="${i}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${i}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="10" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="party" TableVariableExpression="${i}" TableVariableX="2" TableVariableY="${i}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" TableVariableOp="Set" TableVariableName="party" TableVariableExpression="${_ffxivparty[${i}].name}" TableVariableX="3" TableVariableY="${i}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" TableVariableOp="Set" TableVariableName="party" TableVariableExpression="${_ffxivparty[${i}].job}" TableVariableX="4" TableVariableY="${i}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="party" TableVariableExpression="1" TableVariableX="5" TableVariableY="${i}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Description="判断职业类型 1=Melee" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${tvar:party[4][${i}]}" ExpressionTypeL="String" ExpressionR="WAR|PLD|DRK|GNB|DRG|NIN|MNK|SAM" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="14" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="party" TableVariableExpression="2" TableVariableX="5" TableVariableY="${i}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Description="判断职业类型 2=Ranged" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${tvar:party[4][${i}]}" ExpressionTypeL="String" ExpressionR="WAR|PLD|DRK|GNB|DRG|NIN|MNK|SAM" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="15" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="442aa6cf-4953-4bfc-bf64-dfc342187ce1" TriggerText="party_init:${numeric:${i}+1}:" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="encounter_init" Id="48f0a151-12c9-4a5b-85bd-c51a9e1c5313" RegularExpression="encounter_init">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="SystemBeep">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TableVariableOp="UnsetAll" TableVariableName="damage_encounter" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="11f9002f-298b-4d73-9264-bbdc6df80468" TriggerText="encoubnter_reset" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="encounter_interval" VariableExpression="2.41" TableVariableName="name5full" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="442aa6cf-4953-4bfc-bf64-dfc342187ce1" ActionType="Variable" ExecutionDelayExpression="100" Description="计算步长-【建议将该值设置为玩家复唱时间】（默认2.41）" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="17d42fe1-0a8a-44fb-b6ad-90eb5928be44" TriggerText="dps_job_reference_init_all" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="442aa6cf-4953-4bfc-bf64-dfc342187ce1" TriggerText="party_init:1:" ActionType="Trigger" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="encounter_reset" Id="11f9002f-298b-4d73-9264-bbdc6df80468" RegularExpression="encounter_reset" PeriodRefire="Deny" RefirePeriodExpression="2000">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="EndEncounter">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="encounter_current_index" VariableExpression="1" TableVariableName="ranged_card_maximum_gain" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="0d00b82b-4053-4481-85fb-41d04e862d47" TriggerText="encounter_init" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TableVariableName="card_record" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="48f0a151-12c9-4a5b-85bd-c51a9e1c5313" TriggerText="encounter_init" ActionType="TableVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TableVariableName="debuff_record" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="48f0a151-12c9-4a5b-85bd-c51a9e1c5313" TriggerText="encounter_init" ActionType="TableVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="b3fe0024-5703-48e9-90fa-4c98969d514b" Name="dps_calculator" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="false" Sequential="True" Name="dps_job_reference_init" Id="67bb367e-badc-4da4-9aeb-4ae6a56bcf0a" RegularExpression="default_dps:(?&lt;index&gt;[0-9]*?):(?&lt;job&gt;...):(?&lt;dps&gt;[0-9]*?):">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableName="dps_job_reference" TableVariableExpression="${job}" TableVariableX="1" TableVariableY="${index}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="dps_job_reference" TableVariableExpression="${dps}" TableVariableX="2" TableVariableY="${index}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="dps_calculator" Id="9f36d2ae-b997-4971-a07a-6b449f4e2ac6" RegularExpression="dps_calculator:(?&lt;enc_id&gt;[0-9]*?):(?&lt;party_id&gt;[1-8]):" Scheduling="FromLastAction">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="melee_card_maximum_gain" VariableExpression="-999999" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="melee_card_maximum_gain" TableVariableExpression="-999999" TableVariableX="${enc_id}" TableVariableY="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="rdps重置" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${party_id}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="ranged_card_maximum_gain" VariableExpression="-999999" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="ranged_card_maximum_gain" TableVariableExpression="-999999" TableVariableX="${enc_id}" TableVariableY="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="rdps重置" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${party_id}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict" ListVariableExpression="${tvar:damage_encounter[${enc_id}][${party_id}]}/(${enc_id}*${var:encounter_interval})" ListVariableIndex="${party_id}" VariableOp="SetNumeric" VariableName="dps_sampling_cycles" VariableExpression="10" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="dps_predict" TableVariableExpression="${tvar:damage_encounter[${enc_id}][${party_id}]}/(${enc_id}*${var:encounter_interval})" TableVariableX="1" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="设置短时间dps估算时长（单位：GCD）" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict_long" ListVariableExpression="${tvarrl:dps_job_reference[${tvar:party[4][${party_id}]}][1]}" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="dps_predict" TableVariableExpression="${tvarrl:dps_job_reference[${tvar:party[4][${party_id}]}][1]}" TableVariableX="1" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="长时dps估计 = 职业基础dps" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict_long" ListVariableExpression="${tvar:damage_encounter[${enc_id}][${party_id}]}/(${enc_id}*${var:encounter_interval})" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="dps_predict" TableVariableExpression="${tvar:damage_encounter[${enc_id}][${party_id}]}/(${enc_id}*${var:encounter_interval})" TableVariableX="1" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="长时dps估计 = 总伤害 / 总战斗时间  &#xD;&#xA;(注：小于30秒的总战斗时间将不会执行该估计。)" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tvar:damage_encounter[${enc_id}][${party_id}]}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${enc_id}*${var:encounter_interval}" ExpressionTypeL="Numeric" ExpressionR="30" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict_short" ListVariableExpression="0" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="dps_predict" TableVariableExpression="${tvar:damage_encounter[${enc_id}][${party_id}]}/(${enc_id}*${var:encounter_interval})" TableVariableX="1" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="短时dps估计 = 0" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict_short" ListVariableExpression="(${tvar:damage_encounter[${enc_id}][${party_id}]}-${tvar:damage_encounter[${numeric:${enc_id}-${var:dps_sampling_cycles}}][${party_id}]})/(${var:dps_sampling_cycles}*${var:encounter_interval})" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="dps_predict" TableVariableExpression="${tvar:damage_encounter[${enc_id}][${party_id}]}/(${enc_id}*${var:encounter_interval})" TableVariableX="1" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="短时dps估计 = ( 采样时间内的伤害值 ) / 采样时间" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tvar:damage_encounter[${enc_id}][${party_id}]}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${tvar:damage_encounter[${numeric:${enc_id}-${var:dps_sampling_cycles}}][${party_id}]}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict" ListVariableExpression="0.4 * ${lvar:dps_predict_long[${party_id}]} + 0.6 * ${lvar:dps_predict_short[${party_id}]}" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="dps_predict" TableVariableExpression="${tvar:damage_encounter[${enc_id}][${party_id}]}/(${enc_id}*${var:encounter_interval})" TableVariableX="1" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="整体dps估计 = K1 * 长时dps估计 + K2 * 短时dps估计  &#xD;&#xA;(说明：增大K1的数值，将发卡给整场战斗dps较高的玩家，结果较为稳定，而增大K2的数值，将更重视短时间内的最高输出，但也使得结果更加不稳定。)" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict" ListVariableExpression="${tvar:dps_predict[${enc_id}][${party_id}]}*(1+${tvar:debuff_record[2][${party_id}]})" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="dps_predict" TableVariableExpression="${tvar:dps_predict[${enc_id}][${party_id}]}*(1+${tvar:debuff_record[2][${party_id}]})" TableVariableX="${enc_id}" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="计算debuff影响：在debuff生效期间，修正后dps估计值=原始dps估计值*(1-debuff影响)" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${enc_id}*${var:encounter_interval}" ExpressionTypeL="Numeric" ExpressionR="${tvar:debuff_record[1][${party_id}]}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="dps_predict" ListVariableExpression="0" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="dps_predict" TableVariableExpression="${tvar:dps_predict[${enc_id}][${party_id}]}*(1+${tvar:debuff_record[2][${party_id}]})" TableVariableX="${enc_id}" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="考虑最远因素(30ym)：超出给卡距离的玩家dps估计值修正为0。" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="distance(${_ffxivparty[${party_id}].x}, ${_ffxivparty[${party_id}].y}, ${_ffxivparty[1].x}, ${_ffxivparty[1].y})" ExpressionTypeL="Numeric" ExpressionR="30" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="card_loss_percentage" ListVariableExpression="0" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="card_loss_percentage" TableVariableExpression="0" TableVariableX="${enc_id}" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="卡牌损失率计算" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="card_loss_percentage" ListVariableExpression="${tvar:card_record[2][${party_id}]}*(15000-(${var:encounter_start_timestamp}+${enc_id}*${var:encounter_interval}*1000-${tvar:card_record[1][${party_id}]}))*0.001" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="card_loss_percentage" TableVariableExpression="${tvar:card_record[2][${party_id}]}*(15000-(${var:encounter_start_timestamp}+${enc_id}*${var:encounter_interval}*1000-${tvar:card_record[1][${party_id}]}))*0.001" TableVariableX="${enc_id}" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="卡牌损失率计算：如果给该玩家一张牌会覆盖其原有的卡牌增益，则需计算这一损失占当前dps的比例。" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tvar:card_record[1][${party_id}]}" ExpressionTypeL="Numeric" ExpressionR="-15000+${var:encounter_start_timestamp}+${enc_id}*${var:encounter_interval}*1000" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="melee_card_gain" ListVariableExpression="(if(${tvar:party[5][${party_id}]}=1,0.06,0.03)*15-${lvar:card_loss_percentage[${party_id}]})*${lvar:dps_predict[${party_id}]}" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="melee_card_gain" TableVariableExpression="(if(${tvar:party[5][${party_id}]}=1,0.06,0.03)*15-${tvar:card_loss_percentage[${enc_id}][${party_id}]})*${tvar:dps_predict[${enc_id}][${party_id}]}" TableVariableX="${enc_id}" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="近战卡牌净收益rdps = ( 卡牌增益率*15秒 - 卡牌损失率 ) * dps估计值" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="ranged_card_gain" ListVariableExpression="(if(${tvar:party[5][${party_id}]}=2,0.06,0.03)*15-${lvar:card_loss_percentage[${party_id}]})*${lvar:dps_predict[${party_id}]}" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="ranged_card_gain" TableVariableExpression="(if(${tvar:party[5][${party_id}]}=2,0.06,0.03)*15-${tvar:card_loss_percentage[${enc_id}][${party_id}]})*${tvar:dps_predict[${enc_id}][${party_id}]}" TableVariableX="${enc_id}" TableVariableY="${party_id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Asynchronous="False" Description="远程卡牌净收益rdps = ( 卡牌增益率*15秒 - 卡牌损失率 ) * dps估计值" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" VariableOp="SetNumeric" VariableName="melee_card_target" VariableExpression="${party_id}" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="melee_card_maximum_gain" TableVariableExpression="${party_id}" TableVariableX="${enc_id}" TableVariableY="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="近战卡牌最优分配单位" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:melee_card_gain[${party_id}]}" ExpressionTypeL="Numeric" ExpressionR="${var:melee_card_maximum_gain}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" VariableOp="SetNumeric" VariableName="melee_card_maximum_gain" VariableExpression="max(${var:melee_card_maximum_gain},${lvar:melee_card_gain[${party_id}]})" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="melee_card_maximum_gain" TableVariableExpression="max(${tvar:melee_card_maximum_gain[${enc_id}][1]},${tvar:melee_card_gain[${enc_id}][${party_id}]})" TableVariableX="${enc_id}" TableVariableY="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="近战卡牌最大净收益rdps" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:melee_card_gain[${party_id}]}" ExpressionTypeL="Numeric" ExpressionR="${var:melee_card_maximum_gain}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="17" VariableOp="SetNumeric" VariableName="ranged_card_target" VariableExpression="${party_id}" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="ranged_card_maximum_gain" TableVariableExpression="${party_id}" TableVariableX="${enc_id}" TableVariableY="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="远程卡牌最优分配单位" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:ranged_card_gain[${party_id}]}" ExpressionTypeL="Numeric" ExpressionR="${var:ranged_card_maximum_gain}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="18" VariableOp="SetNumeric" VariableName="ranged_card_maximum_gain" VariableExpression="max(${var:ranged_card_maximum_gain},${lvar:ranged_card_gain[${party_id}]})" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="ranged_card_maximum_gain" TableVariableExpression="max(${tvar:ranged_card_maximum_gain[${enc_id}][1]},${tvar:ranged_card_gain[${enc_id}][${party_id}]})" TableVariableX="${enc_id}" TableVariableY="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="远程卡牌最大净收益rdps" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:ranged_card_gain[${party_id}]}" ExpressionTypeL="Numeric" ExpressionR="${var:ranged_card_maximum_gain}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="19" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="9f36d2ae-b997-4971-a07a-6b449f4e2ac6" TriggerText="dps_calculator:${enc_id}:${numeric:${party_id}+1}:" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="20" VariableOp="SetNumeric" VariableName="card_target_party_id" VariableExpression="if(${var:card_type_drawn}=1,${var:melee_card_target},${var:ranged_card_target})" TableVariableOp="Set" TableVariableExpressionType="Numeric" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="分配卡牌使用对象" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${party_id}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="619b469a-b5bd-4bd6-a7e4-16bd14dc7916" Name="card_triggers" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Sequential="True" Name="card_play" Id="8049ce79-570c-47df-88ae-5a2340641424" RegularExpression="] 15:(?&lt;player_id&gt;1[0-9A-F]{7}):(?&lt;player&gt;[^:]*?):(?&lt;card_id&gt;113[1-6]|1D1[45]):[^:]*?:(?&lt;target_id&gt;1[0-9A-F]{7}):">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="card_type_played" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="判断卡的类型 1=Melee" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${card_id}" ExpressionTypeL="String" ExpressionR="1131|1132|1133|1D14" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="card_type_played" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="??" ActionType="Variable" Asynchronous="False" Description="判断卡的类型 2=Ranged" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${card_id}" ExpressionTypeL="String" ExpressionR="1134|1135|1136|1D15" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="card_arcana_played" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="??" ActionType="Variable" Asynchronous="False" Description="判断是否为奥秘卡 1=奥秘卡" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="card_arcana_played" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="??" ActionType="Variable" Asynchronous="False" Description="判断是否为奥秘卡 0=普通卡" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${card_id}" ExpressionTypeL="String" ExpressionR="1D14|1D15" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="card_record" TableVariableExpression="${_timestampms}" TableVariableX="1" TableVariableY="${_ffxivparty[${target_id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Asynchronous="False" Description="记录该卡牌的时间戳" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="card_record" TableVariableExpression="if(${var:card_arcana_played},0.04,0.03)*if(${var:card_type_played}=${tvar:party[5][${_ffxivparty[${target_id}].order}]},2,1)" TableVariableX="2" TableVariableY="${_ffxivparty[${target_id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Asynchronous="False" Description="记录该卡牌的伤害增益(普通卡:0.03-0.06,奥秘卡:0.04-0.08)" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="card_record" TableVariableExpression="if(${var:card_arcana_played},0.04,0.03)*if(${var:card_type_played}=${tvar:party[5][${_ffxivparty[${target_id}].order}]},2,1)" TableVariableX="2" TableVariableY="${_ffxivparty[${target_id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="9f36d2ae-b997-4971-a07a-6b449f4e2ac6" TriggerText="dps_calculator:${var:encounter_current_index}:1:" ActionType="Trigger" Asynchronous="False" Description="重新计算伤害" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And" />
+          </Trigger>
+          <Trigger Enabled="true" Name="card_draw" Id="d13b493e-1d40-4a01-9dde-bb812692ece0" RegularExpression="] 1F:(1[0-9A-F]{7}):(?&lt;player&gt;[^:]*?):(0*?)21:([0-9]*?)(?&lt;card_type&gt;100|200|300|400|500|600):" PeriodRefire="Deny" RefirePeriodExpression="100">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="card_type_drawn" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" Asynchronous="False" Description="判断抽卡的类型 1=Melee" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${card_type}" ExpressionTypeL="String" ExpressionR="100|300|400" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="card_type_drawn" VariableExpression="2" TextAuraFontSize="9" TextAuraFontName="??" ActionType="Variable" Asynchronous="False" Description="判断抽卡的类型 2=Ranged" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${card_type}" ExpressionTypeL="String" ExpressionR="200|500|600" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="48f0a151-12c9-4a5b-85bd-c51a9e1c5313" TriggerText="encounter_init" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:encounter_interval}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="9f36d2ae-b997-4971-a07a-6b449f4e2ac6" TriggerText="dps_calculator:${var:encounter_current_index}:1:" ActionType="Trigger" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="0d00b82b-4053-4481-85fb-41d04e862d47" TriggerText="encounter_step" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="bc9e3367-d664-4c97-bd7b-b05ec0a5bd90" Name="status_triggers" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Sequential="True" Name="death" Id="5edfd16b-1895-4ef1-b7ca-8cf73458b801" RegularExpression="] 19:(?&lt;name&gt;.*?) was defeated by">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="debuff_record" TableVariableExpression="${_timestampms}+20000" TableVariableX="1" TableVariableY="${_ffxivparty[${name}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Asynchronous="False" Description="记录该死亡的时间戳" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="debuff_record" TableVariableExpression="-1" TableVariableX="2" TableVariableY="${_ffxivparty[${name}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Asynchronous="False" Description="记录该死亡的伤害增益(死亡:-100%)" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="card_record" TableVariableExpression="if(${var:card_arcana_played},0.04,0.03)*if(${var:card_type_played}=${tvar:party[5][${_ffxivparty[${target_id}].order}]},2,1)" TableVariableX="2" TableVariableY="${_ffxivparty[${target_id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="9f36d2ae-b997-4971-a07a-6b449f4e2ac6" TriggerText="dps_calculator:${var:encounter_current_index}:1:" ActionType="Trigger" Asynchronous="False" Description="重新计算伤害" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="weakness" Id="4baff5d1-ce1c-4a60-a810-adfe7bb0671c" RegularExpression="] 1A:(?&lt;id&gt;1[0-9A-F]{7}):.*? gains the effect of (?&lt;debuff&gt;Weakness|衰弱|衰弱|Brink Of Death|衰弱［強］|濒死|Damage Down|ダメージ低下|伤害降低) from .*? for (?&lt;time&gt;.*?) Seconds">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="debuff_record" TableVariableExpression="${_timestampms}+${time}*1000" TableVariableX="1" TableVariableY="${_ffxivparty[${id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Asynchronous="False" Description="记录该虚弱的时间戳" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="debuff_record" TableVariableExpression="-0.25" TableVariableX="2" TableVariableY="${_ffxivparty[${id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Asynchronous="False" Description="记录该虚弱的伤害增益(虚弱:-0.25)" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="Weakness|衰弱|衰弱" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="debuff_record" TableVariableExpression="-0.5" TableVariableX="2" TableVariableY="${_ffxivparty[${id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Asynchronous="False" Description="记录该虚弱的伤害增益(濒死-0.5)" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="Brink Of Death|衰弱［強］|濒死" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="debuff_record" TableVariableExpression="-0.5" TableVariableX="2" TableVariableY="${_ffxivparty[${id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable" Asynchronous="False" Description="记录该伤害降低的伤害增益(伤害降低-0.5)" DescriptionOverride="True">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="Damage Down|ダメージ低下|伤害降低" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="card_record" TableVariableExpression="if(${var:card_arcana_played},0.04,0.03)*if(${var:card_type_played}=${tvar:party[5][${_ffxivparty[${target_id}].order}]},2,1)" TableVariableX="2" TableVariableY="${_ffxivparty[${target_id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="9f36d2ae-b997-4971-a07a-6b449f4e2ac6" TriggerText="dps_calculator:${var:encounter_current_index}:1:" ActionType="Trigger" Asynchronous="False" Description="重新计算伤害" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="a786525e-0c9d-489c-8e30-0dc2f1d8bc89" Name="设置" Enabled="true">
+        <Folders>
+          <Folder Id="495f487f-35a0-427d-9b99-e2d328c15888" Name="键位设置" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="玩家选择：【F5-F12】 发卡：【K】 选择上一个敌人：【L】" Id="8ffcdc5b-e8b7-46f9-b43c-254b4f8ec565" RegularExpression="/cardplay">
+                <Actions>
+                  <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressExpression="{F${numeric:${var:card_target_party_id}+4}}" KeyPressCode="${numeric:${var:card_target_party_id}+115}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="K" KeyPressCode="75" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="??" ActionType="KeyPress" ExecutionDelayExpression="50">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="L" KeyPressCode="76" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="??" ActionType="KeyPress" ExecutionDelayExpression="200" RefireInterrupt="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+              </Trigger>
+              <Trigger Enabled="true" Name="玩家选择：【F5-F12】 小奥秘卡：【J】 选择上一个敌人：【L】" Id="bcc6e965-7313-4783-b3b7-02bd86fb88d2" RegularExpression="/cardarcana">
+                <Actions>
+                  <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressExpression="{F${numeric:${var:card_target_party_id}+4}}" KeyPressCode="${numeric:${var:card_target_party_id}+115}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="K" KeyPressCode="74" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="??" ActionType="KeyPress" ExecutionDelayExpression="50">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="L" KeyPressCode="76" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="??" ActionType="KeyPress" ExecutionDelayExpression="200" RefireInterrupt="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+              </Trigger>
+              <Trigger Enabled="false" Name="玩家选择：【小键盘1-8】 发卡：【K】 选择上一个敌人：【L】" Id="f2f707ca-4f26-4869-b52d-8d4b488da8ed" RegularExpression="/cardplay">
+                <Actions>
+                  <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressExpression="{F${numeric:${var:card_target_party_id}+4}}" KeyPressCode="${numeric:${var:card_target_party_id}+96}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="K" KeyPressCode="74" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="??" ActionType="KeyPress" ExecutionDelayExpression="50">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="L" KeyPressCode="76" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="??" ActionType="KeyPress" ExecutionDelayExpression="200" RefireInterrupt="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+              </Trigger>
+              <Trigger Enabled="false" Name="玩家选择：【小键盘1-8】 小奥秘卡：【J】 选择上一个敌人：【L】" Id="56f73bc3-22f9-4b6d-9928-64df0cf9ec84" RegularExpression="/cardarcana">
+                <Actions>
+                  <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressExpression="{F${numeric:${var:card_target_party_id}+4}}" KeyPressCode="${numeric:${var:card_target_party_id}+96}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="K" KeyPressCode="74" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="??" ActionType="KeyPress" ExecutionDelayExpression="50">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="L" KeyPressCode="76" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="9" TextAuraFontName="??" ActionType="KeyPress" ExecutionDelayExpression="200" RefireInterrupt="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="b09ebed3-a408-44d3-95d0-70bf7daa1b14" Name="dps设置" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="职业基础dps设置" Id="17d42fe1-0a8a-44fb-b6ad-90eb5928be44" RegularExpression="dps_job_reference_init_all">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:1:BLM:21355:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" TriggerOp="EnableTrigger" TriggerId="67bb367e-badc-4da4-9aeb-4ae6a56bcf0a" ActionType="Trigger" Asynchronous="False" Description="修改下面的数值可调整各职业的默认dps估计值。" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:1:BLM:21355:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:2:SAM:21291:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:3:SMN:20395:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:4:MNK:19844:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="6" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:5:RDM:19700:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="7" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:6:MCH:19683:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="8" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:7:DRG:19529:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="9" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:8:NIN:19390:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="10" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:9:BRD:17944:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="11" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:10:DNC:16545:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="12" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:11:GNB:12000:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="13" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:12:PLD:11671:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="14" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:13:WAR:11657:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="15" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:14:DRK:11626:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="16" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:15:WHM:10156:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="17" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:16:SCH:9178:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="18" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:17:AST:8480:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="19" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="dps_estimation" LogMessageText="default_dps:1:BLM:21355:" LogProcess="True" VariableOp="SetNumeric" VariableName="dps_dict(BLM)" VariableExpression="19523" TextAuraFontSize="9" TextAuraFontName="??" TriggerOp="DisableTrigger" TriggerId="67bb367e-badc-4da4-9aeb-4ae6a56bcf0a" ActionType="Trigger" ExecutionDelayExpression="100">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+      <Folder Id="dbccc28b-079d-437a-a19f-9451efc8f5ce" Name="自动重置" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="场景切换初始化" Id="a2895eee-1391-4920-8711-bc24958cbff6" RegularExpression="] 01:">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="48f0a151-12c9-4a5b-85bd-c51a9e1c5313" TriggerText="encounter_init" ActionType="Trigger" ExecutionDelayExpression="5000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="副本重置" Id="4808ca34-023c-4360-9e04-c0c91485fdc6" RegularExpression="^\[[\d:\.]{12}\] 21:[\w]{8}:400000(03|10)" PeriodRefire="Deny" RefirePeriodExpression="2000">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="encounter_max_index" VariableExpression="${var:encounter_current_index}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="11f9002f-298b-4d73-9264-bbdc6df80468" TriggerText="encounter_reset" ActionType="Trigger" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>
