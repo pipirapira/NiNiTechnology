@@ -303,7 +303,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="20" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableExpression="0.4 * ${lvar:dps_predict_long[${party_id}]} + 0.6 * ${lvar:dps_predict_short[${party_id}]}" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TextAuraAlignment="TopRight" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="Yellow" TextAuraOutline="Black" TextAuraName="dps_predict_show_${party_id}" TextAuraExpression="${numeric:round(${lvar:dps_predict[${party_id}]})}" TextAuraXIniExpression="250" TextAuraYIniExpression="35+33*${party_id}" TextAuraWIniExpression="131" TextAuraHIniExpression="39" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura" Asynchronous="False">
+              <Action OrderNumber="20" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableExpression="0.4 * ${lvar:dps_predict_long[${party_id}]} + 0.6 * ${lvar:dps_predict_short[${party_id}]}" ListVariableIndex="${party_id}" VariableOp="SetNumeric" TableVariableOp="Set" TextAuraAlignment="TopRight" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="Yellow" TextAuraOutline="Black" TextAuraName="dps_predict_show_${party_id}" TextAuraExpression="${numeric:round(${lvar:dps_predict[${party_id}]})}" TextAuraXIniExpression="250" TextAuraYIniExpression="35+33*${party_id}" TextAuraWIniExpression="131" TextAuraHIniExpression="39" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" Enabled="False" ActionType="TextAura" Asynchronous="False">
                 <Condition Enabled="false" Grouping="And" />
                 <Conditions />
               </Action>
@@ -593,6 +593,7 @@
             <Actions>
               <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="48f0a151-12c9-4a5b-85bd-c51a9e1c5313" TriggerText="encounter_init" ActionType="Trigger" ExecutionDelayExpression="5000">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
