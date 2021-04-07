@@ -163,7 +163,6 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="右击退" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -247,30 +246,25 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="猛男出现" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="4000">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="15000">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" UseTTSTextExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" UseTTSTextExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="5" UseTTSTextExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="ad333d4b-eedd-4e8a-8146-1ee9247aa86b" Name="标记偏移器" Enabled="true">
+          <Folder Id="ad333d4b-eedd-4e8a-8146-1ee9247aa86b" Name="标记偏移器" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Name="marker_record" Id="d687b086-6fea-42c3-8bd6-3494a037909e" RegularExpression="] 14:58A9:" PeriodRefire="Deny" RefirePeriodExpression="1000">
@@ -301,7 +295,7 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="d7319ace-15f3-4fa9-b611-776a717c8a30" Name="麻将" Enabled="true">
+          <Folder Id="d7319ace-15f3-4fa9-b611-776a717c8a30" Name="麻将" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Name="麻将报数" Id="8ad943ba-75a4-4da0-89a0-a6477c525b7e" RegularExpression="1B:1[0-9A-F]{7}:(?&lt;player&gt;.*?):....:....:(?&lt;number&gt;91|92|93|94|95|96|97|98):">
@@ -353,7 +347,7 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="56eeaa21-69b7-4790-8f1e-c83a67061925" Name="三色标" Enabled="true">
+          <Folder Id="56eeaa21-69b7-4790-8f1e-c83a67061925" Name="三色标" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Name="黄" Id="92685998-ed67-471a-a048-29ef7366761b" RegularExpression="1B:1[0-9A-F]{7}:(?&lt;player&gt;.*?):....:....:B9:">
@@ -402,7 +396,6 @@
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="死刑击退" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -436,7 +429,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Name="无心天使(Hell's Judgment|ヘル・ジャッジメント)" Id="bd9174c2-735b-46c9-b761-e6d864f89094" RegularExpression="] 14:58EF:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="false" Name="无心天使(Hell's Judgment|ヘル・ジャッジメント)" Id="bd9174c2-735b-46c9-b761-e6d864f89094" RegularExpression="] 14:58EF:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="无心天使" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -444,7 +437,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Name="钢铁(Cataclysm|カタクリスム)" Id="86e4f9f8-7c36-40d3-9906-f61bc8cc2c89" RegularExpression="] 14:58C2:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="false" Name="钢铁(Cataclysm|カタクリスム)" Id="86e4f9f8-7c36-40d3-9906-f61bc8cc2c89" RegularExpression="] 14:58C2:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="钢铁钢铁" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -452,7 +445,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Name="分摊(Shell Crusher|アポカリプス)" Id="6c88ef04-4f19-4d3d-b315-c7de3b0969cf" RegularExpression="] 14:58C3:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="false" Name="分摊(Shell Crusher|アポカリプス)" Id="6c88ef04-4f19-4d3d-b315-c7de3b0969cf" RegularExpression="] 14:58C3:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="分摊分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -477,12 +470,15 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第二次运动会" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="第二次运动会" UseTTSRateExpression="2" VariableOp="SetString" VariableName="phase" VariableExpression="relativity2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" UseTTSTextExpression="第二次运动会" UseTTSRateExpression="2" VariableName="phase" VariableExpression="relativity2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="60000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -491,6 +487,7 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第一次运动会，看黄灯" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -499,6 +496,7 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第三次运动会" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -507,6 +505,7 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第一次弟火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -523,7 +522,6 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第二次弟火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -606,36 +604,42 @@
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Dark Eruption" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークエラプション" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="冰圈" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Dark Blizzard III" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークブリザガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" UseTTSTextExpression="核爆" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Flare" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="フレア" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="4" UseTTSTextExpression="先散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Dark Eruption" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークエラプション" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="5" UseTTSTextExpression="先冰圈" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Dark Blizzard III" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークブリザガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="6" UseTTSTextExpression="先核爆" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Flare" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="フレア" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -647,36 +651,42 @@
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Dark Eruption" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークエラプション" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="冰圈" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Dark Blizzard III" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークブリザガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" UseTTSTextExpression="核爆" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Flare" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="フレア" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="4" UseTTSTextExpression="散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="10500">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Dark Eruption" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークエラプション" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="5" UseTTSTextExpression="冰圈" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Dark Blizzard III" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークブリザガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="6" UseTTSTextExpression="核爆" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="Flare" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="フレア" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -715,7 +725,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークブリザガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗冰封" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="长火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -723,7 +732,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークファイガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗爆炎" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" UseTTSTextExpression="冰冰冰" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="24000">
                         <Condition Enabled="true" Grouping="Or">
@@ -731,7 +739,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークブリザガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗冰封" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="4" UseTTSTextExpression="火火火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -739,7 +746,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークファイガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗爆炎" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -749,7 +755,7 @@
               <Folder Id="76223926-3754-43bf-82ad-65c34e2b5683" Name="二运（国服）" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="22.95buff" Id="166b22f3-e218-4f71-aecb-b1ac14ce9594" RegularExpression="1A:[\w]+:(?&lt;name&gt;[\w-' ]+) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|地狱之风|暗影之眼) from  for 22.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="22.95buff" Id="166b22f3-e218-4f71-aecb-b1ac14ce9594" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|地狱之风|暗影之眼) from  for 22.9. Seconds" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
                         <Condition Enabled="true" Grouping="Or">
@@ -828,9 +834,8 @@
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:e12s_phase}" ExpressionTypeL="String" ExpressionR="relativity2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="26.95buff" Id="d38d79cf-be23-4ca9-8227-16537b2792f1" RegularExpression="1A:[\w]+:(?&lt;name&gt;[\w-' ]+) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|地狱之风|暗影之眼) from  for 26.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="26.95buff" Id="d38d79cf-be23-4ca9-8227-16537b2792f1" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|地狱之风|暗影之眼) from  for 26.9. Seconds" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
                         <Condition Enabled="true" Grouping="Or">
@@ -909,9 +914,8 @@
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:e12s_phase}" ExpressionTypeL="String" ExpressionR="relativity2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="30.95buff" Id="8ba39f56-473f-4f98-98f2-e74ff96a4603" RegularExpression="1A:[\w]+:(?&lt;name&gt;[\w-' ]+) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|地狱之风|暗影之眼) from  for 30.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="30.95buff" Id="8ba39f56-473f-4f98-98f2-e74ff96a4603" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|地狱之风|暗影之眼) from  for 30.9. Seconds" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -990,13 +994,12 @@
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:e12s_phase}" ExpressionTypeL="String" ExpressionR="relativity2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="true" Name="各种时间的水分摊Dark Water III" Id="7b63b2ae-bca4-4a3f-b6ee-a0fca10d3df7" RegularExpression="1A:[\w]+:(?&lt;name&gt;[\w-' ]+) gains the effect of (Spell-In-Waiting: Dark Water III|ディレイスペル：ダークウォタガ|延迟咏唱：黑暗狂水) from [\w ]? for (?&lt;timer&gt;[\d]{1,2})\.\w+ Seconds\.">
+              <Trigger Enabled="true" Name="各种时间的水分摊Dark Water III" Id="7b63b2ae-bca4-4a3f-b6ee-a0fca10d3df7" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of (Spell-In-Waiting: Dark Water III|ディレイスペル：ダークウォタガ|延迟咏唱：黑暗狂水) from [\w ]? for (?&lt;timer&gt;[\d]{1,2})\.\w+ Seconds\.">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="双分摊" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="(${timer}*1000)-4000" RefireRequeue="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1017,7 +1020,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Name="各种时间的石化Shadoweye" Id="cda2312e-4f11-4b0e-8166-bb2d5e279e1b" RegularExpression="1A:[\w]+:(?&lt;name&gt;[\w-' ]+) gains the effect of (Spell-In-Waiting: Shadoweye|ディレイスペル：シャドウアイ|延迟咏唱：暗影之眼) from [\w ]? for (?&lt;timer&gt;[\d]{1,2})\.\w+ Seconds\." PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="各种时间的石化Shadoweye" Id="cda2312e-4f11-4b0e-8166-bb2d5e279e1b" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of (Spell-In-Waiting: Shadoweye|ディレイスペル：シャドウアイ|延迟咏唱：暗影之眼) from [\w ]? for (?&lt;timer&gt;[\d]{1,2})\.\w+ Seconds\." PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="石化" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="(${timer}*1000)-4000" RefireRequeue="False">
                     <Condition Enabled="false" Grouping="Or" />
