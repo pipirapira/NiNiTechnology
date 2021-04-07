@@ -147,6 +147,7 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="光冲锋，集合" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3500">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -263,7 +264,7 @@
                 </Condition>
                 <Conditions />
               </Action>
-              <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="fatebreaker_image_caster" ListVariableExpression="(4-arctan2(${_ffxiventity[${id}].x},${_ffxiventity[${id}].y})*4/pi)%4" UseTTSTextExpression="一三一三" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="test" VariableExpression="distance(${x}, ${y}, 14, -75)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False" Description="↙↗方向报1313（标点不同请修改播报内容）" DescriptionOverride="True">
+              <Action OrderNumber="3" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="fatebreaker_image_caster" ListVariableExpression="(4-arctan2(${_ffxiventity[${id}].x},${_ffxiventity[${id}].y})*4/pi)%4" UseTTSTextExpression="二四二四" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="test" VariableExpression="distance(${x}, ${y}, 14, -75)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False" Description="↙↗方向报2424（标点不同请修改播报内容）" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="fatebreaker_image_caster" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="ListDoesNotContain" />
                 </Condition>
@@ -275,7 +276,7 @@
                 </Condition>
                 <Conditions />
               </Action>
-              <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="fatebreaker_image_caster" ListVariableExpression="(4-arctan2(${_ffxiventity[${id}].x},${_ffxiventity[${id}].y})*4/pi)%4" UseTTSTextExpression="二四二四" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="test" VariableExpression="distance(${x}, ${y}, 14, -75)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False" Description="↖↘方向报2424（标点不同请修改播报内容）" DescriptionOverride="True">
+              <Action OrderNumber="5" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="fatebreaker_image_caster" ListVariableExpression="(4-arctan2(${_ffxiventity[${id}].x},${_ffxiventity[${id}].y})*4/pi)%4" UseTTSTextExpression="一三一三" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="test" VariableExpression="distance(${x}, ${y}, 14, -75)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False" Description="↖↘方向报1313（标点不同请修改播报内容）" DescriptionOverride="True">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="fatebreaker_image_caster" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="ListDoesNotContain" />
                 </Condition>
@@ -287,7 +288,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -407,6 +407,7 @@
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -420,9 +421,11 @@
             <Actions>
               <Action OrderNumber="1" LogMessageText="multijob_trigger:MortalPowderMark:${_ffxivparty[${name}].job}:100:1:2:" LogProcess="True" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
               <Action OrderNumber="2" LogMessageText="multijob_trigger:waterbuff2:${_ffxivparty[${name}].job}:100:1:2:" LogProcess="True" UseTTSTextExpression="神圣" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2500">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
