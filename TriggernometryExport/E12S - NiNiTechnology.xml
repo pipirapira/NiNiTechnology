@@ -535,9 +535,13 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Name="分摊(Shell Crusher|アポカリプス)" Id="ab47c105-0f0d-448d-9b93-445a79817e02" RegularExpression="] 14:58C3:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="分摊(Shell Crusher|アポカリプス)" Id="ab47c105-0f0d-448d-9b93-445a79817e02" RegularExpression="] 14:58C3:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="分摊分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="散开散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="4000">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
