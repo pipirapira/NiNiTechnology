@@ -1,266 +1,324 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="e9cc0069-7628-4170-ad3a-f31999ea2d10" Name="E12S-NiniTechnology" Enabled="true">
+  <ExportedFolder Id="94fe158a-f824-4094-91aa-e9b3aa8d5a40" Name="E12S-NiniTechnology" Enabled="true">
     <Folders>
-      <Folder Id="24369b25-341e-4b81-a6d5-a21201f29afb" Name="门神" Enabled="true">
+      <Folder Id="2e370608-6862-422f-ac49-d738eaa2df1d" Name="门神" Enabled="true">
         <Folders>
-          <Folder Id="1eaf055d-3aa0-4606-ac17-21fa4201b76f" Name="蛮神技能" Enabled="true">
+          <Folder Id="48cd1050-380b-4172-b2b2-eb8c88d29147" Name="蛮神技能" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="模式转变-冰" Id="5805f122-de8d-43ba-b1f2-0746a5b25ff4" RegularExpression="] 14:5894:">
+              <Trigger Enabled="true" Name="模式转变-冰" Id="19b9ddc0-e6b3-4544-a7b5-d8af3ec86a23" RegularExpression="] 14:5894:">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="希瓦模式" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False">
                     <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="希瓦模式" UseTTSRateExpression="2" VariableOp="SetString" VariableName="junction" VariableExpression="shiva" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" RefireRequeue="False">
                     <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" UseTTSTextExpression="希瓦模式" UseTTSRateExpression="2" VariableName="junction" VariableExpression="shiva" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="25000" RefireRequeue="False">
                     <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="激光分摊(Obliteration|オブリタレーション)" Id="5b1445b3-a652-4c5d-9a3a-8d7f368d33e0" RegularExpression="] 14:4E36:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="激光分摊(Obliteration|オブリタレーション)" Id="e5beadea-c31b-4b0e-a741-92842667f272" RegularExpression="] 14:4E36:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="直线分摊" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="蛮神组合技" Id="f9df21ea-de08-4074-9ce8-b0cec3083343" RegularExpression="] 14:4E4(?&lt;type&gt;4|5|6|7):">
+              <Trigger Enabled="true" Name="蛮神组合技" Id="943f4b9f-1bbc-4b74-bc15-3593ec8f7211" RegularExpression="] 14:4E4(?&lt;type&gt;4|5|6|7):">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="e12s_water" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="4" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" VariableOp="SetString" VariableName="e12s_fire" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="5" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" VariableOp="SetString" VariableName="e12s_storm" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="6" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" VariableOp="SetString" VariableName="e12s_thunder" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="7" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="5" UseTTSTextExpression="前后远离" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="100" RefireRequeue="False">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_water}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_thunder}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="6" UseTTSTextExpression="左右靠近" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_water}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_fire}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="7" UseTTSTextExpression="四角远离" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_thunder}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_storm}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="8" UseTTSTextExpression="左右靠近" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_storm}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_fire}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="9" UseTTSTextExpression="左右远离" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_thunder}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_fire}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="10" UseTTSTextExpression="四角靠近" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_water}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${evar:e12s_storm}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="11" VariableName="e12s_water" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="15000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="12" VariableName="e12s_fire" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="13" VariableName="e12s_storm" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="14" VariableName="e12s_thunder" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="模式转变-土" Id="fa3f5a3b-5244-4607-9e12-1ba1885692fb" RegularExpression="] 14:5895:">
+              <Trigger Enabled="true" Name="模式转变-土" Id="7345a2ff-dda9-4a8a-96d5-828b991123c2" RegularExpression="] 14:5895:">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="泰坦模式" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireRequeue="False">
                     <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="泰坦模式" UseTTSRateExpression="2" VariableOp="SetString" VariableName="junction" VariableExpression="titan" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" RefireRequeue="False">
                     <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" UseTTSTextExpression="泰坦模式" UseTTSRateExpression="2" VariableName="junction" VariableExpression="titan" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="25000" RefireRequeue="False">
                     <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="延时技能-开场左右刀后" Id="c2e4310c-9a9c-4fa0-8dd4-3aaedd3ecb5b" RegularExpression="] 14:58A(D|E):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="延时技能-开场左右刀后" Id="f8e1d579-8c42-4f1c-88d9-ffef95f9507b" RegularExpression="] 14:58A(D|E):" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="双分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:junction}" ExpressionTypeL="String" ExpressionR="titan" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="散开散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:junction}" ExpressionTypeL="String" ExpressionR="shiva" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="延时技能-Cast或Release后" Id="f4522fe6-aabb-4fb1-9822-e67c2880bb1c" RegularExpression="] 14:(5893|4E43):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="延时技能-Cast或Release后" Id="5bba75a6-0ff5-4f40-bcb6-9751c2914436" RegularExpression="] 14:(5893|4E43):" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="双分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="6000">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:junction}" ExpressionTypeL="String" ExpressionR="titan" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="散开散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:junction}" ExpressionTypeL="String" ExpressionR="shiva" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="55c46c4e-2b0e-48da-8bc8-145bce8de789" Name="击退提醒" Enabled="true">
+          <Folder Id="11822bd1-53df-4461-b6a4-7444e39b15cd" Name="击退提醒" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="冰柱击退(Plunging Ice|落氷衝撃)" Id="59b34f65-468a-4ec5-9a1c-8d480d42a47c" RegularExpression="] 14:589D:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="冰柱击退(Plunging Ice|落氷衝撃)" Id="e54b2792-a5ab-4599-afe5-e6b5e56fa383" RegularExpression="] 14:589D:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="防击退" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="4000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="大击退-右下(Palm of Temperance|拒絶の手)" Id="6a8ee26b-c02e-4661-acac-c9de51ea397a" RegularExpression="] 14:58B4:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="大击退-右下(Palm of Temperance|拒絶の手)" Id="19dc9fd9-b5a2-4a0a-bf29-d56ba39d7e4f" RegularExpression="] 14:58B4:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="右击退" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="大击退-左下(Palm of Temperance|拒絶の手)" Id="5215825a-69f3-44e8-9dc7-c8a9554d54ae" RegularExpression="] 14:58B5:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="大击退-左下(Palm of Temperance|拒絶の手)" Id="b6123d1e-bd1b-4edc-b2af-231bf2aca996" RegularExpression="] 14:58B5:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="左击退" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="中央击退(Laser Eye|メーザーアイ)" Id="44473391-66dc-4727-a696-e2df120ec498" RegularExpression="] 14:58B8:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="中央击退(Laser Eye|メーザーアイ)" Id="6f20028a-a5d7-418c-b4a7-bfaac6f8d4a3" RegularExpression="] 14:58B8:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="防击退" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="7500">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="4fd9737a-7b66-4858-bb8a-702e6e9b5ada" Name="普通技能" Enabled="true">
+          <Folder Id="9fcf0c3d-cce4-45a6-bd59-e90d312f6aa3" Name="普通技能" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="AOE(Obliteration|オブリタレーション)" Id="88314274-89ae-4eb7-b39d-74437f204bd4" RegularExpression="] 14:58A8:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="AOE(Obliteration|オブリタレーション)" Id="d6258d7e-3986-4142-b332-1c96c7b9d39d" RegularExpression="] 14:58A8:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="双死刑(Formless Judgment|天罰の波動)" Id="ca04e4cd-5eb7-4175-9734-9461ba48439c" RegularExpression="] 14:58A9:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="双死刑(Formless Judgment|天罰の波動)" Id="798dbbc0-453c-4fce-b101-c7bc6a5d1925" RegularExpression="] 14:58A9:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="双死刑" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="左右刀-右安全(Rapturous Reach|悦楽の手)" Id="66611f26-761c-4400-9b30-2adb47dc5a28" RegularExpression="] 14:58AE:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="左右刀-右安全(Rapturous Reach|悦楽の手)" Id="b5138658-3cd0-40b6-a3ae-dc0e74d9997a" RegularExpression="] 14:58AE:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="右右右" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="左右刀-左安全(Rapturous Reach|悦楽の手)" Id="204b65be-af48-4278-9f28-da68795a2564" RegularExpression="] 14:58AD:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="左右刀-左安全(Rapturous Reach|悦楽の手)" Id="9ceef36c-1bb2-411a-bb47-3894c28c38f6" RegularExpression="] 14:58AD:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="左左左" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="577a8ba2-a9e9-46ef-8b96-cc7c46663b0d" Name="阶段提醒" Enabled="true">
+          <Folder Id="d80ffc41-2354-41db-9e65-3d8ebb9a64e0" Name="阶段提醒" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="狮子阶段" Id="98267a02-cd83-445e-a41c-849cd03d847c" RegularExpression="その存在ごと、記憶の彼方に消し去ろう|once you are erased from our memory" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="狮子阶段" Id="ebd1f8cb-7306-470c-82b6-a132c494e19a" RegularExpression="その存在ごと、記憶の彼方に消し去ろう|once you are erased from our memory" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="狮子出现" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="火1" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="14000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" UseTTSTextExpression="火2" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="9000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" UseTTSTextExpression="火3" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="9000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="猛男阶段" Id="b6e8a583-41fe-4ad8-80bb-e029a6f60e66" RegularExpression="この理想郷に、おまえたちは必要ない|Our utopia will only be complete" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="猛男阶段" Id="abc8359f-bd85-4e30-a9d3-720ee76758f3" RegularExpression="この理想郷に、おまえたちは必要ない|Our utopia will only be complete" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="猛男出现" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="4000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="15000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" UseTTSTextExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" UseTTSTextExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="5" UseTTSTextExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="3000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -271,12 +329,15 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="双死刑" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="marker_record" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="双死刑" UseTTSRateExpression="2" VariableName="marker_record" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="5000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="1B" Id="3f6e60aa-1717-44a1-8275-e9149c2fd1bf" RegularExpression="] (?&lt;left&gt;1B:........:.*?:....:....):(?&lt;id&gt;....):(?&lt;right&gt;....:....:....:)" RefirePeriodExpression="1000">
                 <Actions>
@@ -284,14 +345,17 @@
                     <Condition Enabled="false" Grouping="Or">
                       <ConditionSingle Enabled="false" ExpressionL="${evar:marker_record}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="双死刑" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="marker_offset" VariableExpression="hex2dec(${id})-hex2dec(00DA)" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="100">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:marker_record}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -304,123 +368,144 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${number}" ExpressionTypeL="String" ExpressionR="91" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" LogLevel="-1" UseTTSTextExpression="蓝色2号" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${number}" ExpressionTypeL="String" ExpressionR="92" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" LogLevel="-1" UseTTSTextExpression="蓝色3号" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${number}" ExpressionTypeL="String" ExpressionR="93" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" LogLevel="-1" UseTTSTextExpression="蓝色4号" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${number}" ExpressionTypeL="String" ExpressionR="94" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="5" LogLevel="-1" UseTTSTextExpression="红色1号" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${number}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="6" LogLevel="-1" UseTTSTextExpression="红色2号" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${number}" ExpressionTypeL="String" ExpressionR="96" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="7" LogLevel="-1" UseTTSTextExpression="红色3号" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${number}" ExpressionTypeL="String" ExpressionR="97" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="8" LogLevel="-1" UseTTSTextExpression="红色4号" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${number}" ExpressionTypeL="String" ExpressionR="98" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="56eeaa21-69b7-4790-8f1e-c83a67061925" Name="三色标" Enabled="false">
+          <Folder Id="4c715379-121f-4436-8a4d-e74d1835f6d5" Name="三色标" Enabled="false">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="黄" Id="92685998-ed67-471a-a048-29ef7366761b" RegularExpression="1B:1[0-9A-F]{7}:(?&lt;player&gt;.*?):....:....:B9:">
+              <Trigger Enabled="true" Name="黄" Id="a987c31a-3594-441c-beef-22b0ac33a981" RegularExpression="1B:1[0-9A-F]{7}:(?&lt;player&gt;.*?):....:....:B9:">
                 <Actions>
                   <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="黄黄黄" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="橙" Id="5c55ccb2-17c0-485b-9baa-0cebc04ca08b" RegularExpression="1B:1[0-9A-F]{7}:(?&lt;player&gt;.*?):....:....:BA:">
+              <Trigger Enabled="true" Name="橙" Id="b1234ddf-0315-4017-9f7a-a540705276b3" RegularExpression="1B:1[0-9A-F]{7}:(?&lt;player&gt;.*?):....:....:BA:">
                 <Actions>
                   <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="橙橙橙" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="蓝" Id="4bc27437-7e26-4125-86e9-f9a51fdcdfe9" RegularExpression="1B:1[0-9A-F]{7}:(?&lt;player&gt;.*?):....:....:BB:">
+              <Trigger Enabled="true" Name="蓝" Id="270fd575-f007-4e4c-b482-1437a37fb06c" RegularExpression="1B:1[0-9A-F]{7}:(?&lt;player&gt;.*?):....:....:BB:">
                 <Actions>
                   <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="蓝蓝蓝" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
         </Folders>
         <Triggers />
       </Folder>
-      <Folder Id="d2f76888-cb62-4cad-8b17-00fb78396e50" Name="本体" Enabled="true">
+      <Folder Id="d322df79-80f5-4b41-9290-e7622a74c5c2" Name="本体" Enabled="true">
         <Folders>
-          <Folder Id="5bd542cc-1c40-4098-8c4d-b6b138e5747d" Name="普通技能" Enabled="true">
+          <Folder Id="a5ed236c-62dc-4d2d-9759-d899df900479" Name="普通技能" Enabled="true">
             <Folders>
-              <Folder Id="ac9eecae-f6d5-450a-a12f-3689f1518015" Name="死刑" Enabled="true">
+              <Folder Id="e87d7358-9317-4b75-ae52-1a09630f7eb6" Name="死刑" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="暗夜の舞踏技(Darkest Dance)" Id="47ef22a9-cc6b-4d74-bf2a-1beab6b66d1a" RegularExpression="] 14:58BE:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="暗夜の舞踏技(Darkest Dance)" Id="dcf65312-50df-4be0-8627-2588adb24168" RegularExpression="] 14:58BE:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="死刑击退" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="宵闇の舞踏技(Somber Dance)" Id="f45e2402-5305-489d-8ed3-3db0f628b595" RegularExpression="] 14:58BD:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="宵闇の舞踏技(Somber Dance)" Id="c185139d-3551-4520-a379-2ea1e7407445" RegularExpression="] 14:58BD:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="二连死刑" UseTTSRateExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="分摊死刑(Black Halo|ブラックヘイロー)" Id="03ad67d3-eb7c-4435-a823-986d65c1c564" RegularExpression="] 14:58C7:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="分摊死刑(Black Halo|ブラックヘイロー)" Id="cae9f269-9884-4499-aaa7-124f3ecc91c3" RegularExpression="] 14:58C7:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="分摊死刑" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="true" Name="AOE(Shockwave Pulsar)" Id="74728c3e-185a-4684-a5c4-d7dc25b87d69" RegularExpression="] 14:58F0:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="AOE(Shockwave Pulsar)" Id="99217b29-90f7-4861-b21f-0922b6eb1cf3" RegularExpression="] 14:58F0:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -428,45 +513,54 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Name="无心天使(Hell's Judgment|ヘル・ジャッジメント)" Id="bd9174c2-735b-46c9-b761-e6d864f89094" RegularExpression="] 14:58EF:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="false" Name="无心天使(Hell's Judgment|ヘル・ジャッジメント)" Id="efc8e073-5940-4c4a-87c0-607540375e46" RegularExpression="] 14:58EF:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="无心天使" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Name="钢铁(Cataclysm|カタクリスム)" Id="86e4f9f8-7c36-40d3-9906-f61bc8cc2c89" RegularExpression="] 14:58C2:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="false" Name="钢铁(Cataclysm|カタクリスム)" Id="984ff81a-4b3c-48de-b3a9-43f4c420899b" RegularExpression="] 14:58C2:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="钢铁钢铁" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Name="分摊(Shell Crusher|アポカリプス)" Id="6c88ef04-4f19-4d3d-b315-c7de3b0969cf" RegularExpression="] 14:58C3:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="false" Name="分摊(Shell Crusher|アポカリプス)" Id="ab47c105-0f0d-448d-9b93-445a79817e02" RegularExpression="] 14:58C3:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="分摊分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="超级跳(Spirit Taker|スピリットテイカー)" Id="dceb4767-b4c0-4988-9de5-8a3c00d32a2e" RegularExpression="] 14:58C4:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="超级跳(Spirit Taker|スピリットテイカー)" Id="29829c46-ea33-48eb-9fe1-cd3d30e2facd" RegularExpression="] 14:58C4:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="超级跳，散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="33f36174-907b-4848-882c-8877bc6f1b14" Name="阶段技能" Enabled="true">
+          <Folder Id="0bbacdaa-990b-48db-bb3f-dc32770c0b3e" Name="阶段技能" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="第二次运动会(Intermediate Relativity|時間圧縮・破)" Id="37b1f59a-efed-464b-8e11-de41c966cbfb" RegularExpression="] 14:58E1:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="第二次运动会(Intermediate Relativity|時間圧縮・破)" Id="6b21777a-ada0-483f-85d3-c38cb53302c5" RegularExpression="] 14:58E1:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第二次运动会" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -482,8 +576,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="第一次运动会(Basic Relativity|時間圧縮・序)" Id="ddb02f77-d20a-4e6f-8e65-824e3e1974c8" RegularExpression="] 14:58E0:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="第一次运动会(Basic Relativity|時間圧縮・序)" Id="5638fbd3-2529-45f5-b228-da1a1b9dfef2" RegularExpression="] 14:58E0:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第一次运动会，看黄灯" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -491,8 +586,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="第三次运动会(Advanced Relativity|時間圧縮・急)" Id="1aeb1a43-459e-40df-ae94-52952f1ceed4" RegularExpression="] 14:58E2:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="第三次运动会(Advanced Relativity|時間圧縮・急)" Id="bcca0997-85bb-49b4-b964-fb5ff0a18698" RegularExpression="] 14:58E2:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第三次运动会" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -500,8 +596,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="地火1(Singular Apocalypse|アポカリプス・シングル)" Id="bfe9381b-7e9a-4f3f-9ed9-d0aa7ba031a7" RegularExpression="] 14:58E5:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="地火1(Singular Apocalypse|アポカリプス・シングル)" Id="d1e3c04e-d198-4288-8f2c-4579e5770821" RegularExpression="] 14:58E5:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第一次弟火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -509,48 +606,58 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="地火3(Triple Apocalypse|アポカリプス・トリプル)" Id="08e3b4a5-96ec-46d8-9a84-dfa492efdb9c" RegularExpression="] 14:501D:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="地火3(Triple Apocalypse|アポカリプス・トリプル)" Id="139ea338-725b-4c4e-b238-16b8b672c67b" RegularExpression="] 14:501D:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第三次弟火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="地火2(Dual Apocalypse|アポカリプス・ダブル)" Id="73a5b318-5c8a-4478-ae75-b45eba468407" RegularExpression="] 14:501C:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="地火2(Dual Apocalypse|アポカリプス・ダブル)" Id="68c419b6-888f-4f65-91ac-83dbddd0b268" RegularExpression="] 14:501C:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="第二次弟火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="软狂暴(Terminal Relativity|時間圧縮・終)" Id="2329b392-4054-4eb2-a448-46f6a4c2f32d" RegularExpression="] 14:58E3:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="软狂暴(Terminal Relativity|時間圧縮・終)" Id="b23611b3-2a36-42c2-9d73-b18b34501e0e" RegularExpression="] 14:58E3:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="软狂暴AOE，幕帘罩子雪仇光之心" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" UseTTSTextExpression="策动，雪仇" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="20000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" UseTTSTextExpression="小翅膀大翅膀，罩子" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="13000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" UseTTSTextExpression="昏乱" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="10000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="2ad6047f-778e-4405-8eec-556f82f2b1c5" Name="buff监视" Enabled="true">
+          <Folder Id="3686d0ad-7e6a-4c6a-ab9e-ee33b296ec57" Name="buff监视" Enabled="true">
             <Folders>
-              <Folder Id="db41f9fd-be99-4a7e-8bb0-93c443205f8f" Name="二运（国际服）" Enabled="true">
+              <Folder Id="6d157efa-2331-4629-abe1-a387789c8161" Name="二运（国际服）" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="22.95buff" Id="4951f803-e0f4-4547-9a5f-34c4d8849fd1" RegularExpression="gains the effect of (Spell-In-Waiting: |ディレイスペル：)(?&lt;type&gt;Dark Eruption|Flare|Dark Blizzard III|ダークエラプション|フレア|ダークブリザガ) from .*? for 22.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="22.95buff" Id="11577b4f-3f40-4fca-bbe2-5db1f4f3eb79" RegularExpression="gains the effect of (Spell-In-Waiting: |ディレイスペル：)(?&lt;type&gt;Dark Eruption|Flare|Dark Blizzard III|ダークエラプション|フレア|ダークブリザガ) from .*? for 22.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
                         <Condition Enabled="true" Grouping="Or">
@@ -596,8 +703,9 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="30.95buff" Id="bdfdef1f-618b-430b-85e8-25fbe57070bf" RegularExpression="gains the effect of (Spell-In-Waiting: |ディレイスペル：)(?&lt;type&gt;Dark Eruption|Flare|Dark Blizzard III|ダークエラプション|フレア|ダークブリザガ) from .*? for 30.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="30.95buff" Id="daf20473-4bf3-4da4-8597-97a3b13b18a5" RegularExpression="gains the effect of (Spell-In-Waiting: |ディレイスペル：)(?&lt;type&gt;Dark Eruption|Flare|Dark Blizzard III|ダークエラプション|フレア|ダークブリザガ) from .*? for 30.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -643,8 +751,9 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="26.95buff" Id="0f8ab5e2-7230-4974-96b6-e7d75d687d72" RegularExpression="gains the effect of (Spell-In-Waiting: |ディレイスペル：)(?&lt;type&gt;Dark Eruption|Flare|Dark Blizzard III|ダークエラプション|フレア|ダークブリザガ) from .*? for 26.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="26.95buff" Id="07f6c611-4f97-41b4-a623-567c9bf22021" RegularExpression="gains the effect of (Spell-In-Waiting: |ディレイスペル：)(?&lt;type&gt;Dark Eruption|Flare|Dark Blizzard III|ダークエラプション|フレア|ダークブリザガ) from .*? for 26.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
                         <Condition Enabled="true" Grouping="Or">
@@ -690,13 +799,14 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="3ebab03b-3358-4e16-b5c1-73cb14e80f23" Name="一运" Enabled="true">
+              <Folder Id="f0ce92bc-ce7c-4b6d-93e3-ce4d7e20c680" Name="一运" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="14.96冰火buff" Id="ef62d776-abdb-436c-8776-f79d8c50d758" RegularExpression="gains the effect of (Spell-In-Waiting: Dark |ディレイスペル：|延迟咏唱：)(?&lt;type&gt;Blizzard|Fire|ダークブリザガ|ダークファイガ|黑暗冰封|黑暗爆炎)(| III) from .*? for 14.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="14.96冰火buff" Id="5b472b98-b9cc-4a46-bb9d-f0725c5a11c7" RegularExpression="gains the effect of (Spell-In-Waiting: Dark |ディレイスペル：|延迟咏唱：)(?&lt;type&gt;Blizzard|Fire|ダークブリザガ|ダークファイガ|黑暗冰封|黑暗爆炎)(| III) from .*? for 14.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="短冰" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -716,8 +826,9 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="28.96冰火buff" Id="adfe8580-fd41-4e2b-97a4-141ffffe46d7" RegularExpression="gains the effect of (Spell-In-Waiting: Dark |ディレイスペル：|延迟咏唱：)(?&lt;type&gt;Blizzard|Fire|ダークブリザガ|ダークファイガ|黑暗冰封|黑暗爆炎)(| III) from .*? for 28.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="28.96冰火buff" Id="2d7f35dc-8649-468b-b6c8-0619f76fec0b" RegularExpression="gains the effect of (Spell-In-Waiting: Dark |ディレイスペル：|延迟咏唱：)(?&lt;type&gt;Blizzard|Fire|ダークブリザガ|ダークファイガ|黑暗冰封|黑暗爆炎)(| III) from .*? for 28.9. Seconds" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="长冰" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
                         <Condition Enabled="true" Grouping="Or">
@@ -725,6 +836,7 @@
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークブリザガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗冰封" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="长火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -732,6 +844,7 @@
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークファイガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗爆炎" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" UseTTSTextExpression="冰冰冰" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="24000">
                         <Condition Enabled="true" Grouping="Or">
@@ -739,6 +852,7 @@
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークブリザガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗冰封" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="4" UseTTSTextExpression="火火火" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -746,16 +860,18 @@
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="ダークファイガ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗爆炎" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="76223926-3754-43bf-82ad-65c34e2b5683" Name="二运（国服）" Enabled="true">
+              <Folder Id="ad13a1bf-34e4-42d3-aef6-58bdf3b74e2c" Name="二运（国服）" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="22.95buff" Id="166b22f3-e218-4f71-aecb-b1ac14ce9594" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|地狱之风|暗影之眼) from  for 22.9. Seconds" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="22.95buff" Id="b4d167b5-0efe-44d5-9de5-242917e98619" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|黑暗暴风|暗影之眼) from  for 22.9. Seconds" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="2000">
                         <Condition Enabled="true" Grouping="Or">
@@ -771,7 +887,7 @@
                       </Action>
                       <Action OrderNumber="3" PlaySpeechMyself="True" UseTTSTextExpression="风圈" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="地狱之风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗暴风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                         <Conditions />
                       </Action>
@@ -813,7 +929,7 @@
                       </Action>
                       <Action OrderNumber="10" UseTTSTextExpression="风圈，背对" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="地狱之风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗暴风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                         <Conditions />
                       </Action>
@@ -834,8 +950,9 @@
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:e12s_phase}" ExpressionTypeL="String" ExpressionR="relativity2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="26.95buff" Id="d38d79cf-be23-4ca9-8227-16537b2792f1" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|地狱之风|暗影之眼) from  for 26.9. Seconds" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="26.95buff" Id="90a90b74-78aa-4750-85f0-e1b96b1a4e09" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|黑暗暴风|暗影之眼) from  for 26.9. Seconds" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1000">
                         <Condition Enabled="true" Grouping="Or">
@@ -851,7 +968,7 @@
                       </Action>
                       <Action OrderNumber="3" UseTTSTextExpression="风圈" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="地狱之风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗暴风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                         <Conditions />
                       </Action>
@@ -893,7 +1010,7 @@
                       </Action>
                       <Action OrderNumber="10" UseTTSTextExpression="风圈" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="地狱之风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗暴风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                         <Conditions />
                       </Action>
@@ -914,8 +1031,9 @@
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:e12s_phase}" ExpressionTypeL="String" ExpressionR="relativity2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="30.95buff" Id="8ba39f56-473f-4f98-98f2-e74ff96a4603" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|地狱之风|暗影之眼) from  for 30.9. Seconds" RefirePeriodExpression="1000">
+                  <Trigger Enabled="true" Name="30.95buff" Id="c74ac2eb-b8a7-479f-a4ea-5556847ecd7e" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of 延迟咏唱：(?&lt;type&gt;暗炎喷发|核爆|黑暗冰封|黑暗神圣|黑暗暴风|暗影之眼) from  for 30.9. Seconds" RefirePeriodExpression="1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
@@ -931,7 +1049,7 @@
                       </Action>
                       <Action OrderNumber="3" UseTTSTextExpression="风圈" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="地狱之风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗暴风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                         <Conditions />
                       </Action>
@@ -967,7 +1085,7 @@
                       </Action>
                       <Action OrderNumber="9" UseTTSTextExpression="先风圈" UseTTSRateExpression="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="地狱之风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="黑暗暴风" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                         <Conditions />
                       </Action>
@@ -994,12 +1112,13 @@
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:e12s_phase}" ExpressionTypeL="String" ExpressionR="relativity2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="true" Name="各种时间的水分摊Dark Water III" Id="7b63b2ae-bca4-4a3f-b6ee-a0fca10d3df7" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of (Spell-In-Waiting: Dark Water III|ディレイスペル：ダークウォタガ|延迟咏唱：黑暗狂水) from [\w ]? for (?&lt;timer&gt;[\d]{1,2})\.\w+ Seconds\.">
+              <Trigger Enabled="true" Name="各种时间的水分摊Dark Water III" Id="1ada9d27-8dbe-43d1-a935-07953f1f592a" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of (Spell-In-Waiting: Dark Water III|ディレイスペル：ダークウォタガ|延迟咏唱：黑暗狂水) from [\w ]? for (?&lt;timer&gt;[\d]{1,2})\.\w+ Seconds\.">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="双分摊" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="(${timer}*1000)-4000" RefireRequeue="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1019,8 +1138,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="各种时间的石化Shadoweye" Id="cda2312e-4f11-4b0e-8166-bb2d5e279e1b" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of (Spell-In-Waiting: Shadoweye|ディレイスペル：シャドウアイ|延迟咏唱：暗影之眼) from [\w ]? for (?&lt;timer&gt;[\d]{1,2})\.\w+ Seconds\." PeriodRefire="Deny" RefirePeriodExpression="1000">
+              <Trigger Enabled="true" Name="各种时间的石化Shadoweye" Id="faa957d1-c92d-487f-b966-c9432d82dc8a" RegularExpression="1A:(?&lt;id&gt;1[0-9A-F]{7}):(?&lt;name&gt;.*?) gains the effect of (Spell-In-Waiting: Shadoweye|ディレイスペル：シャドウアイ|延迟咏唱：暗影之眼) from [\w ]? for (?&lt;timer&gt;[\d]{1,2})\.\w+ Seconds\." PeriodRefire="Deny" RefirePeriodExpression="1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="石化" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="(${timer}*1000)-4000" RefireRequeue="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1042,6 +1162,7 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="phase" ExpressionTypeL="String" ExpressionR="relativity2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                 </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
