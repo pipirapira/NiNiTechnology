@@ -115,7 +115,7 @@
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="核爆(Photon Burst)" Id="4594488f-986d-4d99-9624-f9c4ba46c061" RegularExpression="starts using Photon Burst" PeriodRefire="Deny" RefirePeriodExpression="1000">
+      <Trigger Enabled="true" Name="核爆(Photon Burst)" Id="4594488f-986d-4d99-9624-f9c4ba46c061" RegularExpression="] 14:5FA8:" PeriodRefire="Deny" RefirePeriodExpression="1000">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="核爆出去" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="false" Grouping="Or" />
