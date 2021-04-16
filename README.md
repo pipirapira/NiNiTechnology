@@ -1,6 +1,6 @@
 # NiNiTechnology
 ## 温馨提示：
-ff14国际服版本5.5及后续版本的尼尼科技Triggernometry触发器将分为普通版和专业版两种不同版本。专业版触发器需使用尼尼科技专业版增强触发插件Triggernometry-pro导入（https://github.com/pipirapira/triggernometry-pro）
+ff14国际服版本5.5及后续版本的尼尼科技Triggernometry触发器将分为普通版和专业版两种不同版本。专业版触发器需使用尼尼科技专业版增强触发插件Triggernometry-pro导入（ https://github.com/pipirapira/triggernometry-pro ）
 
 专业版触发器包含更多强大的实验性功能和更好的版本兼容性，我们今后的开发将逐步转向全面支持专业版触发器。
 
