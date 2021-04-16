@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="361de0e2-5057-4001-9242-46b5b8419306" Name="5.5钻石神兵正式版v1.1-NiniTechnology" Enabled="true">
+  <ExportedFolder Id="361de0e2-5057-4001-9242-46b5b8419306" Name="5.5钻石神兵普通版v1.1-NiniTechnology" Enabled="true">
     <Folders>
       <Folder Id="0b1ea394-7e02-4f9e-b3fd-e56c93d23e82" Name="左右刀" Enabled="true">
         <Folders />
@@ -95,6 +95,10 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
+              <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="死刑" UseTTSRateExpression="2" VariableName="superjump_typeid" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
@@ -111,6 +115,7 @@
                     <ConditionSingle Enabled="true" ExpressionL="abs(74-${_ffxiventity[${id}].x})" ExpressionTypeL="Numeric" ExpressionR="2.5" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                   </ConditionGroup>
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="bits_pos" VariableExpression="right" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
@@ -123,9 +128,11 @@
                     <ConditionSingle Enabled="true" ExpressionL="abs(86-${_ffxiventity[${id}].x})" ExpressionTypeL="Numeric" ExpressionR="2.5" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                   </ConditionGroup>
                 </Condition>
+                <Conditions />
               </Action>
-              <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableName="bit_safezone" VariableExpression="left" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="5000" RefireInterrupt="True">
+              <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableName="bits_pos" VariableExpression="left" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="5000" RefireInterrupt="True">
                 <Condition Enabled="false" Grouping="And" />
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -378,10 +385,16 @@
       <Trigger Enabled="true" Name="前后弹球(Auri Arts)" Id="20378208-e257-43d3-b84c-5ff8bfd4302f" RegularExpression="] 14:5FB5" PeriodRefire="Deny" RefirePeriodExpression="1000">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="有球远离，没球靠近" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${elvar:superjump_typeid}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="防击退" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="6000">
-            <Condition Enabled="false" Grouping="Or" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${elvar:superjump_typeid}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
