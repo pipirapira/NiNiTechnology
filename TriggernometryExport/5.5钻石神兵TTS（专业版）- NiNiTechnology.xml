@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="acfb2a52-729e-498a-bfc0-81ef17d267d4" Name="5.5钻石神兵专业版v1.1-NiniTechnology" Enabled="true">
+  <ExportedFolder Id="acfb2a52-729e-498a-bfc0-81ef17d267d4" Name="5.5钻石神兵专业版v1.2-NiniTechnology" Enabled="true">
     <Folders>
       <Folder Id="0be94bbc-c37e-4f99-beac-a880e26460d8" Name="左右刀" Enabled="true">
         <Folders />
@@ -99,6 +99,20 @@
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="左右刀(Claw Swipe)" Id="00482247-2201-4f02-8178-0067e77d5bb3" RegularExpression="] 14:5FC(2|3):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="可传送" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="diamond_rain_lock" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="可传送" UseTTSRateExpression="2" VariableName="diamond_rain_lock" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="20000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
         </Triggers>
@@ -346,15 +360,30 @@
       </Trigger>
       <Trigger Enabled="true" Name="分组AOE(Diamond Rain)" Id="92cd9e0f-7cc2-4072-ba4d-24c286b5a238" RegularExpression="] 14:5FA7:" PeriodRefire="Deny" RefirePeriodExpression="1000">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="分组AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
+          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="diamond_rain_counter" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="分组AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${evar:diamond_warp_banned}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
             <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="分组AOE，可传送" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
+          <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="分组AOE，可传送" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${evar:diamond_warp_banned}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="diamond_rain_counter" VariableExpression="if(${_ffxivparty[1].x}&gt;100,1,0)+ if(${_ffxivparty[2].x}&gt;100,1,0)+ if(${_ffxivparty[3].x}&gt;100,1,0)+ if(${_ffxivparty[4].x}&gt;100,1,0)+ if(${_ffxivparty[5].x}&gt;100,1,0)+ if(${_ffxivparty[6].x}&gt;100,1,0)+ if(${_ffxivparty[7].x}&gt;100,1,0)+ if(${_ffxivparty[8].x}&gt;100,1,0)" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="5000">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="diamond_rain_mypos" VariableExpression="if(${_ffxivparty[${_ffxivplayer}].x}&gt;100,1,0)" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="100">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:diamond_rain_counter}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:diamond_rain_lock}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
             <Conditions />
           </Action>
@@ -481,6 +510,19 @@
           <Action OrderNumber="16" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="下下下" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="56" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="17" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="可传送" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="6000">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionSingle Enabled="true" ExpressionL="${var:diamond_rain_mypos}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].x}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              </ConditionGroup>
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionSingle Enabled="true" ExpressionL="${var:diamond_rain_mypos}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].x}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+              </ConditionGroup>
             </Condition>
             <Conditions />
           </Action>

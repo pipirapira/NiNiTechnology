@@ -1,95 +1,126 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="361de0e2-5057-4001-9242-46b5b8419306" Name="5.5钻石神兵普通版v1.1-NiniTechnology" Enabled="true">
+  <ExportedFolder Id="d441e612-e6c4-48d2-ad99-137ed02376f0" Name="5.5钻石神兵普通版v1.2-NiniTechnology" Enabled="true">
     <Folders>
-      <Folder Id="0b1ea394-7e02-4f9e-b3fd-e56c93d23e82" Name="左右刀" Enabled="true">
+      <Folder Id="fa28aa35-8aeb-4459-9214-f29955212afb" Name="左右刀" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="18左右刀+散开(Adamant Purge Emerald)" Id="312d61bf-b928-49ec-840b-a175e7351628" RegularExpression="] 14:5FA(?&lt;type&gt;2|3):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="18左右刀+散开(Adamant Purge Emerald)" Id="3ced13da-a339-48e4-9bfb-8767665122e1" RegularExpression="] 14:5FA(?&lt;type&gt;2|3):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="右右右，准备散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="左左左，准备散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="散开散开" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="12000">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
               <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="可传送" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="6000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${evar:diamond_warp_banned}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="19左右刀+分摊(Adamant Purge Sapphire)" Id="cabd98c0-9300-4173-8dc0-999d1737cd03" RegularExpression="] 14:5FA(?&lt;type&gt;4|5):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="19左右刀+分摊(Adamant Purge Sapphire)" Id="d779ddfd-a3c0-49c7-b656-b782bc629db9" RegularExpression="] 14:5FA(?&lt;type&gt;4|5):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="右右右，准备分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="5" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="左左左，准备分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="4" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="分摊分摊" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="12000">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
               <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="可传送" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="6000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${evar:diamond_warp_banned}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="17左右刀+分组(Adamant Purge Ruby)" Id="1543eb2c-20fb-46a6-b629-1c6956f15424" RegularExpression="] 14:5F9(?&lt;type&gt;A|B):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="17左右刀+分组(Adamant Purge Ruby)" Id="d09ac484-126e-437a-9a06-8212d74ea813" RegularExpression="] 14:5F9(?&lt;type&gt;A|B):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="右右右，准备分组AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="左左左，准备分组AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="A" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="可传送" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="14000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${evar:diamond_warp_banned}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="禁止传送(Immobile Suit)" Id="e68d2324-bfe8-4a9e-ad8e-21963003f03a" RegularExpression="] 1A:1[0-9A-F]{7}:(?&lt;player&gt;.*?) gains the effect of (転移装置利用不可|Immobile Suit) from">
+          <Trigger Enabled="true" Name="禁止传送(Immobile Suit)" Id="4e58a18a-62a0-460d-8196-0694357d192e" RegularExpression="] 1A:1[0-9A-F]{7}:(?&lt;player&gt;.*?) gains the effect of (転移装置利用不可|Immobile Suit) from">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="diamond_warp_banned" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
               <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableName="diamond_warp_banned" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="20000">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="左右刀(Claw Swipe)" Id="92c2aefd-0f24-49c4-9800-eaaeb2aec328" RegularExpression="] 14:5FC(2|3):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="可传送" UseTTSRateExpression="2" VariableOp="SetNumeric" VariableName="diamond_rain_lock" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="可传送" UseTTSRateExpression="2" VariableName="diamond_rain_lock" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="20000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="69179598-2367-4ff4-8243-becf343f4a06" Name="冲锋提示" Enabled="true">
+      <Folder Id="cd8b6f44-8f78-42ce-9547-9a5d7bb98b3e" Name="冲锋提示" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="BossID获取器" Id="6087ade7-373f-4438-a506-0b891baccae3" RegularExpression="] 15:(?&lt;id&gt;4[0-9A-F]{7}):[^:]*?:5FAD:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Name="BossID获取器" Id="ea567b94-58c0-44d4-82ed-e84256a6aa81" RegularExpression="] 15:(?&lt;id&gt;4[0-9A-F]{7}):[^:]*?:5FAD:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="死刑" UseTTSRateExpression="2" VariableOp="SetString" VariableName="boss_id" VariableExpression="${id}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -101,8 +132,9 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="手手左右" Id="6ba6bdb7-6714-46fc-8070-6495925396b7" RegularExpression="] 03:(?&lt;id&gt;4[0-9A-F]{7}):Added new combatant (Articulated Bit|アームビット)">
+          <Trigger Enabled="true" Name="手手左右" Id="f36c826d-c356-464f-8cd4-9f184c575d5b" RegularExpression="] 03:(?&lt;id&gt;4[0-9A-F]{7}):Added new combatant (Articulated Bit|アームビット)">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="bits_pos" VariableExpression="left" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="5000">
                 <Condition Enabled="true" Grouping="And">
@@ -136,8 +168,9 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="Z字冲锋(Auri Arts)—以场地12点方向为基准" Id="46312273-6f77-4bfd-9f71-fc8f0d664494" RegularExpression="] 14:5F(?&lt;type&gt;AF|F8):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Sequential="True" Name="Z字冲锋(Auri Arts)—以场地12点方向为基准" Id="4e6f8d5f-3cd4-4297-8f9a-fb3806f43b0c" RegularExpression="] 14:5F(?&lt;type&gt;AF|F8):" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="左偶右基" UseTTSRateExpression="2" VariableOp="SetString" VariableName="auri_arts_type" VariableExpression="${type}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerText="diamond_rush:${actorID}:101.99:79.99:138.00:90:101.99:100.01:138.00:109.99:101.99:120.00:" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -217,8 +250,9 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="半场竖向冲(Auri Arts)—以场地12点方向为基准" Id="9c0bea2e-2126-4cbf-a6f3-f262b1482d7a" RegularExpression="] 14:5FB2:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+          <Trigger Enabled="true" Sequential="True" Name="半场竖向冲(Auri Arts)—以场地12点方向为基准" Id="c43126ea-a9b0-4c37-8349-579372304b81" RegularExpression="] 14:5FB2:" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="左左左" UseTTSRateExpression="2" VariableOp="SetString" VariableName="auri_arts_safezone" VariableExpression="${var:auri_arts_safezone}右4" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerText="diamond_rush:${actorID}:101.99:79.99:138.00:90:101.99:100.01:138.00:109.99:101.99:120.00:" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" Description="boss冲左下，左">
                 <Condition Enabled="true" Grouping="Or">
@@ -248,141 +282,197 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
     </Folders>
     <Triggers>
-      <Trigger Enabled="true" Name="AOE(Outrage)" Id="8ddc526e-5fb0-44b7-8ce5-68ea8b4891b9" RegularExpression="] 14:5FBC:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+      <Trigger Enabled="true" Name="AOE(Outrage)" Id="51fe5046-bf7f-4812-a6dc-cbdbb6fcb4e7" RegularExpression="] 14:5FBC:" PeriodRefire="Deny" RefirePeriodExpression="1000">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="分组AOE(Diamond Rain)" Id="b9c704c9-6fb4-4e4c-b40a-995af245bed3" RegularExpression="] 14:5FA7:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+      <Trigger Enabled="true" Name="分组AOE(Diamond Rain)" Id="4432d42f-f0cf-41e0-b119-3cdf62cad6a9" RegularExpression="] 14:5FA7:" PeriodRefire="Deny" RefirePeriodExpression="1000">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="分组AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
+          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="diamond_rain_counter" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="分组AOE" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${evar:diamond_warp_banned}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
           </Action>
-          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="分组AOE，可传送" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
+          <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="分组AOE，可传送" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${evar:diamond_warp_banned}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="diamond_rain_counter" VariableExpression="if(${_ffxivparty[1].x}&gt;100,1,0)+ if(${_ffxivparty[2].x}&gt;100,1,0)+ if(${_ffxivparty[3].x}&gt;100,1,0)+ if(${_ffxivparty[4].x}&gt;100,1,0)+ if(${_ffxivparty[5].x}&gt;100,1,0)+ if(${_ffxivparty[6].x}&gt;100,1,0)+ if(${_ffxivparty[7].x}&gt;100,1,0)+ if(${_ffxivparty[8].x}&gt;100,1,0)" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="5000">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="diamond_rain_mypos" VariableExpression="if(${_ffxivparty[${_ffxivplayer}].x}&gt;100,1,0)" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="Variable" ExecutionDelayExpression="100">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:diamond_rain_counter}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:diamond_rain_lock}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="核爆(Photon Burst)" Id="4594488f-986d-4d99-9624-f9c4ba46c061" RegularExpression="] 14:5FA8:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+      <Trigger Enabled="true" Name="核爆(Photon Burst)" Id="6bd37b77-7c7a-475e-99d7-00edaa593993" RegularExpression="] 14:5FA8:" PeriodRefire="Deny" RefirePeriodExpression="1000">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="核爆远离" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="流沙(Diamond Shrapnel)" Id="5356f6bf-2b7d-405c-adac-d3631aa351c0" RegularExpression="] 14:5FAC:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+      <Trigger Enabled="true" Name="流沙(Diamond Shrapnel)" Id="3c1d6b00-362e-4873-9c2d-926ac7d03a73" RegularExpression="] 14:5FAC:" PeriodRefire="Deny" RefirePeriodExpression="1000">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="流沙流沙" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
           <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="跳跳跳" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="8000">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="麻将(Flood Ray)" Id="e3917ad0-f2a8-4b46-b769-8d2ff0a97e14" RegularExpression="] 1B:1[0-9A-F]{7}:(?&lt;player&gt;[^:]*?):....:....:00(?&lt;type&gt;4F|50|51|52|53|54|55|56):">
+      <Trigger Enabled="true" Name="麻将(Flood Ray)" Id="73cb9f48-75f7-46ed-814a-6f16608fd64f" RegularExpression="] 1B:1[0-9A-F]{7}:(?&lt;player&gt;[^:]*?):....:....:00(?&lt;type&gt;4F|50|51|52|53|54|55|56):">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="1号1号，左上左上" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="4F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="2号2号，右上右上" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="50" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="3号3号，左下左下" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="51" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="4号4号，右下右下" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="52" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="5号5号，左左左待机，然后向上" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="53" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="6号6号，右右右待机，然后向上" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="54" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="7号7号，左左左待机，准备往下" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="55" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="8号8号，右右右待机，准备往下" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="56" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="9" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="回中央" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="12000">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="4F" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="10" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="上上上" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="53" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="11" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="回中央" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="1500">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="50" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="12" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="上上上" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="54" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="13" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="回中央" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="1500">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="51" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="14" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="下下下" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="55" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="15" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="回中央" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="1500">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="52" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="16" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="下下下" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="56" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="17" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="可传送" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS" ExecutionDelayExpression="6000">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionSingle Enabled="true" ExpressionL="${var:diamond_rain_mypos}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].x}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              </ConditionGroup>
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionSingle Enabled="true" ExpressionL="${var:diamond_rain_mypos}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${_ffxivplayer}].x}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+              </ConditionGroup>
+            </Condition>
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
           <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
         </Condition>
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="前后弹球(Auri Arts)" Id="20378208-e257-43d3-b84c-5ff8bfd4302f" RegularExpression="] 14:5FB5" PeriodRefire="Deny" RefirePeriodExpression="1000">
+      <Trigger Enabled="true" Name="前后弹球(Auri Arts)" Id="67c32883-49a7-47f3-a0d6-dbe081b67d61" RegularExpression="] 14:5FB5" PeriodRefire="Deny" RefirePeriodExpression="1000">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="有球远离，没球靠近" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
@@ -398,31 +488,37 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="死刑(Auri Doomstead)" Id="22c4eac2-a34c-4381-aff7-6abf3cc99b8c" RegularExpression="] 14:5FBD:" PeriodRefire="Deny" RefirePeriodExpression="1000">
+      <Trigger Enabled="true" Name="死刑(Auri Doomstead)" Id="5b4892b8-bef8-4226-a390-89f64d3b5096" RegularExpression="] 14:5FBD:" PeriodRefire="Deny" RefirePeriodExpression="1000">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="死刑" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="手手拉线(Diamond Shot)" Id="f17575dc-5073-4e2e-a0fb-950228f1fa3d" RegularExpression="] 23:(?&lt;actorID&gt;4[0-9A-F]{7}):(?&lt;actorName&gt;[^:]*?):(?&lt;targetID&gt;1[0-9A-F]{7}):(?&lt;targetName&gt;[^:]*?):0000:0000:(?&lt;type&gt;0039|0001):" PeriodRefire="Deny" RefirePeriodExpression="10000">
+      <Trigger Enabled="true" Name="手手拉线(Diamond Shot)" Id="1ae286a4-7fbf-4744-9b85-9de0d5b1af4f" RegularExpression="] 23:(?&lt;actorID&gt;4[0-9A-F]{7}):(?&lt;actorName&gt;[^:]*?):(?&lt;targetID&gt;1[0-9A-F]{7}):(?&lt;targetName&gt;[^:]*?):0000:0000:(?&lt;type&gt;0039|0001):" PeriodRefire="Deny" RefirePeriodExpression="10000">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="跳去对面" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0039" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
           <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="留在同侧" UseTTSRateExpression="2" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0001" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
           <ConditionSingle Enabled="true" ExpressionL="${targetName}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
         </Condition>
+        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
