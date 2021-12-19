@@ -1,0 +1,474 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="5a768575-f219-4904-91cc-60f2da8f706d" Name="Cardcaptor AST v6.0 Lite" Enabled="true">
+    <Folders>
+      <Folder Id="a786525e-0c9d-489c-8e30-0dc2f1d8bc89" Name="设置" Enabled="true">
+        <Folders>
+          <Folder Id="495f487f-35a0-427d-9b99-e2d328c15888" Name="宏与键位设置" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="发卡宏：【/cardplay】" Id="ed5b0157-8310-4659-93dd-ce2ed9e24241" RegularExpression="/cardplay">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="0861d3f2-fbad-4934-918e-793cef364543" TriggerForce="regexp,conditions" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor" JvarTarget="" JvarExpression="{&quot;card_play_delegated&quot;:1}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+              </Trigger>
+              <Trigger Enabled="true" Source="None" Name="玩家选择：【F5-F12】，发卡：【K】，选择上一个敌人：【L】" Id="eb4e50db-b90f-4e78-8ef3-460ef567a108" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="cardcaptor.card_play_delegated" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Description="请选择您使用的键位" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="{F${numeric:${var:card_target_party_id}+4}}" KeyPressCode="${numeric:${jvar:cardcaptor.card.maxprofit_pid}+115}" KeyPressWindow="${jvar:cardcaptor.settings.client}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="KeyPress" ExecutionDelayExpression="0" Description="玩家选择：【F5-F12】" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="{F${numeric:${var:card_target_party_id}+4}}" KeyPressCode="${numeric:${jvar:cardcaptor.card.maxprofit_pid}+96}" KeyPressWindow="${jvar:cardcaptor.settings.client}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="0" Description="玩家选择：【小键盘1-8】" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressExpression="K" KeyPressCode="75" KeyPressWindow="${jvar:cardcaptor.settings.client}" TextAuraFontSize="9" TextAuraFontName="??" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="KeyPress" ExecutionDelayExpression="50" Description="发卡：【K】" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressExpression="L" KeyPressCode="76" KeyPressWindow="${jvar:cardcaptor.settings.client}" TextAuraFontSize="9" TextAuraFontName="??" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="KeyPress" ExecutionDelayExpression="200" RefireInterrupt="True" Description="选择上一个敌人：【L】" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="30815fa9-9286-4885-833d-046d21051189" Name="客户端设置" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="false" Source="None" Name="中国服 最终幻想XIV" Id="3f46b38b-9ade-4d34-8948-5bb875b89cda" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings" JvarTarget="" JvarExpression="{&quot;client&quot;:&quot;最终幻想XIV&quot;}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="None" Name="国际服 FINAL FANTASY XIV" Id="99513c31-3f43-4178-a8d4-4606debfdbb9" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings" JvarTarget="" JvarExpression="{&quot;client&quot;:&quot;FINAL FANTASY XIV&quot;}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="4c9097bf-fc3a-4ad9-8909-bf95249fe434" Name="显示设置" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="false" Source="None" Name="DEBUG显示" Id="f587bfae-257e-43bc-8eae-0b379d03e75f" RegularExpression="(?&lt;pid&gt;.*)">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="Yellow" TextAuraOutline="Black" TextAuraName="cardcaptor_dps_aura_${pid}" TextAuraExpression="${_ffxivparty[${pid}].job(CN1)} ${jvar:cardcaptor.party[${pid}].dps} ${numeric:round(${jvar:cardcaptor.party[${pid}].dps_profit})}" TextAuraXIniExpression="365" TextAuraYIniExpression="45+40*${pid}" TextAuraWIniExpression="570" TextAuraHIniExpression="69" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="TextAura" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="Yellow" TextAuraOutline="Black" TextAuraName="cardcaptor_time_aura" TextAuraExpression="计算用时：${numeric:${jvar:cardcaptor.calc_end_timestamp}-${jvar:cardcaptor.calc_begin_timestamp}}" TextAuraXIniExpression="350" TextAuraYIniExpression="45+40*9" TextAuraWIniExpression="570" TextAuraHIniExpression="69" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="TextAura" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${numeric:${pid}+1}].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+      <Folder Id="dbccc28b-079d-437a-a19f-9451efc8f5ce" Name="条件重置" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="初始化(换图/手动触发)" Id="a2895eee-1391-4920-8711-bc24958cbff6" RegularExpression="^.{15}ChangeMap" PeriodRefire="Deny" RefirePeriodExpression="2000">
+            <Actions>
+              <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="SystemBeep" ExecutionDelayExpression="0">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="CancelTrigger" TriggerId="0861d3f2-fbad-4934-918e-793cef364543" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="cardcaptor" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="TextAura" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="4ac4534d-0d8a-40e2-bfe1-5ea505de2e8a" TriggerForce="regexp,conditions" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="5000" RefireRequeue="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="初始化(换职业)" Id="b88800e3-7923-471b-a9f1-40b1b89317f9" RegularExpression="^.{15}AddCombatant 03:1[0-9A-F]{7}:(?&lt;name&gt;[^:]*?):">
+            <Actions>
+              <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a2895eee-1391-4920-8711-bc24958cbff6" TriggerForce="regexp,conditions" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="4294967296" Id="db47fd9d-f2f3-488f-b94f-31ba83fa2007" Name="核心（请勿修改）" Enabled="true">
+        <Folders>
+          <Folder Id="8b197f34-767a-4012-9457-2058e3261fdf" Name="calculator" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="None" Name="cardcaptor_dps_calculator" Id="c93657f2-f2f2-49f1-bf40-19578093e6f7" RegularExpression="(?&lt;pid&gt;[1-8])">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor" JvarTarget="" JvarExpression="{&quot;calc_begin_timestamp&quot;:${_systemtimems}}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${pid}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Set" JvarExpressionType="Numeric" JvarSource="cardcaptor.card.maxprofit_pid" JvarTarget="" JvarExpression="1" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${pid}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.party[${pid}]" JvarTarget="" JvarExpression="{&quot;dps_loss&quot;:0,&quot;dps_gain&quot;:0}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.party[${pid}]" JvarTarget="" JvarExpression="{&quot;dps&quot;:${jvar:cardcaptor.settings.default_dps.${_ffxivparty[${pid}].job}}}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${ejvar:cardcaptor.settings.default_dps.${_ffxivparty[${pid}].job}}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
+                      <ConditionGroup Enabled="true" Grouping="Not">
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${pid}].enc(DURATION)}" ExpressionTypeL="Numeric" ExpressionR="10" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Set" JvarExpressionType="Numeric" JvarSource="cardcaptor.party[${pid}].dps" JvarTarget="" JvarExpression="0.5*${_ffxivparty[${pid}].enc(DPS)} + 0.5*${_ffxivparty[${pid}].enc(Last30DPS)}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${pid}].enc(DURATION)}" ExpressionTypeL="Numeric" ExpressionR="10" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="6" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Set" JvarExpressionType="Numeric" JvarSource="cardcaptor.party[${pid}].dps_loss" JvarTarget="" JvarExpression="0" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${jvar:cardcaptor.party[${pid}].last_card_timestamp}+15000" ExpressionTypeL="Numeric" ExpressionR="${_timestampms}" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${ejvar:cardcaptor.party[${pid}].last_card_timestamp}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="7" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Set" JvarExpressionType="Numeric" JvarSource="cardcaptor.party[${pid}].dps_loss" JvarTarget="" JvarExpression="(${jvar:cardcaptor.party[${pid}].last_card_timestamp}+15000-${_timestampms})*0.001*${jvar:cardcaptor.party[${pid}].last_card_gain}*${jvar:cardcaptor.party[${pid}].dps}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${jvar:cardcaptor.party[${pid}].last_card_timestamp}+15000" ExpressionTypeL="Numeric" ExpressionR="${_timestampms}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="8" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Set" JvarExpressionType="Numeric" JvarSource="cardcaptor.party[${pid}].dps_gain" JvarTarget="" JvarExpression="0.03*15*${jvar:cardcaptor.party[${pid}].dps}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="9" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Set" JvarExpressionType="Numeric" JvarSource="cardcaptor.party[${pid}].dps_gain" JvarTarget="" JvarExpression="${jvar:cardcaptor.party[${pid}].dps_gain}*2" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${jvar:cardcaptor.card.type}" ExpressionTypeL="String" ExpressionR="Melee" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${pid}].job(SubRoleEN)}" ExpressionTypeL="String" ExpressionR="Melee|Tank" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${jvar:cardcaptor.card.type}" ExpressionTypeL="String" ExpressionR="Ranged" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${pid}].job(SubRoleEN)}" ExpressionTypeL="String" ExpressionR="Ranged|Healer|Caster" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="10" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Set" JvarExpressionType="Numeric" JvarSource="cardcaptor.party[${pid}].dps_profit" JvarTarget="" JvarExpression="${jvar:cardcaptor.party[${pid}].dps_gain}-${jvar:cardcaptor.party[${pid}].dps_loss}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="11" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Set" JvarExpressionType="Numeric" JvarSource="cardcaptor.party[${pid}].dps_profit" JvarTarget="" JvarExpression="${jvar:cardcaptor.party[${pid}].dps_profit}*${jvar:cardcaptor.party[${pid}].debuff.value}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${ejvar:cardcaptor.party[${pid}].debuff}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${jvar:cardcaptor.party[${pid}].debuff.timestamp}" ExpressionTypeL="Numeric" ExpressionR="${_timestampms}" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="12" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Set" JvarExpressionType="Numeric" JvarSource="cardcaptor.party[${pid}].dps_profit" JvarTarget="" JvarExpression="0" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="distance(${_ffxivparty[${pid}].x},${_ffxivparty[${pid}].y},${_ffxivparty[1].x},${_ffxivparty[1].y})" ExpressionTypeL="Numeric" ExpressionR="30" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${pid}].currenthp}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="13" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Set" JvarExpressionType="Numeric" JvarSource="cardcaptor.card.maxprofit_pid" JvarTarget="" JvarExpression="${pid}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${jvar:cardcaptor.party[${pid}].dps_profit}" ExpressionTypeL="Numeric" ExpressionR="${jvar:cardcaptor.party[${jvar:cardcaptor.card.maxprofit_pid}].dps_profit}" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="14" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="c93657f2-f2f2-49f1-bf40-19578093e6f7" TriggerText="${numeric:${pid}+1}" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="15" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="Yellow" TextAuraOutline="Black" TextAuraUseOutline="True" TextAuraFontName="宋体" TriggerId="f587bfae-257e-43bc-8eae-0b379d03e75f" TriggerText="${pid}" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="16" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor" JvarTarget="" JvarExpression="{&quot;calc_end_timestamp&quot;:${_systemtimems}}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${numeric:${pid}+1}].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="17" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="Yellow" TextAuraOutline="Black" TextAuraName="cardcaptor_time_aura_${pid}" TextAuraExpression="计算用时：${numeric:${jvar:cardcaptor.calc_end_timestamp}-${jvar:cardcaptor.calc_begin_timestamp}}" TextAuraXIniExpression="350" TextAuraYIniExpression="45+40*9" TextAuraWIniExpression="570" TextAuraHIniExpression="69" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="TextAura" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${numeric:${pid}+1}].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="18" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="Yellow" TextAuraOutline="Black" TextAuraUseOutline="True" TextAuraFontName="宋体" TriggerId="eb4e50db-b90f-4e78-8ef3-460ef567a108" TriggerForce="regexp,conditions" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${ejvar:cardcaptor.card_play_delegated}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${numeric:${pid}+1}].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${pid}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${pid}].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="cardcaptor_init" Id="4ac4534d-0d8a-40e2-bfe1-5ea505de2e8a" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="" JvarTarget="" JvarExpression="{&quot;cardcaptor&quot;:{&quot;settings&quot;:{}}}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor" JvarTarget="" JvarExpression="{&quot;card&quot;:{}}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor" JvarTarget="" JvarExpression="{&quot;party&quot;:[{},{},{},{},{},{},{},{},{}]}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings" JvarTarget="" JvarExpression="{&quot;recast_time&quot;:2.41}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings" JvarTarget="" JvarExpression="{&quot;default_dps&quot;:{}}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="6" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;SAM&quot;:5808}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="7" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;RPR&quot;:5793}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="8" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;MNK&quot;:5663}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="9" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;BLM&quot;:5643}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="10" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;MCH&quot;:5453}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="11" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;DRG&quot;:5308}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="12" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;RDM&quot;:5287}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="13" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;SMN&quot;:5137}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="14" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;NIN&quot;:5125}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="15" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;BRD&quot;:4792}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="16" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;DNC&quot;:4388}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="17" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;DRK&quot;:3984}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="18" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;GNB&quot;:3859}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="19" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;WAR&quot;:3847}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="20" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;PLD&quot;:3596}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="21" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;SGE&quot;:3261}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="22" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;WHM&quot;:2991}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="23" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;SCH&quot;:2828}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="24" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.settings.default_dps" JvarTarget="" JvarExpression="{&quot;AST&quot;:2447}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="25" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="99513c31-3f43-4178-a8d4-4606debfdbb9" TriggerForce="regexp,conditions" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="26" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="3f46b38b-9ade-4d34-8948-5bb875b89cda" TriggerForce="regexp,conditions" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="None" Name="cardcaptor_refresh" Id="0861d3f2-fbad-4934-918e-793cef364543" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="c93657f2-f2f2-49f1-bf40-19578093e6f7" TriggerText="1" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="0" RefireInterrupt="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" SchedulingActionOp="-1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="0861d3f2-fbad-4934-918e-793cef364543" TriggerForce="regexp,conditions" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarSource="" JvarTarget="" JvarExpression="" JvarListIndex="" ActionType="Trigger" ExecutionDelayExpression="max(1000,${jvar:cardcaptor.settings.recast_time}*5000)" RefireInterrupt="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="619b469a-b5bd-4bd6-a7e4-16bd14dc7916" Name="triggers" Enabled="true">
+            <Folders>
+              <Folder Id="bc9e3367-d664-4c97-bd7b-b05ec0a5bd90" Name="status" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Sequential="True" Name="weakness" Id="4baff5d1-ce1c-4a60-a810-adfe7bb0671c" RegularExpression="^.{15}StatusAdd 1A:(?&lt;type&gt;2B|2C):[^:]*?:(?&lt;time&gt;[^:]*?):E0000000::(?&lt;id&gt;1[0-9A-F]{7}):">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="debuff_record" TableVariableExpression="${_timestampms}+${time}*1000" TableVariableX="1" TableVariableY="${_ffxivparty[${id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.party[${_ffxivparty[${id}].order}]" JvarTarget="" JvarExpression="{&quot;debuff&quot;:{&quot;timestamp&quot;:${numeric:${_timestampms}+60000},&quot;value&quot;:0.5}}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Description="记录濒死" DescriptionOverride="True">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2C" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="debuff_record" TableVariableExpression="${_timestampms}+${time}*1000" TableVariableX="1" TableVariableY="${_ffxivparty[${id}].order}" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.party[${_ffxivparty[${id}].order}]" JvarTarget="" JvarExpression="{&quot;debuff&quot;:{&quot;timestamp&quot;:${numeric:${_timestampms}+60000},&quot;value&quot;:0.25}}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Description="记录虚弱" DescriptionOverride="True">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="And" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Sequential="True" Name="card_play" Id="8049ce79-570c-47df-88ae-5a2340641424" RegularExpression="^.{15}ActionEffect 15:(?&lt;player_id&gt;1[0-9A-F]{7}):(?&lt;player&gt;[^:]*?):(?&lt;card_id&gt;113[1-6]):[^:]*?:(?&lt;target_id&gt;1[0-9A-F]{7}):" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="card_type_played" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.card" JvarTarget="" JvarExpression="{&quot;played_type&quot;:&quot;Melee&quot;}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Description="判断卡的类型 1=Melee" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${card_id}" ExpressionTypeL="String" ExpressionR="1131|1132|1133|1D14" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" TextAuraFontSize="9" TextAuraFontName="??" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.card" JvarTarget="" JvarExpression="{&quot;played_type&quot;:&quot;Ranged&quot;}" JvarListIndex="" ActionType="JsonVariable" ExecutionDelayExpression="0" Description="判断卡的类型 2=Ranged" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${card_id}" ExpressionTypeL="String" ExpressionR="1134|1135|1136|1D15" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.party[${_ffxivparty[${target_id}].order}]" JvarTarget="" JvarExpression="{&quot;last_card_timestamp&quot;:${_timestampms},&quot;last_card_gain&quot;:0.03}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Description="记录该卡牌的时间戳" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" VariableOp="SetNumeric" TableVariableOp="Set" TableVariableExpressionType="Numeric" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.party[${_ffxivparty[${target_id}].order}]" JvarTarget="" JvarExpression="{&quot;last_card_gain&quot;:0.06}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="10" Description="是否双倍增益" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${jvar:cardcaptor.card.played_type}" ExpressionTypeL="String" ExpressionR="Melee" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${target_id}].job(SubRoleEN)}" ExpressionTypeL="String" ExpressionR="Melee|Tank" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${jvar:cardcaptor.card.played_type}" ExpressionTypeL="String" ExpressionR="Ranged" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${target_id}].job(SubRoleEN)}" ExpressionTypeL="String" ExpressionR="Ranged|Healer|Caster" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="And" />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="card_draw" Id="d13b493e-1d40-4a01-9dde-bb812692ece0" RegularExpression="^.{15}Gauge 1F:(?&lt;id&gt;1[0-9A-F]{7}):(0*?)21:([0-9]*?)(?&lt;card_type&gt;100|200|300|400|500|600):" DebugLevel="Error" PeriodRefire="Deny" RefirePeriodExpression="100">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.card" JvarTarget="" JvarExpression="{&quot;type&quot;:&quot;Melee&quot;}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Description="判断抽卡的类型 1=Melee" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${card_type}" ExpressionTypeL="String" ExpressionR="100|300|400" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" TextAuraFontSize="9" TextAuraFontName="??" PartyOrderPlayerName="" PartyOrderPartyOrder="" DevActionKey="" DevActionValue="" JvarOp="Push" JvarSource="cardcaptor.card" JvarTarget="" JvarExpression="{&quot;type&quot;:&quot;Ranged&quot;}" JvarListIndex="" JvarAppendAsDict="True" ActionType="JsonVariable" ExecutionDelayExpression="0" Description="判断抽卡的类型 2=Ranged" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${card_type}" ExpressionTypeL="String" ExpressionR="200|500|600" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${id}].name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>
